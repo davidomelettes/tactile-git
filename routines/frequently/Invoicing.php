@@ -2,21 +2,81 @@
 require_once 'Service/Xero.php';
 
 class Invoicing extends EGSCLIApplication {
+    
+    const PREMIUM_PER_USER = 6.00;
+    const ENTERPRISE_PER_USER = 12.00;
+    
 	// This is a lookup for names xero can't handle
 	private $INVOICE_NAMES = array(
 		'gactechnologies' => 'GAC Technologies'
 	);
 	
+	public function getVATForCountry($code, $time = 'now')
+	{
+	    $when = strtotime($time);
+	    switch ($code) {
+	        case 'LU': // Luxembourg
+	            return 0.17;
+	        case 'MT': // Malta
+	            return 0.18;
+	        case 'CY': // Cyprus
+	        case 'DE': // Germany
+	            return 0.19;
+	        case 'AT': // Austria
+	        case 'BG': // Bulgaria
+	        case 'EE': // Estonia
+	        case 'FR': // France
+	        case 'SK': // Slovakia
+	            return 0.20;
+	        case 'BE': // Belgium
+	        case 'CZ': // Czech Republic
+	        case 'LV': // Latvia
+	        case 'LT': // Lithuania
+	        case 'NL': // Netherlands
+	        case 'ES': // Spain
+	            return 0.21;
+	        case 'IT': // Italy
+	        case 'SI': // Slovenia
+	            return 0.22;
+	        case 'GR': // Greece
+	        case 'IE': // Ireland
+	        case 'PL': // Poland
+	        case 'PT': // Portugal
+	            return 0.23;
+	        case 'FI': // Finland
+	        case 'RO': // Romania
+	            return 0.24;
+	        case 'HR': // Croatia
+	        case 'DK': // Denmark
+	        case 'SE': // Sweden
+	            return 0.25;
+	        case 'HU': // Hungary
+	            return 0.27;
+	        case 'GB':
+	        case 'UK':
+	            if ($when > strtotime('2015-01-01 00:00:00')) {
+	                // Deregistered for VAT
+	                return 0;
+	            } else {
+	                return 0.20;
+	            }
+	        default:
+	            return 0;
+	    }
+	}
+	
+	/*
 	private $VAT_COUNTRIES = array(
 		'AT','BE','BG','CY','CZ','DK','EE','FI','FR',
 		'DE','EL','HU','IE','IT','LV','LT','LU','MT',
 		'NL','PL','PT','RO','SK','SI','ES','SE'
 	);
+	*/
 	
 	private $_countries = array();
 	private $xero;
 	private $_start_date = '2009-03-18';
-	private $_VAT = 0.175;
+	//private $_VAT = 0.175;
 	private $_plans = array (
 		'Micro',
 		'SME',
@@ -33,9 +93,11 @@ class Invoicing extends EGSCLIApplication {
 	
 	public function go() {
 		// This is the time for 4th Jan 2011: 1294099200
+		/*
 		if(time() > 1294099200) {
 			$this->_VAT = 0.2;
 		}
+		*/
 		$db = DB::Instance();
 		require_once 'Zend/Log.php';
 		$this->xero = new Service_Xero(XERO_INVOICING_PROVIDER_KEY, XERO_INVOICING_CUSTOMER_KEY, PRODUCTION);
@@ -163,6 +225,14 @@ class Invoicing extends EGSCLIApplication {
 			
 			$xero_lineitem = new Service_Xero_Entity_Invoice_LineItems_LineItem($this->xero);
 			// Check if we need to charge VAT
+			$tax = false;
+			$taxRate = $this->getVATForCountry($payment['country_code'], $payment['created']);
+			$tax_type = Service_Xero_Entity_Invoice_LineItems_LineItem::TAX_ZERORATEDOUTPUT;
+			if ($taxRate > 0) {
+			    $tax = 'true';
+			    $tax_type = Service_Xero_Entity_Invoice_LineItems_LineItem::TAX_OUTPUT;
+			}
+			/*
 			if($payment['country_code'] == 'GB') {
 				// In the UK so all have VAT
 				$tax = 'true';
@@ -175,6 +245,7 @@ class Invoicing extends EGSCLIApplication {
 				$tax_type = Service_Xero_Entity_Invoice_LineItems_LineItem::TAX_ZERORATEDOUTPUT;
 				$VAT = '0.00';
 			}
+			*/
 			
 			$xero_lineitem // You can also use fluid interfaces
 				->set('AccountCode', 200) // Shrug. Our own ref for the line item?
@@ -188,6 +259,9 @@ class Invoicing extends EGSCLIApplication {
 				// This must mean we're invoicing a full 30 day payment
 				if($payment['plan'] == 'Premium' && (strpos($payment['description'], '@') !== false)) {
 					// This is a premium Plan (30 Day/Full), i.e. a per user payment
+					$unit_amount = round(self::PREMIUM_PER_USER / (1 + $taxRate), 2);
+					$tax_amount = round(self::PREMIUM_PER_USER - $unit_amount, 2);
+					/*
 					if($tax == 'true') {
 						// This is to take into account the VAT change
 						if($this->_VAT == 0.15) {
@@ -204,18 +278,22 @@ class Invoicing extends EGSCLIApplication {
 						$unit_amount = 6;
 						$tax_amount = 0;
 					}
+					*/
 					$xero_lineitem
 						->set('Description', 'Tactile CRM Premium Subscription (per user)')
-						->set('Quantity', intval($payment['amount']/6))
+						->set('Quantity', intval($payment['amount']/self::PREMIUM_PER_USER))
 						->set('UnitAmount', round($unit_amount, 2))
-						->set('LineAmount', round($unit_amount * intval($payment['amount']/6), 2))
+						->set('LineAmount', round($unit_amount * intval($payment['amount']/self::PREMIUM_PER_USER), 2))
 						->set('TaxType', $tax_type) // There are several different types
-						->set('TaxAmount', round($tax_amount * intval($payment['amount']/6), 2));
+						->set('TaxAmount', round($tax_amount * intval($payment['amount']/self::PREMIUM_PER_USER), 2));
 					
 					$total_vat = round($tax_amount * intval($payment['amount']/6), 2);
 				} 
 				else if($payment['plan'] == 'Enterprise') {
 					// This is an enterprise Plan (30 Day/Full), i.e. a per user payment
+				    $unit_amount = round(self::ENTERPRISE_PER_USER / (1 + $taxRate), 2);
+				    $tax_amount = round(self::ENTERPRISE_PER_USER - $unit_amount, 2);
+					/*
 					if($tax == 'true') {
 						if($this->_VAT == 0.15) {
 							$unit_amount = 10.435;
@@ -231,19 +309,20 @@ class Invoicing extends EGSCLIApplication {
 						$unit_amount = 12;
 						$tax_amount = 0;
 					}
+					*/
 					$xero_lineitem
 						->set('Description', 'Tactile CRM Enterprise Subscription (per user)')
-						->set('Quantity', intval($payment['amount']/12))
+						->set('Quantity', intval($payment['amount']/self::ENTERPRISE_PER_USER))
 						->set('UnitAmount', round($unit_amount, 2))
-						->set('LineAmount', round($unit_amount * intval($payment['amount']/12), 2))
+						->set('LineAmount', round($unit_amount * intval($payment['amount']/self::ENTERPRISE_PER_USER), 2))
 						->set('TaxType', $tax_type) // There are several different types
-						->set('TaxAmount', round($tax_amount * intval($payment['amount']/12), 2));
+						->set('TaxAmount', round($tax_amount * intval($payment['amount']/self::ENTERPRISE_PER_USER), 2));
 					
-					$total_vat = round($tax_amount * intval($payment['amount']/12), 2);
+					$total_vat = round($tax_amount * intval($payment['amount']/self::ENTERPRISE_PER_USER), 2);
 				} else {
 					// This is an old style plan (30 Day/Full) payment
 					if($tax == 'true') {
-						$unit_amount = round($payment['amount'] / (1 + $this->_VAT), 2);
+						$unit_amount = round($payment['amount'] / (1 + $taxRate), 2);
 						$tax_amount = round($payment['amount'] - $unit_amount, 2);
 					} else {
 						$unit_amount = $payment['amount'];
@@ -269,7 +348,7 @@ class Invoicing extends EGSCLIApplication {
 						$days = str_replace('(', '', str_replace(')', '', $days[0]));
 						
 						if($tax == 'true') {
-							$unit_amount = round(($payment['amount'] / (1 + $this->_VAT)) / $users, 2);
+							$unit_amount = round(($payment['amount'] / (1 + $taxRate)) / $users, 2);
 							$tax_amount = round(($payment['amount'] / $users) - $unit_amount, 2);
 						} else {
 							$unit_amount = round($payment['amount']/$users, 3);
@@ -289,6 +368,9 @@ class Invoicing extends EGSCLIApplication {
 						// An upgrade from solo to premium
 						$users = trim(str_replace('users', '', str_replace('changing plan from solo to premium with', '', $payment['description'])));
 						
+						$unit_amount = round(self::PREMIUM_PER_USER / (1 + $taxRate), 2);
+						$tax_amount = round(self::PREMIUM_PER_USER - $unit_amount, 2);
+						/*
 						if($tax == 'true') {
 							if($this->_VAT == 0.15) {
 								$unit_amount = 5.217;
@@ -304,6 +386,7 @@ class Invoicing extends EGSCLIApplication {
 							$unit_amount = 6;
 							$tax_amount = 0;
 						}
+						*/
 						$xero_lineitem
 							->set('Description', 'Tactile CRM Upgrade (per user)')
 							->set('Quantity', $users)
@@ -316,7 +399,7 @@ class Invoicing extends EGSCLIApplication {
 					} else {
 						// They are on a premium plan and have been moved from an old style plan, or manual payment
 						if($tax == 'true') {
-							$unit_amount = round($payment['amount'] / (1 + $this->_VAT), 2);
+							$unit_amount = round($payment['amount'] / (1 + $taxRate), 2);
 							$tax_amount = round($payment['amount'] - $unit_amount, 2);
 						} else {
 							$unit_amount = $payment['amount'];
@@ -341,7 +424,7 @@ class Invoicing extends EGSCLIApplication {
 						$days = str_replace('(', '', str_replace(')', '', $days[0]));
 						
 						if($tax == 'true') {
-							$unit_amount = round(($payment['amount'] / (1 + $this->_VAT)) / $users, 2);
+							$unit_amount = round(($payment['amount'] / (1 + $taxRate)) / $users, 2);
 							$tax_amount = round(($payment['amount'] / $users) - $unit_amount, 2);
 						} else {
 							$unit_amount = round($payment['amount']/$users, 3);
@@ -361,7 +444,7 @@ class Invoicing extends EGSCLIApplication {
 				} else if (strpos($payment['description'], 'changing plan from') !== false){
 					// This is an old style plan change
 					if($tax == 'true') {
-						$unit_amount = round($payment['amount'] / (1 + $this->_VAT), 2);
+						$unit_amount = round($payment['amount'] / (1 + $taxRate), 2);
 						$tax_amount = round($payment['amount'] - $unit_amount, 2);
 					} else {
 						$unit_amount = $payment['amount'];
@@ -382,7 +465,7 @@ class Invoicing extends EGSCLIApplication {
 					$plan = $this->_plan_amounts[intval($payment['amount'])];
 					
 					if($tax == 'true') {
-						$unit_amount = round($payment['amount'] / (1 + $this->_VAT), 2);
+						$unit_amount = round($payment['amount'] / (1 + $taxRate), 2);
 						$tax_amount = round($payment['amount'] - $unit_amount, 2);
 					} else {
 						$unit_amount = $payment['amount'];
@@ -419,7 +502,7 @@ class Invoicing extends EGSCLIApplication {
 				->set('Total', $payment['amount']);
 
 			try {
-				//$xero_invoice->put();
+				$xero_invoice->put();
 			} catch (Service_Xero_Exception $e) {
 				$logger = new Zend_Log(new Log_Writer_Mail(DEBUG_EMAIL_ADDRESS, 'Error saving invoice to Xero'));
 				$logger->crit($e->getMessage());
@@ -455,7 +538,7 @@ class Invoicing extends EGSCLIApplication {
 			$mail->getView()->set('line_total', '&pound;'.number_format($xero_invoice->LineItems->LineItem[0]->LineAmount, 2));
 			$mail->getView()->set('sub_total', '&pound;'.number_format($payment['amount'] - $total_vat, 2));
 			$mail->getView()->set('vat', '&pound;'.number_format($total_vat, 2));
-			$mail->getView()->set('vat_rate', $this->_VAT*100);
+			$mail->getView()->set('vat_rate', $this->getVATForCountry($payment['country_code'])*100);
 			$mail->getView()->set('total', '&pound;'.number_format($payment['amount'], 2));
 			$mail->getView()->set('total', '&pound;'.number_format($payment['amount'], 2));
 			$mail->getView()->set('country', $this->_countries[$payment['country_code']]);
@@ -485,13 +568,13 @@ class Invoicing extends EGSCLIApplication {
 			try {
 				$soapClient = @new SoapClient("http://api.createsend.com/api/api.asmx?wsdl");
 
-				/*$response = $soapClient->Unsubscribe(
+				$response = $soapClient->Unsubscribe(
 					array(
 						'ApiKey' => OMELETTES_CM_API_KEY,
 						'ListID' => '5230d0f588eda4a723fc81418f421919',
 						'Email' => $payment['email']
 					)
-				);*/
+				);
 			} catch (Exception $e) {
 				require_once 'Zend/Log.php';
 				$logger = new Zend_Log(new Log_Writer_Mail(DEBUG_EMAIL_ADDRESS, 'Campaign monitor removing from free trial reminder as purchasing'));
@@ -600,6 +683,7 @@ class Invoicing extends EGSCLIApplication {
 							$mail->addBcc(TACTILE_DROPBOX_WEBSITE);
 						}
 						$mail->getMail()->addTo($payment['email']);
+						$mail->addBcc('accounts@omelett.es');
 					} else {
 						$mail->getMail()->addTo(DEBUG_EMAIL_ADDRESS);
 					}
@@ -669,7 +753,7 @@ class Invoicing extends EGSCLIApplication {
 		$xero_contact->addAddress($xero_address);
 		
 		try {
-			//$xero_contact->put();
+			$xero_contact->put();
 		} catch (Service_Xero_Exception $e) {
 			$logger = new Zend_Log(new Log_Writer_Mail(DEBUG_EMAIL_ADDRESS, 'Error saving contact to Xero'));
 			$logger->crit('Account\'s Site Address: '.$contact['site_address']);
