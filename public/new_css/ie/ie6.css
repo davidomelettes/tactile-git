@@ -1,0 +1,48 @@
+#browser_warning { display: block !important; }
+
+#activity_timeline,
+table.index_table {
+	width: auto !important;
+}
+
+#add_nav { display: none; }
+
+#activity_timeline li {
+	clear: left;
+	overflow: hidden;
+}
+	#activity_timeline li .header,
+	#activity_timeline li .header h4 { float: none !important; }
+	#activity_timeline li .footer { float: none !important; }
+	
+#activity_timeline .attached_things { display: none; }
+
+#list_types { border: none; }
+	#list_types .menu { position: static; }
+	#list_types .shadow {
+		background: none;
+		margin: 0;
+	}
+	#list_types span,
+	#list_types div,
+	#list_types ul,
+	#list_types li {
+		border: none !important;
+	}
+	#list_types li {
+		display: inline !important;
+		float: left;
+		margin: 0;
+	}
+	#list_types li.current { display: none !important; }
+	
+#custom_timeline_helper,
+.paging {
+	border: none;
+	clear: left;
+	position: static !important;
+	margin-bottom: 10px;
+}
+
+#page_title h2 { float: none !important; }
+.edit_delete { float: none !important; }

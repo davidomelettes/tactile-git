@@ -1,0 +1,265 @@
+---
+
+basic:
+  name: Test Activity
+  date_choice: today
+  
+with_created_set:
+  name: Test Activity
+  created: 12/01/2002
+  date_choice: today
+  
+with_quotes:
+  name: Test for Mr O'Reilly
+  date_choice: today
+
+all_main_fields:
+  name: Test Again
+  description: This is an activity with more fields filled
+  date: 12/12/2008
+  assigned_to: user2//tactile
+  date_choice: date
+
+basic_note:
+  title: Test Note
+  note: This is a test note
+  activity_id: 100
+
+basic_with_mdy_date:
+  name: Test Activity
+  date: 12/20/2008
+  date_choice: date
+
+alternative_person:
+  -
+    id: 100
+    firstname: Fred
+    surname: Smith
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    language_code: EN
+ 
+alternative_user:
+  - 
+    person_id: 100
+    username: user2//tactile
+    password: sdfsdfsdfsdfsdfds
+    
+with_type:
+  name: Test Activity
+  type_id: 1
+  date_choice: today
+  
+default_types:
+  -
+    id: 1
+    name: Test Type
+    usercompanyid: 1
+
+default_activities:
+  -
+    id: 100
+    name: Default Activity
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+    
+basic_event:
+  name: Event
+  class: event
+  date_choice: today
+  time_hours: 12
+  time_minutes: 00
+  end_time_hours: 13
+  end_time_minutes: 00
+
+basic_event_invalid_time:
+  name: Event
+  class: event
+  date_choice: today
+  time_hours: 12
+  time_minutes: 99
+  end_time_hours: 13
+  end_time_minutes: 00
+
+basic_event_tomorrow:
+  name: Event Tomorrow
+  class: event
+  date_choice: tomorrow
+  time_hours: 12
+  time_minutes: 00
+  end_time_hours: 13
+  end_time_minutes: 00
+  
+basic_event_date:
+  name: Event Date
+  class: event
+  date_choice: date
+  date: 01/01/2011
+  time_hours: 12
+  time_minutes: 00
+  end_date: 01/01/2011
+  end_time_hours: 13
+  end_time_minutes: 00
+
+basic_event_date_only_start_time:
+  name: Event Date
+  class: event
+  date_choice: date
+  date: 01/01/2011
+  time_hours: 12
+  time_minutes: 00
+  end_date: 02/01/2011
+  end_time_hours:
+  end_time_minutes:
+
+basic_event_date_only_end_time:
+  name: Event Date
+  class: event
+  date_choice: date
+  date: 01/01/2011
+  time_hours:
+  time_minutes:
+  end_date: 02/01/2011
+  end_time_hours: 13
+  end_time_minutes: 00
+
+basic_event_date_no_time:
+  name: Event Date
+  class: event
+  date_choice: date
+  date: 01/01/2011
+  time_hours:
+  time_minutes:
+  end_date: 01/01/2011
+  end_time_hours:
+  end_time_minutes:
+
+basic_event_later:
+  name: Event Later
+  class: event
+  date_choice: later
+  
+basic_event_today_bad_time_range:
+  name: Event Bad Time Range
+  class: event
+  date_choice: today
+  time_hours: 13
+  time_minutes: 00
+  end_time_hours: 12
+  end_time_minutes: 00
+  
+basic_event_date_bad_date_range:
+  name: Event Date Bad Date Range
+  class: event
+  date_choice: date
+  date: 01/01/2011
+  time_hours: 12
+  time_minutes: 00
+  end_date: 01/01/2010
+  end_time_hours: 13
+  end_time_minutes: 00
+  
+event_activities:
+  -
+    id: 700
+    name: Activity Event
+    class: event
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+  -
+    id: 701
+    name: Activity Event With Dates
+    class: event
+    owner: greg//tactile
+    alteredby: greg//tactile
+    date: 2010-01-01
+    end_date: 2010-01-02
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+  -
+    id: 702
+    name: Activity Event With Dates And Times
+    class: event
+    owner: greg//tactile
+    alteredby: greg//tactile
+    date: 2010-01-01
+    time: 12:00:00
+    end_date: 2010-01-02
+    end_time: 13:00:00
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+  -
+    id: 703
+    name: Activity Event With Dates And Start Time
+    class: event
+    owner: greg//tactile
+    alteredby: greg//tactile
+    date: 2010-01-01
+    time: 12:00:00
+    end_date: 2010-01-02
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+  -
+    id: 704
+    name: Activity Event With Dates And End Time
+    class: event
+    owner: greg//tactile
+    alteredby: greg//tactile
+    date: 2010-01-01
+    end_date: 2010-01-02
+    end_time: 13:00:00
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+    
+person_contact_details:
+  -
+    person_id: 100
+    contact: foo@bar.com
+    type: E
+    name: Main
+    main: true
+  -
+    person_id: 100
+    contact: 0121 345 543
+    type: T
+    name: Main
+    main: true
+    
+tz_complete_activity:
+  -
+    id: 888
+    name: Complete This!
+    date: 2010-10-12
+    time: 19:00:00
+    end_date: 2010-10-12
+    end_time: 20:00:00
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    class: event
+    
+overdue_tz_activities:
+  -
+    id: 111
+    name: Today and Overdue
+    class: todo
+    owner: greg//tactile
+    alteredby: greg//tactile
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1

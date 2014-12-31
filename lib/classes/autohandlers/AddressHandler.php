@@ -1,0 +1,27 @@
+<?php
+/**
+* Ensures that there will be a 'main' contact method if the save happens
+*
+*/
+class AddressHandler extends AutoHandler {
+	
+	public function __construct($f_key) {
+		$this->f_key=$f_key;
+		parent::__construct();
+	}
+	
+	function handle(DataObject $model) {
+		$f_value = $model->{$this->f_key};
+		if(empty($f_value)) {
+			return false;
+		}
+		$classname = $model->get_name();
+		$model2 = new $classname;
+		$cc = new ConstraintChain();
+		$cc->add(new Constraint($this->f_key,'=',$model->{$this->f_key}));
+		$cc->add(new Constraint('main','=','true'));
+		$result = $model2->loadBy($cc);
+		return ($result===false);
+	}
+}
+?>

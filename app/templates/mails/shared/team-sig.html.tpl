@@ -1,0 +1,1 @@
+<p style="font-family: Arial; font-size: 12px; color: #999; margin: 0 0 10px 0; padding: 0;">--<br />The Tactile CRM Team.<br />Need Help? Why not check out <a style="color: #333;" href="http://help.tactilecrm.com/?utm_source=TactileCRM&utm_medium=email&utm_campaign=EmailSuite">our online help</a>.</p>

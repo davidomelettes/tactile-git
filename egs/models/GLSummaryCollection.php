@@ -1,0 +1,15 @@
+<?php
+class GLSummaryCollection extends DataObjectCollection {
+	
+		public $field;
+		
+		function __construct() {
+			parent::__construct('GLSummary');
+			
+		$this->identifierField='summary';
+		}
+	
+		
+		
+}
+?>

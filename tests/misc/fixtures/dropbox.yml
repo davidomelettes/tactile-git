@@ -1,0 +1,50 @@
+---
+
+default_user_contact:
+  -
+    id: 1
+    person_id: 1
+    name: Alternative
+    type: E
+    contact: greg+alt@tactilecrm.com
+  -
+    id: 2
+    person_id: 1
+    name: Main
+    type: E
+    contact: greg@tactilecrm.com
+
+nonmatching_user_contact:
+  -
+    id: 1
+    person_id: 1
+    name: Main
+    type: E
+    contact: do.not.use.this.email@address.com
+
+archie:
+  -
+    id: 200
+    firstname: Archie
+    surname: Dog
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+    
+archie_contact:
+  -
+    id: 200
+    person_id: 200
+    name: Main
+    type: E
+    contact: archie@omelett.es
+    
+attach_opp:
+  -
+    id: 100
+    name: Test Opportunity
+    enddate: 2015-01-01
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    

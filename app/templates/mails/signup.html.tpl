@@ -1,0 +1,8 @@
+{assign var='email_title' value='Welcome to Tactile CRM'}
+{include file="mails/shared/header.tpl"}
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 25px 0 10px 0; padding: 0;">Hi {$firstname},</p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">Welcome to Tactile CRM and thank you for signing up - <strong>your account is now setup and you can start using it straight away:</strong></p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">Site Address: <strong><a href="https://{$site_address}.tactilecrm.com">https://{$site_address}.tactilecrm.com</a></strong><br />Username: <strong>{$username}</strong><br />Password: [Withheld for Security Purposes]</p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">We'll be in touch over the next few days with some hints and tips about how to get the most from Tactile CRM, but please remember - <strong>if you have any questions in the meantime, drop us an email</strong> to <a href="mailto:support@tactilecrm.com">support@tactilecrm.com</a>, or give us a call.</p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0; padding: 0;">Many Thanks<br />The Tactile CRM Team</p>
+{include file="mails/shared/footer.tpl"}

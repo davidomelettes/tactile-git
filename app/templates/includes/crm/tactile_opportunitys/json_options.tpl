@@ -1,0 +1,1 @@
+{literal}{{/literal}"status":"success","opportunity_options":{$options_json}{literal}}{/literal}

@@ -1,0 +1,22 @@
+<?php
+class GLBalance extends DataObject {
+
+	function __construct() {
+		parent::__construct('glbalance');
+		$this->idField='id';
+		$this->identifierField='year';
+		$this->orderby='year';
+		
+ 		$this->validateUniquenessOf('year');
+ 		$this->validateUniquenessOf('periods_id');
+ 		$this->validateUniquenessOf('account_id');
+ 		$this->validateUniquenessOf('centre_id');
+ 		$this->belongsTo('GLMaster', 'account_id', 'account');
+ 		$this->belongsTo('GLMentre', 'centre_id', 'centre');
+ 		$this->belongsTo('Glperiod', 'periods_id', 'periods'); 
+
+	}
+
+
+}
+?>

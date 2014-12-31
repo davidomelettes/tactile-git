@@ -1,0 +1,140 @@
+---
+
+default_opportunities:
+  -
+    id: 1
+    name: Test Opportunity
+    usercompanyid: 1
+    owner: greg//tactile
+    enddate: 2007-12-01
+    alteredby: greg//tactile
+    
+default_activities:
+  -
+    id: 1
+    name: Default Activity
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+
+default_tags:
+  -
+    id: 1
+    name: bar
+    usercompanyid: 1
+    
+default_tag_map:
+  -
+    tag_id: 1
+    organisation_id: 1
+    hash: org1
+    
+extra_tags:
+  -
+    id: 2
+    name: foo
+    usercompanyid: 1
+  -
+    id: 3
+    name: baz
+    usercompanyid: 1
+    
+extra_tag_map:
+  -
+    tag_id: 2
+    activity_id: 1
+    hash: act1
+  -
+    tag_id: 3
+    activity_id: 1
+    hash: act1
+    
+multiple_tags_tag_map:
+  -
+    tag_id: 2
+    organisation_id: 1
+    hash: org1
+    
+multiple_types_tag_map:
+  -
+    tag_id: 1
+    activity_id: 1
+    hash: act1
+  -
+    tag_id: 1
+    opportunity_id: 1
+    hash: org1
+  -
+    tag_id: 1
+    person_id: 1
+    hash: peo1
+
+other_company:
+  -
+    id: 900
+    name: XX Company
+    accountnumber: XX01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 900
+    assigned_to: greg//tactile
+
+other_company_tags:
+  -
+    id: 900
+    name: bar
+    usercompanyid: 900
+    
+other_company_tag_map:
+  -
+    tag_id: 900
+    organisation_id: 900
+    hash: org900
+
+private_person:
+  -
+    id: 5
+    firstname: Private
+    surname: Person
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+
+private_user:
+  -
+    username: private//tactile
+    password: password
+    person_id: 5
+
+private_company:
+  -
+    id: 5
+    name: Private Company
+    usercompanyid: 1
+    owner: private//tactile
+    
+private_companyroles:
+  -
+    organisation_id: 5
+    roleid: 1
+    
+private_tags:
+  -
+    id: 5
+    name: private
+    usercompanyid: 1
+    
+private_tag_map:
+  -
+    tag_id: 5
+    organisation_id: 5
+    hash: org5
+    
+delayed_task_tags:
+  -
+    id: 7
+    name: delayed
+    usercompanyid: 1

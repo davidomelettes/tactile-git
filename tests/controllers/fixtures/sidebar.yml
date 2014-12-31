@@ -1,0 +1,10 @@
+---
+
+default_opportunity:
+  -
+    id: 1
+    name: Default Opp
+    enddate: 12/12/2006
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1

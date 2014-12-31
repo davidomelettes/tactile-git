@@ -1,0 +1,125 @@
+---
+
+some_person:
+  id: 1000
+  firstname: Fred
+  surname: Smith
+  owner: greg//tactile
+  alteredby: greg//tactile
+  usercompanyid: 1
+  organisation_id: 100
+  language_code: EN
+
+some_company: 
+  id: 100
+  name: Client 100
+  accountnumber: CXXX
+  usercompanyid: 1
+  owner: greg//tactile
+  alteredby: greg//tactile
+
+some_opportunity: 
+  id: 100
+  name: An Opportunity
+  description: Opportunity details
+  usercompanyid: 1
+  enddate: 2010-01-01 00:00:00
+  owner: greg//tactile
+  alteredby: greg//tactile
+
+some_other_person:
+  id: 1001
+  firstname: Another
+  surname: Person
+  owner: greg//tactile
+  alteredby: greg//tactile
+  usercompanyid: 1
+  organisation_id: 1
+  language_code: EN
+
+greg_contact_method:
+  id: 1
+  contact: greg.jones@senokian.com
+  type: E
+  person_id: 1
+  name: Main
+  main: true
+
+some_other_user:
+  -
+    person_id: 1001
+    username: otheruser//tactile
+    password: password
+    dropboxkey: aaaaaaaaaaaa
+    terms_agreed: 2009-01-01 12:30:12
+    
+some_other_access:
+  -
+    username: otheruser//tactile
+    organisation_id: 1
+
+basic:
+  id: 300
+  person_id: 1000
+  organisation_id: 100
+  email_from: notauser@example.com
+  email_to: greg.jones@senokian.com
+
+assign_opportunity:
+  id: 300
+  opportunity_id: 100
+  email_from: notauser@example.com
+  email_to: greg.jones@senokian.com
+
+change_from:
+  id: 300
+  person_id: 1000
+  organisation_id: 100
+  email_from: different@example.com
+  email_to: greg.jones@senokian.com
+
+change_to:
+  id: 400
+  person_id: 1000
+  organisation_id: 100
+  email_from: greg.jones@senokian.com
+  email_to: different@example.com
+
+unknown_to:
+  id: 300
+  email_from: notauser@example.com
+  email_to: greg.jones@senokian.com
+  subject: "Fwd: Test"
+  body: Test Body
+  owner: greg//tactile
+  usercompanyid: 1
+
+unknown_from:
+  id: 400
+  email_from: greg.jones@senokian.com
+  email_to: notauser@example.com
+  subject: "Fwd: Test"
+  body: Test Body
+  owner: greg//tactile
+  usercompanyid: 1
+
+default_contact_method:
+  -
+   id: 1
+   contact: greg.jones@senokian.com
+   type: E
+   person_id: 1
+   name: Main
+   main: true
+
+create_contacts:
+  id: 300
+  person: Robert Smith
+  organisation: The Cure
+  opportunity: Friday I'm in Love
+  
+default_status:
+  id: 900
+  name: Won
+  usercompanyid: 1
+  

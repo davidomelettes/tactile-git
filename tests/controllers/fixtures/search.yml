@@ -1,0 +1,174 @@
+
+search_organisations:
+  -
+    id: 100
+    name: Tactile CRM
+    accountnumber: TC01
+    usercompanyid: 1
+    owner: greg//tactile
+    created: 2009-01-01 00:00:00
+  -
+    id: 200
+    name: Zanzibar CRM
+    accountnumber: Z01
+    usercompanyid: 1
+    owner: greg//tactile
+  -
+    id: 300
+    name: XXX Co
+    accountnumber: X01
+    usercompanyid: 1
+    owner: greg//tactile
+  -
+    id: 400
+    name: Tictacle DRM
+    accountnumber: TD01
+    usercompanyid: 1
+    owner: greg//tactile
+    created: 2009-01-01 00:00:00
+    
+search_people:
+  -
+    id: 100
+    organisation_id: 100
+    firstname: David
+    surname: Edwards
+    language_code: EN
+    usercompanyid: 1
+    owner: greg//tactile
+  -
+    id: 200
+    firstname: Bob
+    surname: Smith
+    language_code: EN
+    usercompanyid: 1
+    owner: greg//tactile
+  -
+    id: 300
+    firstname: Simon
+    surname: Kamina
+    can_call: 'FALSE'
+    can_email: 'FALSE'
+    language_code: EN
+    usercompanyid: 1
+    owner: greg//tactile
+    
+search_opportunities:
+  -
+    id: 100
+    name: Fix the boat
+    cost: 500
+    probability: 70
+    enddate: 11/11/2011
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+  -
+    id: 200
+    name: Build a website
+    cost: 5000
+    organisation_id: 100
+    person_id: 100
+    probability: 50
+    enddate: 11/11/2012
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+  -
+    id: 300
+    name: Write a report
+    cost: 100
+    probability: 95
+    enddate: 11/11/2011
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+
+search_activity_types:
+  -
+    id: 100
+    name: Business
+    usercompanyid: 1
+  -
+    id: 200
+    name: Recreational
+    usercompanyid: 1
+
+search_activities:
+  -
+    id: 100
+    name: Eat a sandwich
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    usercompanyid: 1
+  -
+    id: 200
+    name: Throw a party
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    usercompanyid: 1
+    type_id: 200
+  -
+    id: 300
+    name: Draw a diagram
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    usercompanyid: 1
+    type_id: 100
+    
+search_custom_fields:
+  -
+    id: 900
+    usercompanyid: 1
+    name: Favourite Colour
+    type: s
+    people: 'true'
+
+search_custom_field_options:
+  -
+    id: 100
+    field_id: 900
+    value: Red
+  -
+    id: 200
+    field_id: 900
+    value: Green
+  -
+    id: 300
+    field_id: 900
+    value: Blue
+
+search_custom_field_map:
+  -
+    field_id: 900
+    person_id: 100
+    hash: per100
+    option: 200
+  -
+    field_id: 900
+    person_id: 200
+    hash: per200
+    option: 300
+  -
+    field_id: 900
+    person_id: 300
+    hash: per300
+    option: 100
+    
+search_advanced_searches:
+  -
+    id: 100
+    name: Name contains crm
+    record_type: org
+    query: q[gen_name][op]=CONTAINS&q[gen_name][value]=crm
+    owner: greg//tactile
+    usercompanyid: 1

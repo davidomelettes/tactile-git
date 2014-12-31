@@ -1,0 +1,5 @@
+BEGIN;
+ALTER TABLE companyroles DROP CONSTRAINT companyroles_roleid_fkey;
+ALTER TABLE companyroles ADD FOREIGN KEY (roleid) REFERENCES roles(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+COMMIT;

@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>broken_contactmethodtest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">broken_contactmethodtest</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>add_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>contact</td>
+	<td>01212344567</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//td[@class='client_contact']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@class='client_contact']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>contact</td>
+	<td>01212344564</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//div[@class='loading']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

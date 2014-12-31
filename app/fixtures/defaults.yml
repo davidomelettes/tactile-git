@@ -1,0 +1,111 @@
+---
+company_statuses:
+  -
+    name: New
+  -
+    name: Qualified
+  -
+    name: Developed
+  -
+    name: Closed
+    
+company_sources:
+  -
+    name: Website
+  -
+    name: Word of Mouth
+  -
+    name: Referral
+    
+company_ratings:
+  -
+    name: Excellent
+  -
+    name: Good
+  -
+    name: Okay
+  -
+    name: Bad
+  -
+    name: Terrible
+
+company_industries:
+  -
+    name: IT
+  -
+    name: Design
+  -
+    name: Retail
+  -
+    name: Construction
+  -
+    name: Manufacturing
+    
+company_types:
+  -
+    name: Sole-trader / Freelance
+  -
+    name: Public Sector
+  -
+    name: Charity
+  -
+    name: Ltd Company
+  -
+    name: PLC
+    
+opportunitystatus:
+  -
+    name: Initial Contact
+    open: true
+    won: false
+    position: 1
+  -
+    name: In Discussion
+    open: true
+    won: false
+    position: 2
+  -
+    name: Won
+    open: false
+    won: true
+    position: 3
+  -
+    name: Lost
+    open: false
+    won: false
+    position: 4
+  -
+    name: On Hold
+    open: true
+    won: false
+    position: 5
+    
+opportunitysource:
+  -
+    name: Website
+    position: 1
+  -
+    name: Newsletter
+    position: 2
+  -
+    name: Word of Mouth
+    position: 3
+    
+opportunitytype:
+  -
+    name: New Business
+    position: 1
+  -
+    name: Repeat Business
+    position: 2
+    
+activitytype:
+  -
+    name: Need to Call
+    position: 1
+  -
+    name: Need to Email
+    position: 2
+  -
+    name: Meeting
+    position: 3

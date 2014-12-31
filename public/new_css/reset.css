@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: verdana, sans-serif;
+	font-size: x-small;
+}
+
+a {
+	text-decoration: none;
+	outline-style: none;
+	cursor: pointer;
+}
+	a:hover { text-decoration: underline; }
+	
+ul { list-style: none; }
+ul.bullets {
+	list-style: disc;
+	margin-bottom: 1em;
+}
+	ul.bullets li {
+		margin-left: 2em;
+		margin-bottom: 1em;
+	}
+
+h1 { font-size: 1.4em; }
+h2 {
+	font-size: 1.8em;
+	color: #333;
+}
+h3 { font-size: 1.4em; }
+h4 { font-size: 1em; }
+h1, h2, h3, h4 {}
+
+p { margin-bottom: 1em; }
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+	table td,
+	table th,
+	table caption { text-align: left; }
+
+
+/*
+ * FORMS
+ */
+
+form {}
+	form fieldset {	overflow: hidden; }
+
+textarea {
+	border-width: 1px;
+	border-style: solid;
+	font-family: verdana, sans-serif;
+	font-size: 1em;
+	padding: 3px;
+	line-height: 17px;
+}
+input { padding: 1px 6px; }
+input, select {
+	font-size: 1em;
+	line-height: 1em;
+	vertical-align: middle;
+	border-width: 1px;
+	border-style: solid;
+}
+	input.file { border: 0; }
+	input.checkbox {
+		width: auto;
+		margin-top: 2px;
+		margin-right: 5px;
+		padding: 0;
+		border: 0;
+	}
+	input.radio {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	input.short { width: 50px; }
+	input.savebutton { width: auto; }
+	
+button.button_link {
+	display: block;
+	border: none;
+	font-size: 1em;
+	line-height: 1em;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.inline_input input { vertical-align: 0; }
+
+
+/*
+ * MISC
+ */
+
+.left { float: left; }
+.right { float: right; }
+.t-left { text-align: left; }
+.t-right { text-align: right; }
+.t-center { text-align: center; }
+.clear { clear: both; }
+.c-left { clear: left; }
+.c-right { clear: right; }
+
+a.action, #actions ul a, a.show_fields { text-decoration: underline; }
+
+table.index_table thead th.toggle,
+table.index_table tfoot th.toggle,
+table.index_table tbody td.toggle { text-align: center; }
+table.index_table thead th.numeric,
+table.index_table tfoot th.numeric,
+table.index_table tbody td.numeric {
+	text-align: right;
+	padding-left: 1em;
+}
+
+.sprite,
+.sprite-med {
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	padding-left: 20px;
+	line-height: 20px;
+	height: 20px;
+	display: inline-block;
+}
+.sprite-med {
+	height: auto;
+	line-height: 30px;
+	min-height: 30px;
+	padding-left: 35px;
+}
+
+.sprite-right {
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	padding-right: 20px;
+	line-height: 20px;
+	height: 20px;
+	display: inline-block;
+}

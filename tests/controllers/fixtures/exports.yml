@@ -1,0 +1,222 @@
+---
+
+all_main_fields:
+  name: Test Client
+  accountnumber: TC01
+  parent_id: 1
+  owner: greg//tactile
+  
+client_defaults: 
+  - 
+    id: 100
+    name: Client 100
+    accountnumber: CXXX
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    created: 2007-04-19 14:00:09
+    lastupdated: 2007-04-19 14:00:09
+
+contact_methods:
+  -
+    organisation_id: 100
+    type: E
+    main: true
+    contact: sales@tactilecrm.com
+    name: Main
+  -
+    organisation_id: 100
+    type: T
+    main: true
+    contact: 0121 234 5543
+    name: Main
+
+crm_defaults:
+   company_statuses:
+     id: 1
+     name: Test Status
+   company_sources:
+     id: 1
+     name: Test Source
+   company_classifications:
+     id: 1
+     name: Test Classification
+   company_ratings:
+     id: 1
+     name: Test Rating
+   company_industries:
+     id: 1
+     name: Test Industry
+   company_types:
+     id: 1
+     name: Test Type
+
+client_tags:
+  -
+    id: 100
+    name: Foo
+    usercompanyid: 1
+  -
+    id: 101
+    name: Bar
+    usercompanyid: 1
+  -
+    id: 102
+    name: Baz
+    usercompanyid: 1
+
+client_access:
+  -
+    organisation_id: 100
+    roleid: 1
+    read: true
+    write: true
+
+client_tag_map:
+  -
+    tag_id: 100
+    organisation_id: 1
+  -
+    tag_id: 101
+    organisation_id: 1
+    
+client_tag_map2:
+  -
+    tag_id: 101
+    organisation_id: 100
+  -
+    tag_id: 102
+    organisation_id: 100
+
+alternative_person:
+  -
+    id: 100
+    firstname: Fred
+    surname: Smith
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    language_code: EN
+
+alternative_user:
+  - 
+    person_id: 100
+    username: user2//tactile
+    password: sdfsdfsdfsdfsdfds
+    
+org_address:
+  -
+    organisation_id: 100
+    main: true
+    street1: 100 Client Road
+    street2: Clientburb
+    street3:
+    town: Clienttown
+    county: Clientshire
+    postcode: CL34 5LK
+    country_code: GB
+    
+default_people:
+  -
+    id: 100
+    firstname: Sam
+    surname: Sparro
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+    created: 2007-04-19 14:00:17
+    lastupdated: 2007-04-19 14:00:17
+
+person_contact_details:
+  -
+    id: 200
+    person_id: 1
+    contact: 0123 345 3455
+    type: T
+    main: true
+    name: Main
+  -
+    id: 201
+    person_id: 1
+    contact: hello@world.com
+    type: E
+    main: true
+    name: Main
+  -
+    id: 202
+    person_id: 1
+    contact: 07784 543 544
+    type: M
+    main: true
+    name: Main
+
+person_address:
+  -
+    person_id: 1
+    main: true
+    street1: Flat 13
+    street2: 12 Person Road
+    street3: Someburb
+    town: Peopletown
+    county: Peopleshire
+    postcode: PE3 3PG
+    country_code: GB
+
+default_person_tags:
+  -
+    tag_id: 100
+    person_id: 1
+  -
+    tag_id: 101
+    person_id: 1
+    
+default_person_tags_2:
+  -
+    tag_id: 101
+    person_id: 100
+  -
+    tag_id: 102
+    person_id: 100
+
+activities:
+  -
+    id: 100
+    name: Activity 100
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+  -
+    id: 200
+    name: Activity 200
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+  -
+    id: 300
+    name: Activity 300
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    
+activities_tag_map:
+  -
+    tag_id: 100
+    activity_id: 100
+  -
+    tag_id: 100
+    activity_id: 300
+    
+alternative_person_contact_details:
+  -
+    id: 100
+    person_id: 100
+    type: E
+    main: true
+    name: Main
+    contact: foo@bar.com

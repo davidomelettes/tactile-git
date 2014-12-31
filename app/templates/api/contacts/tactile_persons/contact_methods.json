@@ -1,0 +1,6 @@
+{"status":"success", "contact_methods": [<#strip#>
+<#foreach name=contact_methods from=$contact_methods item=contact_method#>
+<#$contact_method->asJson()#>
+<#if !$smarty.foreach.contact_methods.last#>,<#/if#>
+<#/foreach#>
+<#/strip#>]}

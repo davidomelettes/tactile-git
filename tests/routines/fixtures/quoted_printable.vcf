@@ -1,0 +1,8 @@
+BEGIN:VCARD
+N:Hatfield;Jane
+FN:Jane Hatfield
+CATEGORIES:Business,Personal
+TEL;HOME:09876543210
+ADR;HOME;ENCODING=QUOTED-PRINTABLE:Mail Stop 9=0D=0ANewline;Suite 105;1001 Pop Road;Denver;CO;80301
+EMAIL;INTERNET:jhatfield@cocacola.com
+END:VCARD

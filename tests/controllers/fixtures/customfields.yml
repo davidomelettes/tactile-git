@@ -1,0 +1,101 @@
+---
+
+basic_company:
+  -
+    id: 100
+    name: Private Client
+    accountnumber: PC01
+    usercompanyid: 1
+    owner: greg//tactile
+    
+text_custom_field:
+  -
+    id: 100
+    name: Test Field
+    type: t
+    usercompanyid: 1
+    organisations: t
+    people: t
+    opportunities: t
+    activities: t
+
+checkbox_custom_field:
+  -
+    id: 100
+    name: Test Field
+    type: c
+    usercompanyid: 1
+    organisations: t
+    people: t
+    opportunities: t
+    activities: t
+    
+custom_field_disabled:
+  -
+    id: 100
+    name: Test Field
+    type: t
+    usercompanyid: 1
+    organisations: f
+    people: f
+    opportunities: f
+    activities: f 
+    
+basic_person:
+  -
+    id: 100
+    firstname: Charlie
+    surname: Catfish
+    jobtitle: IT Manager
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    language_code: EN
+    assigned_to: greg//tactile
+    created: 2007-12-04 15:23:43
+    
+text_custom_field_map:
+ -
+    id: 100
+    field_id: 100
+    organisation_id: 100
+    value: whakka whakka woo
+    hash: o100
+
+checkbox_custom_field_map_enabled:
+ -
+    id: 100
+    field_id: 100
+    organisation_id: 100
+    enabled: t
+    hash: o100
+
+checkbox_custom_field_map_disabled:
+ -
+    id: 100
+    field_id: 100
+    organisation_id: 100
+    enabled: f
+    hash: o100
+    
+basic_opportunity:
+  -
+    id: 100
+    name: Default Opp
+    enddate: 12/12/2006
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    
+basic_activity:
+  -
+    id: 100
+    name: Activity Event
+    class: event
+    owner: greg//tactile
+    alteredby: greg//tactile
+    later: true
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1
+     

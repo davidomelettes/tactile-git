@@ -1,0 +1,470 @@
+.edit_holder {}
+	
+form.saveform {}
+	form.saveform .row {
+		overflow: hidden;
+		margin-bottom: 10px;
+		max-width: 400px;
+	}
+		form.saveform .row label,
+		form.saveform .row .false_label {
+			float: left;
+			font-size: 1.2em;
+			line-height: 2em;
+		}
+		#modal_form form.saveform .row .false_input { line-height: 2em; padding: 0; }
+		form.saveform .row .false_input,
+		form.saveform .row input,
+		form.saveform .row select {
+			float: right;
+			font-size: 1.2em;
+			padding: 4px 1px;
+			margin: 0 0 0 5px;
+			width: 180px;
+			line-height: 1em;
+		}
+		form.saveform .row select {
+			width: 182px;
+			padding: 1px;
+			margin-top: 2px;
+		}
+		form.saveform .row .new_clear {
+			float: right;
+			line-height: 1em;
+			margin: 3px 0 0 0;
+			display: none;
+		}
+		form.saveform .row .new_clear * { display: none; }
+		form.saveform .row .new_clear.new { display: inline; cursor: pointer; }
+		form.saveform .row .new_clear.new strong { display: inline; padding: 0 20px 0 0; background-position: 100% 50%; }
+		form.saveform .row .new_clear.clear { display: inline; clear: none; }
+		form.saveform .row .new_clear.clear a { display: inline; }
+		form.saveform .notice { position: absolute; left: 420px; padding-left: 5px; background: transparent url(/graphics/tactile/left.png) 0px 8px no-repeat; min-width: 250px; max-width: 300px; }
+		form.saveform .notice div { background-color: #666; color: #fff; padding: 5px 10px; }
+		form.saveform .row input.checkbox {
+			width: auto;
+			margin-top: 4px;
+			margin-right: 170px;
+		}
+		form.saveform .row input.file {
+			float: none;
+			margin-left: 50px;
+		}
+		input.submit {
+			background: #ccc url(/graphics/tactile/button-bg.png) top left repeat-x;
+			cursor: pointer;
+			line-height: 1.4em;
+			padding: 1px 8px;
+		}
+			form input.submit:hover,
+			form.saveform .row input.submit:hover { border-color: #333; }
+		form.saveform .row textarea {
+			float: right;
+			min-height: 80px;
+			max-height: 300px;
+			width: 345px;
+			font-size: 1.2em;
+			padding: 4px 1px;
+		}
+		textarea.descriptionEdit {
+			min-height: 80px;
+			max-height: 300px;
+			padding: 4px 1px;
+		}
+		
+		form.saveform input.short { width: 50px; }
+		form.saveform #save_container { text-align: right; }
+			form.saveform #save_container input {
+				float: none;
+				padding: 4px 6px;
+				margin: 0;
+				width: auto;
+				background: #ccc url(/graphics/tactile/button-bg.png) top left repeat-x;
+				cursor: pointer;
+				width: 180px;
+			}
+			form.saveform #save_container input:hover { border-color: #333; }
+		
+		
+	form.saveform fieldset#save_container {
+		border-top-width: 1px;
+		border-top-style: dashed;
+		padding-top: 20px;
+	}
+	form.saveform input.has_error {
+		border-width: 1px;
+		border-style: solid;
+	}
+	form.saveform fieldset.cancel_or_save { font-size: 1.2em; }
+	form.saveform fieldset#save_container.cancel_or_save input {
+		float: none;
+		font-size: 1em;
+		padding: 1px 6px;
+		width: auto;
+		margin-left: 100px;
+	}
+
+	form.saveform .inline_error {
+		float: left;
+		margin: 6px 0;
+		padding: 4px 0;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	
+	form.saveform label.inline_checkbox {
+		float: none;
+		width: auto;
+		font-size: 1.2em;
+	}
+		form.saveform label.inline_checkbox input {
+			float: none;
+			margin: 0;
+		}
+
+#right_bar form.saveform .row label { font-size: 1em; }
+#right_bar form.saveform .row input,
+#right_bar form.saveform .row select { font-size: 1em; width: 140px; }
+#right_bar form.saveform .inline_checkbox input { width: auto; margin: 0; vertical-align: text-bottom; }
+
+form.delete_form {}
+	form.delete_form fieldset#save_container {
+		font-size: 1.2em;
+		border-top-width: 2px;
+		border-top-style: dashed;
+		padding-top: 20px;
+	}
+		form.delete_form fieldset#save_container input { margin-left: 196px; }
+
+
+div.form_help {
+	position: relative;
+	padding: 10px 20px 0 20px;
+	margin: 0 0px 20px 0;
+	border-width: 1px;
+	border-style: solid;
+}
+	div.form_help .more {
+		float: right;
+		font-size: 1.2em;
+		margin: 0 0 1em 1em;
+	}
+	div.form_help a:hover { text-decoration: underline; }
+	div.form_help .warning { font-weight: bold; }
+
+.edit_holder fieldset div.duplicates {
+	clear: both;
+	float: right;
+	width: 182px;
+	border-width: 1px;
+	border-style: dashed;
+	border-top: 0;
+}
+	.edit_holder fieldset div.duplicates p {
+		background-color: #ddd;
+		margin: 0;
+		padding: 0 5px;
+		font-size: 1em;
+		border-top: 1px solid #999;
+	}
+	.edit_holder fieldset div.duplicates p.top {
+		padding: 5px;
+		font-size: 1.2em;
+		border: 0;
+	}
+	.edit_holder fieldset div.duplicates ul {
+		background-color: #eee;
+		border-top: 1px solid #999;
+	}
+	.edit_holder fieldset div.duplicates li { color: #00c; padding: 5px; }
+	.edit_holder fieldset div.duplicates li:hover { background-color: #fff; cursor: pointer; }
+
+.edit_holder #read_access,
+.edit_holder #write_access {}
+	.edit_holder #read_access h4,
+	.edit_holder #write_access h4 {
+		font-size: 1.2em;
+		display: inline;
+	}
+	.edit_holder #read_access .radio_options,
+	.edit_holder #write_access .radio_options { padding: 0; }
+	.edit_holder #read_access .radio_options li,
+	.edit_holder #write_access .radio_options li { margin-bottom: 10px; }
+		.edit_holder #read_access .radio_options label,
+		.edit_holder #write_access .radio_options label {
+			float: none;
+			font-size: 1em;
+		}
+		.edit_holder #read_access .radio_options input,
+		.edit_holder #write_access .radio_options input {
+			float: none;
+			margin: 0 5px 0 0;
+		}
+		.edit_holder #read_access .radio_options select,
+		.edit_holder #write_access .radio_options select { margin: 10px 0 0 0; }
+
+.edit_holder fieldset a.quick_add_trigger {
+	float: left;
+	line-height: 1.6em;
+	margin: 10px 0;
+}
+
+/*
+ * PREFERENCES
+ */
+
+#pref_nav {
+	overflow: hidden;
+	border: 1px solid #999;
+}
+	#pref_nav ul {
+		padding-right: 15px;
+		display: table;
+	}
+		#pref_nav ul li {
+			float: left;
+			font-size: 1.2em;
+			line-height: 25px;
+			padding: 0 0 0 15px;
+		}
+			#pref_nav ul li.arrow {
+				background: url(/graphics/tactile/chevron25.png) no-repeat right top;
+				width: 15px;
+			}
+				#pref_nav ul li.on_left {
+					background: url(/graphics/tactile/chevron25selected.png) no-repeat right top;
+				}
+				#pref_nav ul li.on_right {
+					background: url(/graphics/tactile/chevron25backwards.png) no-repeat right top;
+				}
+				#pref_nav ul li.on { background-color: #ff9; }
+				#pref_nav ul li h3 a {
+					display: inline-block;
+					font-weight: normal;
+				}
+				#pref_nav ul li.on a {
+					color: #333;
+					font-weight: bold;
+				}
+				#pref_nav ul li:last-child h3 { padding-left: 5px; }
+
+#pref_content {
+	padding-top: 20px;
+	border: 1px solid #999;
+	border-top: 0;
+}
+	#pref_content .content_holder {
+		margin: 0;
+		overflow: hidden;
+		padding: 0 20px;
+	}
+	#pref_content .content_holder .content { margin-left: 0; }
+
+.edit_holder .dropboxkey,
+.edit_holder .webkey {}
+.edit_holder fieldset.prefs_save { margin-bottom: 20px; }
+	.edit_holder fieldset.prefs_save input { margin-left: 176px; }
+
+#timeline_options input { float: none; }
+
+#right_bar #toggle_welcome_message .mini_preference_label {
+	float: left;
+	padding-top: 3px;
+	margin-bottom: 10px;
+}
+#right_bar #toggle_welcome_message input {
+	width: auto;
+	float: right;
+}
+
+#key_prefs input.savebutton { margin-bottom: 20px; }
+
+#timeline_options { margin-top: 2px; }
+
+
+/*
+ * TAGS
+ */
+
+input#tags.tag_list { width: 300px; }
+
+div#import_options {}
+	div#import_options input.checkbox { margin-top: 3px; }
+
+
+/*
+ * ACTIVITIES
+ */
+
+#activity_new_inline { margin-left: 20px; }
+#activity_new_inline .row label { margin: 5px 0 0 0; }
+
+#when_container { float: right; width: 187px; position: relative; }
+	#when_container a.skipToDate { display: block; position: absolute; left: -25px; top: 0; height: 25px; width: 25px; background: transparent url(/graphics/tactile/icons/calendar.png) no-repeat center center; }
+	#when_container a.skipToDate:hover { text-decoration: none; }
+	#when_container input,
+	#when_container select { float: right; }
+	#when_container #datetime_container { float: right; }
+	#activity_select_date { width: 112px !important; }
+	#activity_location_container { display: none; }
+	.activity_fs.todo_later,
+	.activity_fs.event_later {}
+		.activity_fs.todo_later #activity_datetime,
+		.activity_fs.todo_later #time_range_mark,
+		.activity_fs.todo_later #activity_end_datetime,
+		.activity_fs.event_later #activity_datetime,
+		.activity_fs.event_later #time_range_mark,
+		.activity_fs.event_later #activity_end_datetime { display: none; }
+		.activity_fs.todo_later #activity_select_date,
+		.activity_fs.event_later #activity_select_date { width: 180px !important; }
+		.activity_fs.event_later #activity_location_container { display: block; }
+	.activity_fs.todo_t {}
+		.activity_fs.todo_t input.date,
+		.activity_fs.todo_t #time_range_mark,
+		.activity_fs.todo_t #activity_end_datetime { display: none; }
+	.activity_fs.todo_date {}
+		.activity_fs.todo_date #time_range_mark,
+		.activity_fs.todo_date #activity_end_datetime { display: none; }
+		.activity_fs.todo_date #activity_select_date { width: 180px !important; }
+		.activity_fs.todo_date #datetime_container { margin-top: 10px; }
+	.activity_fs.event_t {}
+		.activity_fs.event_t #activity_location_container { display: block; }
+		.activity_fs.event_t #activity_datetime,
+		.activity_fs.event_t #time_range_mark,
+		.activity_fs.event_t #activity_end_datetime { float: left !important; }
+		.activity_fs.event_t input.date { display: none; }
+		.activity_fs.event_t #activity_select_date { width: 180px !important; }
+		.activity_fs.event_t #time_range_mark { margin: 5px 0; padding: 0 15px 0 20px; }
+		.activity_fs.event_t #datetime_container { margin-top: 10px; }
+	.activity_fs.event_date {}
+		.activity_fs.event_date #activity_location_container { display: block; }
+		.activity_fs.event_date #time_range_mark {
+			margin: 5px 0;
+			padding-left: 50px !important;
+		}
+		.activity_fs.event_date #datetime_container { margin-top: 10px; }
+		.activity_fs.event_date #activity_end_datetime { clear: left !important; }
+		.activity_fs.event_date #activity_select_date { width: 181px !important; }
+	
+
+#datetime_container {}
+	#datetime_container .date { width: 109px !important; }
+	#datetime_container .time { width: 25px !important; }
+
+#time_range_mark {
+	margin-top: 10px;
+	padding: 0 10px;
+	float: left;
+	font-size: 1.2em;
+}
+
+
+/*
+ * CHANGE YOUR PLAN
+ */
+
+table#plan_comparison {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+	table#plan_comparison td,
+	table#plan_comparison th {
+		padding: 5px 0;
+		text-align: center;
+	}
+	table#plan_comparison tbody th,
+	table#plan_comparison tbody td {
+		border-top-width: 1px;
+		border-top-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+	}
+	table#plan_comparison input { float: none; }
+
+
+/*
+ * CHANGE PAYMENT
+ */
+
+#card_expiration_month { width: 115px; }
+#card_expiration_year { width: 60px; }
+
+
+/*
+ * GROUPS/ROLES
+ */
+
+#read_roles_ids,
+#write_roles_ids,
+#Role_users { height: 150px; }
+
+
+/*
+ * TACTILEMAIL
+ */
+
+#tactilemail_shared_addresses {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+	#tactilemail_shared_addresses td { padding-bottom: 3px; }
+	#tactilemail_shared_addresses td.email_address { color: #666; }
+	#tactilemail_shared_addresses td.email_address span { color: #000; }
+
+span.verified { color: #3a3; }
+span.unverified { color: #c90; }
+
+#pref_shared_addresses .content p, #pref_email_templates .content p { margin-bottom: 20px; }
+
+
+/**
+ * Custom Fields
+ */
+
+table#custom_fields_table tbody td {
+	vertical-align: top;
+	padding-top: 10px;
+	font-weight: bold;
+}
+	table#custom_fields_table tr.none_yet td,
+	table#custom_fields_table tbody a.action { font-weight: normal; }
+
+table#custom_fields_table span.sprite {
+	display: table-cell;
+	padding-right: 4px;
+}
+
+table#custom_fields_table span.addRow { display: block; }
+table#custom_fields_table span.addRow img { vertical-align: text-top; }
+table#custom_fields_table span.addRow input { margin-top: 5px; width: 120px; }
+table#custom_fields_table input.name { width: 120px; }
+
+table#custom_fields_table th#field_name,
+table#custom_fields_table th#enabled_for { width: 150px; }
+table#custom_fields_table th#delete { width: 20px; }
+
+
+/*
+ * WEBFORM
+ */
+
+#edit_tactile_webform div.radio_options {}
+	#edit_tactile_webform div.radio_options label {
+		display: inline;
+		float: none;
+		margin: 0;
+	}
+	#edit_tactile_webform div.radio_options input {
+		margin: 0;
+		float: none;
+	}
+#edit_tactile_webform .form_help pre { font-size: 1.2em; margin-bottom: 1em; }
+#edit_tactile_webform .radio_options label { font-size: 1em; line-height: 1.2em; }
+
+
+/*
+ * LOGOS
+ */
+
+#right_bar #login_logo img { border: 1px solid #333; }

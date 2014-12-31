@@ -1,0 +1,18 @@
+{"status":"success","preferences_options":{<#strip#>
+"users":{
+<#foreach name=options from=$users item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"groups":{
+<#foreach name=options from=$groups item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"date_formats":{"dmy":"Day / Month / Year","mdy":"Month / Day / Year"},
+"timezones":{
+<#foreach name=options from=$timezones item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+}
+<#/strip#>}}

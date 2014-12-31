@@ -1,0 +1,99 @@
+/*
+ * ROUNDED CORNERS
+ */
+
+#pref_content,
+.edit_holder .content_holder div.hide,
+.round-bottom {
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+}
+
+#pref_nav,
+input#header_search.has_results,
+#header ul#sub_nav > li,
+#header ul#main_nav > li,
+.round-top {
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+}
+
+.paging .details .menu,
+.content_holder h3 {
+	border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+}
+
+.round-left,
+.paging .details .pages {
+	border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+}
+
+#pref_nav li:first-child, #pref_nav li:first-child a {
+	border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+}
+
+form.saveform .notice div,
+.view_holder ul.summary_fields,
+ul#mini_nav li.l1.current a,
+ul#mini_nav li.l1.on a,
+input#header_search,
+#motd_important .inner,
+#motd .inner,
+div#by_tag_filter a.filter,
+div#by_tag_filter span.selected,
+#right_bar div.side_tag_list div.tag a,
+#right_bar div.side_tag_list div.tag span,
+.tag_list ul li.tag a,
+.modal-shadow,
+#right_bar div.foldable,
+#right_bar div.ajax-foldable,
+div.form_help,
+div#by_tag_filter,
+#welcome_text,
+.round-all,
+#summary_stats div.stats div.stat,
+#summary_stats div.stats_small div.stat,
+#system_navbar div.bubble,
+#dashboard_report .item,
+#dashboard_report .bubble,
+#activity_stats .bubble a {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+input.submit,
+.summary_fields .view_data textarea,
+form.saveform .row textarea,
+form.saveform .row input[type="submit"],
+form.saveform .row input[type="password"],
+form.saveform .row input[type="text"] {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+form.saveform .row input.has_results,
+#modal_form input.has_results {
+	border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+}
+
+/*
+ * Opacity
+ */
+#system_navbar div.bubble,
+#dashboard_report .stats .bubble {
+	opacity: 0.95;
+	filter:alpha(opacity=95);
+	-moz-opacity: 0.95;
+}

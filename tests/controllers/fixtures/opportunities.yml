@@ -1,0 +1,129 @@
+---
+
+basic:
+  name: Test Opportunity
+  enddate: 12/03/2008
+  status_id: 100
+  
+  
+with_created_set:
+  name: Test Opportunity
+  enddate: 13/04/2008
+  created: 12/01/2002
+  status_id: 100
+    
+with_quotes:
+  name: Test for Mr O'Reilly
+  enddate: 30/04/2008
+  status_id: 100
+  
+all_main_fields:
+  name: Test with more fields
+  enddate: 23/04/2007
+  probability: 50
+  assigned_to: user2//tactile
+  status_id: 100
+  
+invalid_enddate:
+  name: Test with invalid enddate
+  enddate: 32/02/2008
+  status_id: 100
+  
+non_numeric_probability:
+  name: Test with alpha probability
+  enddate: 12/05/2008
+  probability: twenty
+  status_id: 100
+  
+prob_over_100:
+  name: Test with too high probability
+  enddate: 13/12/2008
+  probability: 200
+  status_id: 100
+  
+prob_negative:
+  name: Test with negative probability
+  enddate: 13/12/2008
+  probability: -20
+  status_id: 100
+  
+basic_with_lookups:
+  name: Test Opportunity
+  enddate: 12/03/2008
+  status_id: 1
+  source_id: 1
+  type_id: 1
+
+basic_with_invalid_lookups:
+  name: Test Opportunity
+  enddate: 12/03/2008
+  status_id: 999
+  source_id: 999
+  type_id: 999
+
+
+basic_with_mdy_date:
+  name: Test Opportunity
+  enddate: 12/20/2008
+  status_id: 100
+
+alternative_person:
+  -
+    id: 100
+    firstname: Fred
+    surname: Smith
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    language_code: EN
+ 
+alternative_user:
+  - 
+    person_id: 100
+    username: user2//tactile
+    password: sdfsdfsdfsdfsdfds
+
+alternative_companies:
+  -
+    id: 10
+    name: Test Other UC
+    accountnumber: TOU01
+    usercompanyid: 10
+    owner: user2//tactile
+    alteredby: user2//tactile
+    
+basic_note:
+  title: Test Note
+  note: This is a test note
+  opportunity_id: 100
+  owner: greg//tactile
+  alteredby: greg//tactile
+    
+
+default_opps:
+  -
+    id: 100
+    name: Default Opp
+    enddate: 12/12/2006
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    status_id: 100
+    
+default_status:
+  -
+    id: 100
+    name: Default Status
+    usercompanyid: 1
+    
+custom_defaults:
+   opportunitystatus:
+     id: 1
+     name: Test Status
+   opportunitysource:
+     id: 1
+     name: Test Source
+   opportunitytype:
+     id: 1
+     name: Test Type
+   

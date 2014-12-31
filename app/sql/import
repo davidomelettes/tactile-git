@@ -1,0 +1,27 @@
+#!/bin/sh
+# Silly little script to automate importing Tactile sql files
+
+if [ x$USER != xpostgres ]
+	then
+		echo "This script must be run as the user postgres."
+		exit 1
+
+elif [ x`hostname` != xdagonet ]
+	then
+		echo "This script must be run on Dagonet."
+		exit 1
+
+elif [ x$1 == x ]
+	then
+		echo "This script takes one argument, which must be an sql file for importing."
+		echo "All other arguments are ignored."
+		exit 1
+
+elif [ ! -r $1 ]
+	then
+		echo "$1 cannot be opened for reading."
+		exit 1
+
+fi
+
+psql -U tactile -d tactile < $1

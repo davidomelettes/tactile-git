@@ -1,0 +1,6 @@
+{"status":"success", "organisations": [<#strip#>
+<#foreach name=organisations item=organisation from=$organisations#>
+<#$organisation->asJson()#>
+<#if !$smarty.foreach.organisations.last#>,<#/if#>
+<#/foreach#>
+<#/strip#>], "cur_page":<#$cur_page#>, "num_pages":<#$num_pages#>, "per_page":<#$organisations->per_page#>, "total":<#$organisations->num_records#>}

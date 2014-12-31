@@ -1,0 +1,102 @@
+---
+
+basic:
+  Person:
+    firstname: Simon
+    surname: Simonson
+    email: 
+      contact: greg.jones@senokian.com
+  User:
+    username: testuser123
+    enabled: on
+
+missing_firstname:
+  Person:
+    surname: Simonson
+    email: 
+      contact: greg.jones@senokian.com
+  User:
+    username: testuser123
+    enabled: on
+
+missing_surname:
+  Person:
+    firstname: Simon
+    email: 
+      contact: greg.jones@senokian.com
+  User:
+    username: testuser123
+    enabled: on
+
+missing_person:
+  User:
+    username: testuser123
+    enabled: on
+
+missing_user:
+  Person:
+    firstname: Simon
+    surname: Smith
+    email: 
+      contact: greg.jones@senokian.com
+
+missing_email:
+  Person:
+    firstname: Simon
+    surname: Simonson
+  User:
+    username: testuser123
+    enabled: on
+
+existing_username:
+  Person:
+    firstname: Simon
+    surname: Simonson
+    email: greg.jones@senokian.com
+  User:
+    username: greg
+    enabled: on
+
+with_role:
+  Person:
+    firstname: Simon
+    surname: Simonson
+    email: 
+      contact: greg.jones@senokian.com
+  User:
+    username: testuser123
+    enabled: on
+  role_ids:
+    - 100
+
+with_two_roles:
+  Person:
+    firstname: Simon
+    surname: Simonson
+    email: 
+      contact: greg.jones@senokian.com
+  User:
+    username: testuser123
+    enabled: on
+  role_ids:
+    - 100
+    - 101
+
+default_roles:
+  -
+    id: 100
+    name: Test Role
+    usercompanyid: 1
+  -
+    id: 101
+    name: Test Role 2
+    usercompanyid: 1
+    
+existing_email:
+  -
+    id: 200
+    type: E
+    contact: greg.jones@senokian.com
+    main: true
+    name: Main
+    person_id: 1

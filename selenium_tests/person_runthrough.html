@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>person_runthrough</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">person_runthrough</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=People</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>add_person</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>person_firstname</td>
+	<td>Selenium</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>person_surname</td>
+	<td>TestPerson</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>person_jobtitle</td>
+	<td>Head of Testing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Person_phone_contact</td>
+	<td>0121 234 5678</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>edit_person</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>person_surname</td>
+	<td>TestPerson (edited)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>delete_person</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to do this?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Person successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Tactile</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

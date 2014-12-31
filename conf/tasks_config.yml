@@ -1,0 +1,67 @@
+---
+#7 = debug, 6 = info, 5 = info, 4 = warn, 3 = crit
+- &loglevels
+  console: 4
+  file: 7
+
+#for tasks run in response to user-actions
+taskrunner:
+  log: *loglevels
+
+#for tasks run every hour, split down by classname
+hourly_config:
+  ActivityReminderSender:
+    production: true
+    send_time: 06:00
+    log: *loglevels
+    
+#test should be "true", "false" or "live" (all as strings!)- false doesn't mean live, it means always-fail
+daily_config:
+  AccountChecker:
+    log: *loglevels
+    test: "live"
+  PageLoadHistory:
+    log: *loglevels
+    test: "true"
+    
+morningly_config:
+  WhatDidYouThink:
+    log: *loglevels
+    test: "false"
+  SendNoLoginReminders:
+    log: *loglevels
+    test: "false"
+  WebinarInvite:
+    log: *loglevels
+    test: "false"
+
+frequently_config:
+  DropboxChecker:
+    mail:
+      host: imap.senokian.net
+      user: testbox@senokian.net
+      password: minxmann
+      ssl: SSL
+    log: *loglevels
+  Invoicing:
+    log: *loglevels
+    test: "false"
+  SyncNewAccounts:
+    log: *loglevels
+    test: "false"
+
+never_config:
+  TestSendEmail:
+    log:
+      console: 7
+      mail: 1
+    test: "true"
+  Invoicing:
+    log:
+      console: 7
+    test: "false"
+
+ondemand_config:
+  ParseMail:
+    log: *loglevels
+

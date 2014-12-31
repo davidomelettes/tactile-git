@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>lead_runthrough</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">lead_runthrough</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Leads</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Leads</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Add New Lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>add_lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>company_name</td>
+	<td>Selenium Test Lead</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>company_employees</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Contact Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Company_description</td>
+	<td>Selenium Test Lead is a test of adding leads</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>edit_lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>company_name</td>
+	<td>Selenium Test Lead (edited)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>company_employees</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>delete_lead</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to do this?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Tactile</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

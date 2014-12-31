@@ -1,0 +1,11 @@
+{"status":"success","preferences":{<#strip#>
+"person_id":<#$current_user->person_id#>,
+"is_admin":<#if $current_user->isAdmin()#>true<#else#>false<#/if#>,
+"account_plan":"<#$current_user->getAccountPlanName()#>",
+"dropbox_adddress":"<#$current_user->getDropboxAddress()#>",
+"web_key":"<#$webkey#>",
+"date_format":"<#$date_format#>",
+"timezone":"<#if $europe_selected#><#$europe_selected#>
+<#elseif $america_selected#><#$america_selected#>
+<#else#><#$all_selected#><#/if#>"
+<#/strip#>}}

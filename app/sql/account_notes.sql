@@ -1,0 +1,1 @@
+-- Add a notes column to our accounts table

@@ -1,0 +1,72 @@
+#tactile_webform {}
+
+#tactile_webform p { overflow: hidden; clear: both; }
+	#tactile_webform p label { float: left; }
+	#tactile_webform p input,
+	#tactile_webform p select { float: right; }
+
+#tactile_webform_query { padding-left: 8px;}
+	#tactile_webform_query textarea { width: 100%; float: right; }
+	
+#tactile_webform_callout { float: left }
+	#tactile_webform_callout a {
+		color: #60BE19;
+		text-decoration: none;
+		padding-left: 20px;
+		background: url(/graphics/tactile/icons/tactile.png) no-repeat 0 0;
+	}
+		#tactile_webform_callout a:hover { text-decoration: underline; }
+	
+#webform_body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, sans-serif;
+	font-size: 0.8em;
+	color: #333;
+	width: 300px;
+	background-color: transparent;
+}
+#webform_container {}
+#webform_container #flash { color: #000; }
+#webform_container #flash ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	zoom: 1;
+}
+#webform_container #flash li { margin: 10px; }
+#webform_container #flash #errors {
+	border: 1px solid #c00;
+	background-color: #fcc;
+}
+#webform_container #flash #messages {
+	border: 1px solid #999;
+	background-color: #ffa;
+}
+#webform_container #flash #messages li {
+	padding-left: 20px;
+	background: url(/graphics/tactile/icons/tick.png) no-repeat 0 0;
+}
+#webform_container #flash #errors li {
+	padding-left: 20px;
+	background: url(/graphics/tactile/icons/alert.png) no-repeat 0 0;
+}
+#webform_container fieldset {
+	margin: 0 10px;
+	border: 0;
+	padding: 0;
+}
+#webform_container p { margin: 10px 0 0 0; }
+	#webform_container p label,
+	#webform_container span { line-height: 1.7em; }
+#webform_container select,
+#webform_container input.text { width: 150px; }
+#webform_container #tactile_webform_submit_fieldset { margin-bottom: 10px; overflow: hidden; }
+#webform_container #tactile_webform_required { text-align: right; font-style: italic; }
+
+#recaptcha_buttons { float: right; margin-top: 10px; }
+#webform_container #recaptcha_label { clear: none; }
+#recaptcha_refresh, #recaptcha_audio { cursor: pointer; border: 1px solid #333; padding: 2px; vertical-align: middle; }
+#recaptcha_refresh { margin-left: 2px; }
+

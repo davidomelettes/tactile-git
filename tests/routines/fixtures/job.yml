@@ -1,0 +1,13 @@
+---
+filename: >
+  /var/www/tactile.de/tests/routines/fixtures/large.csv.tmp
+sharing: 
+  read: private
+  write: private
+import_type: client
+tags: foo
+file_type: csv
+task_type: DelayedContactImport
+EGS_USERNAME: greg//tactile
+EGS_COMPANY_ID: 1
+USER_SPACE: tactile

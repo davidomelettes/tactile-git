@@ -1,0 +1,76 @@
+/* Tab fixes */
+#header { z-index: 52; }
+.topNav { position: relative; z-index: 52; }
+.topNav li.level1 {
+	*display: inline;
+	z-index: 52;
+}
+#main_nav li.level1 { margin-right: 5px; }
+#sub_nav li.level1 { margin-left: 5px; }
+
+form.saveform fieldset select optgroup option { background-color: green; }
+
+#pref_nav ul li h3 { margin-right: 0px; }
+
+div#page_title h2 #heading_logo { vertical-align: middle; }
+
+body.area_preferences div.content_holder div.show,
+div#change_plan_card_form,
+div#activity_timeline form,
+div.foldable div,
+div.ajax-foldable div { zoom: 1; }
+
+form.saveform fieldset false_label,
+form.saveform fieldset label { margin-top: 2px; }
+form.saveform .row input { padding-top: 6px; padding-bottom: 2px; }
+form.saveform .row input.checkbox { width: 16px; }
+form.saveform fieldset.save input { margin-bottom: 2px !important; }
+
+#when_container {
+	/*overflow: hidden;*/
+	padding-bottom: 5px;
+}
+
+.activity_fs.event_t #activity_datetime,
+.activity_fs.event_t #activity_end_datetime { width: 70px !important; }
+.activity_fs.event_t #time_range_mark { padding-left: 15px !important; padding-right: 9px !important; }
+
+div.inline_error {
+	position: absolute;
+	right: 0;
+	width: 200px;
+}
+
+form.saveform .cancel_or_save input { float: none; display: inline; }
+span.or { padding: 0 5px; }
+
+label.inline_checkbox { display: block; }
+	label.inline_checkbox input.checkbox {
+		float: none;
+		display: inline;
+	}
+
+#right_bar div.foldable div,
+#right_bar div.ajax-foldable div { position: relative; }
+	#right_bar div.foldable div div,
+	#right_bar div.ajax-foldable div div { position: static; }
+
+#right_bar form.side_form fieldset.save input { padding: 1px 6px; }
+
+fieldset.sidebar {
+	clear: left;
+	margin: 10px 0;
+}
+
+input.file { border: 1px solid; }
+
+/*#topbit { z-index: 47; }
+li#search_nav { vertical-align: middle; }
+li#search_nav form div { line-height: 50px; height: 50px; position: relative; width: 222px; }*/
+
+input#header_search { padding-top: 4px; padding-bottom: 0; /*position: absolute; top: 16px; right: -1px;*/ }
+
+#qa_contact_method input,
+#qa_contact_method select { display: inline; }
+
+#right_bar ul.related_list li dl dd {width: 135px;}

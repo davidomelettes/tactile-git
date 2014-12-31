@@ -1,0 +1,1 @@
+{literal}{{/literal}"status":"success", "client":{$freshbooks_client}{literal}}{/literal}

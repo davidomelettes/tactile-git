@@ -1,0 +1,153 @@
+---
+
+user_people:
+  -
+    id: 2
+    organisation_id: 1
+    firstname: Archie
+    surname: Stride
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+
+users:
+  -
+    person_id: 2
+    username: archie//tactile
+    password: password
+    terms_agreed: 2007-01-01 00:00
+    is_admin: f
+
+user_company_access:
+  -
+    username: archie//tactile
+    organisation_id: 1
+
+roles:
+  -
+    id: 20
+    name: archie//tactile
+    usercompanyid: 1
+
+organisations:
+  -
+    id: 100
+    name: Org A
+    accountnumber: OA
+    usercompanyid: 1
+    owner: archie//tactile
+  -
+    id: 200
+    name: Org B
+    accountnumber: OB
+    usercompanyid: 1
+    owner: archie//tactile
+  -
+    id: 300
+    name: Org C
+    accountnumber: OC
+    usercompanyid: 1
+    owner: archie//tactile
+  -
+    id: 400
+    name: Can't edit me
+    accountnumber: XX
+    usercompanyid: 1
+    owner: greg//tactile
+    
+organisation_roles:
+  -
+    organisation_id: 100
+    roleid: 20
+    read: t
+    write: t
+  -
+    organisation_id: 200
+    roleid: 20
+    read: t
+    write: t
+  -
+    organisation_id: 300
+    roleid: 20
+    read: t
+    write: t
+
+organisation_contact_methods:
+  -
+    organisation_id: 100
+    type: E
+    name: Main
+    contact: email@orga.com
+  -
+    organisation_id: 200
+    type: E
+    name: Main
+    contact: email@orgb.com
+
+notes:
+  -
+    organisation_id: 100
+    title: Note on Org A
+    note: yeah
+    owner: archie//tactile
+    alteredby: archie//tactile
+    usercompanyid: 1
+  -
+    organisation_id: 200
+    title: Note on Org B
+    note: yeah
+    owner: archie//tactile
+    alteredby: archie//tactile
+    usercompanyid: 1
+  -
+    organisation_id: 300
+    title: Note on Org C
+    note: yeah
+    owner: archie//tactile
+    alteredby: archie//tactile
+    usercompanyid: 1
+  -
+    organisation_id: 400
+    title: Note on Uneditable Org
+    note: yeah
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    
+emails:
+  -
+    organisation_id: 200
+    subject: Email for Org B
+    body: yeah
+    email_from: a
+    email_to: b
+    usercompanyid: 1
+    owner: archie//tactile
+    
+people:
+  -
+    organisation_id: 300
+    firstname: Bob
+    surname: Brown
+    language_code: EN
+    owner: archie//tactile
+    usercompanyid: 1
+    
+opportunities:
+  -
+    name: Opp C
+    organisation_id: 300
+    enddate: 2012-01-01
+    owner: archie//tactile
+    alteredby: archie//tactile
+    usercompanyid: 1
+    
+activities:
+  -
+    name: Act C
+    organisation_id: 300
+    owner: archie//tactile
+    assigned_to: archie//tactile
+    assigned_by: archie//tactile
+    alteredby: archie//tactile
+    usercompanyid: 1

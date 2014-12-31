@@ -1,0 +1,1 @@
+{"status":"success", "opportunity": <#$Opportunity->asJson()#>}

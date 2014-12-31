@@ -1,0 +1,14 @@
+{"status":"success","activity_options":{<#strip#>
+"assigned_to":{
+<#foreach name=options from=$assigned_to item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"class":{"todo":"To Do","event":"Event"},
+"date_choice":{"today":"Today","tomorrow":"Tomorrow","date":"Choose a Date...","later":"Later"},
+"type":{
+<#foreach name=options from=$type item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+}
+<#/strip#>}}

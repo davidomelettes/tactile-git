@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <estimates page="1" per_page="25" pages="1" total="2">
+    <estimate>
+      <estimate_id>00000000001</estimate_id>
+      <number>0000001</number>
+      <client_id>1</client_id>
+      <organization>Sega</organization>
+
+      <status>2</status>
+      <amount>1105</amount>
+      <date>2009-04-08 00:00:00</date>
+    </estimate>
+    <estimate>
+      <estimate_id>00000000002</estimate_id>
+      <number>0000002</number>
+
+      <client_id>1</client_id>
+      <organization>Sega</organization>
+      <status>2</status>
+      <amount>500</amount>
+      <date>2009-04-09 00:00:00</date>
+    </estimate>
+
+  </estimates>
+</response>

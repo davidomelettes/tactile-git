@@ -1,0 +1,64 @@
+#!/bin/bash
+# Staged update script, to cope with more complex cases like pausing to do SQL
+# Written by Dave because he fancied writing some code for once.
+
+case "$1" in
+
+    hold)
+        echo "Putting up holding page... "
+        pushd ../public
+	cp ../build/down.html ./
+	cat ../build/htaccess_down > .htaccess
+        popd
+        echo "done."
+        ;;
+
+    unhold)
+        echo "Taking down hold page... "
+        pushd ../public
+        rm down.html
+        cat ../build/htaccess_up > .htaccess
+        popd
+        echo "done."
+        ;;
+
+    svn)
+        echo "Updating from SVN... "
+        pushd ..
+        svn up
+        popd
+        echo "done."
+        ;;
+
+    build)
+        echo "Running build script... "
+        ./build
+        echo "done."
+        ;;
+
+    all)
+        $0 hold
+        $0 svn
+        $0 build
+        $0 unhold
+        ;;
+
+    pause)
+        $0 hold
+        $0 svn
+        echo "You may now run SQL upates. Press Enter to continue..."
+        read
+        $0 build
+        $0 unhold
+        ;;
+
+    *)
+        echo "Usage: $0 {hold|svn|build|unhold|all|pause}" >&2
+        echo "    (all runs all four in the above sequence)"
+		echo "	(pause is like all, but waits for user-confirmation before the build step)"
+        exit 1
+        ;;
+
+esac
+
+exit 0

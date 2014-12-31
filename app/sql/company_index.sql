@@ -1,0 +1,1 @@
+create index company_name on company(name);

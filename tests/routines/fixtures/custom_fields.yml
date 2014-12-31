@@ -1,0 +1,38 @@
+---
+
+custom_fields:
+  -
+    id: 100
+    usercompanyid: 1
+    name: Favourite Book
+    type: t
+    people: true
+  -
+    id: 200
+    usercompanyid: 1
+    name: Age
+    type: n
+    people: true
+  -
+    id: 300
+    usercompanyid: 1
+    name: Crazy
+    type: c
+    people: true
+  -
+    id: 400
+    usercompanyid: 1
+    name: Flavour
+    type: s
+    people: true
+    
+custom_field_options:
+  -
+    id: 100
+    field_id: 400
+    value: Cheese
+  -
+    id: 200
+    field_id: 400
+    value: Tomato
+    

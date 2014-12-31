@@ -1,0 +1,969 @@
+* {margin: 0; padding: 0; border: 0}
+body {font-family: verdana, sans-serif; font-size: x-small}
+a {text-decoration: none; outline-style: none; cursor: pointer}
+a:hover {text-decoration: underline}
+ul {list-style: none}
+ul.bullets {list-style: disc; margin-bottom: 1em}
+ul.bullets li {margin-left: 2em; margin-bottom: 1em}
+h1 {font-size: 1.4em}
+h2 {font-size: 1.8em; color: #333}
+h3 {font-size: 1.4em}
+h4 {font-size: 1em}
+h1, h2, h3, h4 {}
+p {margin-bottom: 1em}
+table {width: 100%; border-collapse: collapse}
+table td, table th, table caption {text-align: left}
+/* * FORMS */ form {}
+form fieldset {overflow: hidden}
+textarea {border-width: 1px; border-style: solid; font-family: verdana, sans-serif; font-size: 1em; padding: 3px; line-height: 17px}
+input {padding: 1px 6px}
+input, select {font-size: 1em; line-height: 1em; vertical-align: middle; border-width: 1px; border-style: solid}
+input.file {border: 0}
+input.checkbox {width: auto; margin-top: 2px; margin-right: 5px; padding: 0; border: 0}
+input.radio {width: auto; margin: 0; padding: 0}
+input.short {width: 50px}
+input.savebutton {width: auto}
+button.button_link {display: block; border: none; font-size: 1em; line-height: 1em; text-decoration: underline; cursor: pointer}
+.inline_input input {vertical-align: 0}
+/* * MISC */ .left {float: left}
+.right {float: right}
+.t-left {text-align: left}
+.t-right {text-align: right}
+.t-center {text-align: center}
+.clear {clear: both}
+.c-left {clear: left}
+.c-right {clear: right}
+a.action, #actions ul a, a.show_fields {text-decoration: underline}
+table.index_table thead th.toggle, table.index_table tfoot th.toggle, table.index_table tbody td.toggle {text-align: center}
+table.index_table thead th.numeric, table.index_table tfoot th.numeric, table.index_table tbody td.numeric {text-align: right; padding-left: 1em}
+.sprite, .sprite-med {background-repeat: no-repeat; background-position: 0 50%; padding-left: 20px; line-height: 20px; height: 20px; display: inline-block}
+.sprite-med {height: auto; line-height: 30px; min-height: 30px; padding-left: 35px}
+.sprite-right {background-repeat: no-repeat; background-position: 100% 50%; padding-right: 20px; line-height: 20px; height: 20px; display: inline-block}
+body {padding: 0 25px}
+#container {min-width: 1000px}
+#free_plan_upsell {padding: 4px 15px 4px 15px; font-size: 0.9em; text-align: center}
+#free_plan_upsell a {font-weight: bold}
+#browser_warning {padding: 25px; font-size: 1.2em}
+#browser_warning .warning {font-weight: bold}
+#browser_warning a {font-weight: bold}
+#no_trial p {background-color: #ffa; font-size: 1.2em; text-align: center; padding: 10px 25px; margin-bottom: 0 !important; border-bottom: 1px solid #999}
+div.loading {z-index: 99; position: fixed; top: 0; right: 25px; font-size: 1em; border-width: 5px; border-style: solid; font-weight: bold; padding: 5px 10px 5px 25px; background-position: 5px center; background-repeat: no-repeat}
+#flash {position: relative; font-size: 1.2em; cursor: pointer; z-index: 48; opacity: 0.95}
+#flash ul {line-height: 1.6em}
+#flash ul li.dismiss {position: absolute; right: 25px; font-size: 0.8em}
+#flash #messages li.dismiss a {color: #00c}
+#flash #errors li.dismiss a {color: #c00}
+#flash #messages {border-width: 1px; border-style: solid; border-top: 0; border-left: 0; border-right: 0; padding: 10px; text-align: center}
+#flash #errors {border-width: 1px; border-style: solid; border-top: 0; border-left: 0; border-right: 0; padding: 10px; text-align: center}
+#main {margin-top: 25px; clear: both; padding: 0 25px}
+#the_page {margin-right: 325px}
+#system_navbar {color: #fff; padding: 0 25px; background: #999 url(/graphics/tactile/system_nav_bg.png) repeat-x left bottom; overflow: visible}
+#system_navbar a {color: #fff}
+#system_welcome {position: relative; display: inline-block; padding-right: 8px; line-height: 20px}
+#system_welcome .detail {text-align: right}
+#system_navbar #system_nav {float: right}
+#system_navbar #system_nav li {float: right; position: relative; margin-right: 15px; padding-right: 8px; border-right: 1px solid #999; line-height: 20px}
+#system_navbar #system_nav li.logout {border: 0; margin: 0; padding: 0}
+#system_navbar #system_nav li li {float: none; border: 0; margin: 0; padding: 0; text-align: right}
+#system_navbar #system_nav li li a {display: block; line-height: 1.8em}
+#system_navbar #system_nav li li.inline a {display: inline}
+#system_navbar a.context {padding-right: 15px; background: transparent url(/graphics/tactile/down.png) no-repeat right -18px}
+#system_navbar .detail {display: none; position: absolute; top: 20px; right: -5px; z-index: 99; width: 210px; background: transparent url(/graphics/tactile/system_nav_pointer_up.png) no-repeat 188px 0px; color: #aaa; padding-top: 5px}
+#system_navbar .detail .bubble {background-color: #666; padding: 8px 10px}
+#system_navbar .expanded .detail {display: block}
+#header {height: 75px; padding: 0 25px 0 25px; margin-bottom: 0; background-repeat: repeat-x; background-position: 0 0}
+#header #topbit {position: relative; height: 50px; z-index: 52}
+#header #topbit h1 {line-height: 50px}
+/* * TABS */ #main_nav {float: left; clear: left}
+#sub_nav {float: right; position: relative; z-index: 50}
+.topNav {float: left; margin: 0 4px 0 0}
+.topNav .level1 {display: inline-block; position: relative}
+.topNav .tab {display: inline-block; height: 25px; line-height: 25px; padding: 0 10px; font-weight: bold}
+.topNav .with_menu {padding-right: 0}
+.topNav .menu {width: 20px; background: transparent url(/graphics/tactile/tab_arrows.png) no-repeat 4px 6px; padding: 0}
+.topNav .level1.hover, .topNav .level1.current {background-color: #fff}
+.topNav .level1.hover .menu {background-position: 4px -108px}
+.topNav .level1.expanded .menu {background-position: 4px -70px}
+.topNav .level1.current .menu {background-position: 4px -32px}
+.topNav .level2.advSearch {background-color: #ffc}
+.topNav a:hover {text-decoration: none}
+.topNav ul {background-color: #fff}
+.topNav ul li a {display: block; padding: 5px 10px; color: #000; font-weight: bold; padding: 5px 10px; line-height: 20px}
+.topNav ul li a:hover {background-color: #ff9}
+.shadow {z-index: 48; position: absolute; display: none; padding: 0 15px 15px 15px; background-position: bottom center; background-repeat: no-repeat}
+#main_nav .shadow {top: 25px; left: -15px}
+#sub_nav .shadow {top: 25px; right: -15px}
+li.expanded .shadow {display: block}
+.shadow200 li.level2 {width: 200px}
+.shadow222 li.level2 {width: 222px}
+.shadow270 li.level2 {width: 270px}
+.modal-shadow {padding: 10px}
+.modal-shadow .shadow-inner {padding: 10px 0 10px 10px}
+#search_nav, #add_nav {background-color: #ddd}
+#search_nav.expanded, #add_nav.expanded {background-color: #fff}
+#search_nav img, #add_nav img {vertical-align: -4px}
+#add_nav li.level2 {float: none; line-height: 40px; height: 40px; background-color: #fff}
+li#add_nav ul li.level2 a {font-size: 1.2em; color: #00c; font-weight: normal; width: 155px; height: 40px; line-height: 40px; padding: 0 0 0 45px}
+#search_nav ul li a:hover, #add_nav ul li a:hover {text-decoration: none}
+#search_nav {position: relative; z-index: 52}
+li#search_nav li.level2 {line-height: auto; padding: 10px 0 10px 0}
+input#header_search {padding: 2px; width: 198px; height: 17px; margin-left: 9px; font-size: 1.2em; vertical-align: baseline; border: 1px solid #333}
+#search_nav .search_results {margin-top: 5px; width: 204px; position: static; margin-left: 9px}
+#main_nav #search_nav .search_results h3 a {background-color: transparent}
+#main_nav #search_nav .search_results h3 a, #search_nav .search_results li {padding: 0}
+#search_nav .search_results .l3 li a {padding: 2px 10px}
+#search_nav .search_results .l3 li a {font-weight: normal}
+#main_nav #search_nav .search_results a {color: #00c; display: block}
+#main_nav #search_nav .search_results h3 a {color: #999}
+#search_nav .search_results p {line-height: 20px}
+#search_nav .search_results a:hover {text-decoration: none}
+.search_results li.show_more a {color: #c00; padding-bottom: 5px; padding-left: 20px}
+.search_results li.no_results {padding: 2px 5px}
+#search_nav #advSearch {padding: 0 0 10px 0}
+#search_nav #advSearch a {display: inline-block; font-weight: normal; color: #00c; padding: 0 0 0 20px; background-position: 2px 2px; margin-left: 9px}
+#search_nav #advSearch a:hover {background-color: #fff; text-decoration: underline}
+#reports_nav {}
+#reports_nav .reports {background-color: #fff}
+#reports_nav .reports li.level2 {float: none; font-size: 1.2em}
+#reports_nav .reports li.level2 a {color: #00c; font-weight: normal; padding: 0; display: inline}
+#reports_nav .reports li.level2 a:hover {text-decoration: underline}
+#reports_nav ul#reports_list {float: left; padding-right: 15px}
+#reports_nav ul#graphs_list {float: right; padding: 0 0 0 14px; border-left: 1px solid #dedede}
+#reports_nav ul.level2 {width: 185px; padding: 0; margin: 0}
+#reports_nav .reports {width: 400px; padding: 10px 15px}
+#reports_nav li.subtitle {padding-top: 5px; white-space: nowrap}
+#reports_nav li.level2 {margin-left: 0; line-height: 20px; height: 20px; padding-left: 5px}
+#reports_nav li.subtitle {padding-left: 0}
+#logo_holder {clear: both; padding: 0 20px 20px 0; height: 35px; line-height: 17px; text-align: right; min-width: 780px}
+#logo_holder img {float: right; margin-left: 10px}
+#javascript_holder {display: none}
+#right_bar {float: right; margin-left: 10px; width: 300px; font-size: 1.1em}
+#right_bar h3 {font-size: 1em; padding-left: 10px; position: relative}
+#right_bar div.foldable, #right_bar div.ajax-foldable {margin-bottom: 10px; border-width: 1px; border-style: solid; padding: 0 5px 5px 5px}
+#right_bar div.foldable h3, #right_bar div.ajax-foldable h3 {margin-top: 5px; background-repeat: no-repeat; background-position: center left}
+#right_bar div.foldable h3 a:hover, #right_bar div.ajax-foldable h3 a:hover {text-decoration: none}
+#right_bar div.foldable div, #right_bar div.ajax-foldable div {position: relative; padding: 10px 10px 0 10px}
+#right_bar div.foldable div div, #right_bar div.ajax-foldable div div {padding: 0}
+#right_bar div.foldable.unfoldable h3 a {cursor: default}
+#right_bar p {margin-bottom: 5px}
+#right_bar div.help {background-position: 277px 5px; background-repeat: no-repeat}
+#right_bar div.help div a {text-decoration: underline}
+#right_bar ul.help_options {}
+#right_bar ul.help_options li {margin-bottom: 5px}
+#right_bar li.add_new {background-repeat: no-repeat; background-position: center left; padding-left: 15px; margin-bottom: 5px}
+#right_bar ul.sidebar_options li {margin-bottom: 5px; overflow: hidden}
+#right_bar ul.recently_viewed li {margin-bottom: 2px}
+div#page_title {min-height: 50px; margin-bottom: 10px}
+div#page_title h2 {float: left; line-height: 50px; position: relative; z-index: 43}
+div#page_title h2 #heading_logo {vertical-align: top; width: 50px; height: 50px}
+div#page_title h2 #heading_logo.default {width: 48px; height: 48px; border: 1px solid #fff}
+#company_view #heading_logo:hover, #person_view #heading_logo:hover {cursor: pointer}
+div#page_title h2 .dialog {width: 50px; font-size: 0.5em; font-weight: normal; color: #c00; line-height: 1.5em; background-color: #eee; text-align: center; position: absolute; left: 0; top: 0; cursor: pointer}
+div#page_main {position: relative}
+#import_options .content ul li {line-height: 25px}
+#import_options .content ul li {font-size: 1.3em}
+/* * DASHBOARD */ #welcome_message p {font-size: 1.2em; padding: 0}
+#welcome_message h3 {font-size: 1.4em; margin-bottom: 10px; color: #333}
+#welcome_points {width: 425px; margin: 20px auto}
+#welcome_points h4 {text-align: center; color: #333; font-size: 1.2em}
+#welcome_points h4, #welcome_points img {margin-bottom: 10px}
+#welcome_points div {width: 125px; margin: 0; padding: 0; text-align: center}
+#welcome_points div#welcome_contacts {float: left; padding-right: 25px}
+#welcome_points div#welcome_email {padding-right: 25px; float: left}
+#welcome_points div#welcome_graphs {float: right}
+#welcome_text {font-size: 1.2em; padding: 10px 15px; padding-bottom: 0; border-width: 1px; border-style: solid; margin-bottom: 20px}
+#welcome_text h2 {font-size: 1.3em; margin-bottom: 20px}
+#welcome_text h4 {font-size: 1.1em; margin-bottom: 1em}
+#welcome_text a:hover {text-decoration: underline}
+#welcome_text p#no_show {float: right; display: none}
+#welcome_text:hover p#no_show {display: block}
+#no_timeline {font-size: 1em}
+/* * TIMELINE */ .timeline .info {maring-bottom: 10px}
+.timeline .info p {line-height: 32px}
+#timeline_helper {z-index: 42; float: right; margin-left: 3px}
+#timeline_helper div.round-all {background-color: #f5f5f5; border: 1px solid #999; padding: 5px 5px 7px 5px; height: 20px}
+#timeline_helper a.sprite {padding: 0 5px 0 22px; background-position: 4px 50%; border: 1px solid #f5f5f5}
+#timeline_helper a.sprite-edit {background-position: 2px 2px}
+#timeline_helper a.selected {background-color: #ddd; border: 1px solid #999}
+#timeline_helper a:hover {text-decoration: underline}
+#timeline_helper a.view:hover {border: 1px solid #999}
+#page_title #timeline_helper {margin-top: 11px}
+.timeline {}
+.content_holder .timeline h3 {background-color: transparent; border-left: 0; color: #666; padding: 2px; margin-bottom: 15px}
+.timeline .attached {float: right}
+.timeline .attached li {display: inline-block; height: 16px; height: 20px; padding: 3px 6px 3px 0}
+.timeline .attached a {color: #eee; overflow: hidden; max-width: 120px; white-space: nowrap}
+.timeline .item {overflow: hidden; margin-bottom: 5px}
+.timeline .item .type {float: left; text-transform: uppercase; padding: 3px; line-height: 20px; width: 40px; text-align: center}
+.timeline .note .type {background-color: #ffbd7e}
+.timeline .email .type {background-color: #9bf}
+.timeline .unassigned_email .type {background-color: #e77}
+.timeline .activity .type {background-color: #ada}
+.timeline .completed_activity .type {background-color: #ada}
+.timeline .completed_activity h4 {text-decoration: line-through}
+.timeline .overdue_activity .type {background-color: #e77}
+.timeline .opportunity .type {background-color: #bdd}
+.timeline .file .type {background-color: #bfa2ff}
+.timeline .flag .type {background-color: #ccc}
+.timeline .hbf {background-color: #eee; overflow: hidden}
+.timeline .header {padding-left: 5px; line-height: 26px}
+.timeline .header h4 {font-weight: normal; font-size: 1.3em; line-height: 20px; padding: 3px 0; display: inline; max-width: 50%; overflow: hidden; white-space: nowrap}
+.timeline .actions {display: inline; visibility: hidden}
+.timeline .actions ul {display: inline}
+.timeline .actions li {display: inline-block; padding-left: 10px}
+.timeline .actions a {display: inline-block; line-height: 20px; padding: 3px 0}
+.timeline .item:hover .actions {visibility: visible}
+.timeline .body, .timeline .footer {clear: left; padding: 5px}
+.timeline .footer {float: right; padding: 10px; color: #666; text-align: right}
+.timeline .footer .me {font-weight: bold}
+.timeline .item:hover .footer {color: #000}
+.timeline .body p {max-width: 700px}
+.timeline .email_files {background-color: #dde; padding: 5px; clear: both}
+.timeline .email_files p {margin-bottom: 0}
+.timeline.list .item .body, .timeline.list .item .footer, .timeline.list .item .email_files {display: none}
+.timeline.list .item.expanded .body, .timeline.list .item.expanded .footer {display: block}
+.timeline .item form .note .body {display: block}
+.timeline form .note .row {margin: 0}
+.timeline form .note .row input, .timeline form .note .row textarea {float: none; margin: 0}
+.timeline form .note .header input {width: 360px; margin-top: 5px}
+.timeline form .note .row textarea, .timeline form .note .body label {margin-bottom: 5px}
+.timeline form .note .body label input {vertical-align: text-bottom; width: auto; border: 0}
+.timeline form .note fieldset {clear: left}
+.timeline form .note fieldset span, .timeline form .note fieldset a {font-size: 1.2em}
+/* * */ #right_bar #graphs img {margin-bottom: 5px}
+#right_bar li.dropbox {padding-left: 19px; background-position: left center; background-repeat: no-repeat}
+#right_bar #activities {}
+#right_bar #activities div.upcoming h4, #right_bar #activities div.later h4 {clear: left; margin-bottom: 10px}
+#right_bar #activities a.view_link {display: block; float: left; font-weight: normal; padding: 2px 10px; margin-bottom: 10px}
+#right_bar #activities span.normal {padding-left: 10px}
+#right_bar #activities ul {}
+#right_bar #activities ul li {padding-bottom: 0; border-bottom: 0}
+#right_bar #activities ul li input {float: left; margin: 0}
+#right_bar #activities ul li div.activity_summary {float: left; width: 235px; margin-left: 10px}
+#right_bar #activities ul li dl {clear: left}
+.content_holder {position: relative; clear: left; margin-bottom: 20px}
+.content_holder h3 {border-left-width: 10px; border-left-style: solid; padding: 7px; padding-left: 10px; margin-bottom: 20px; clear: left}
+.content_holder .content {margin-left: 20px}
+.content_holder ul.bullets, .content_holder p {font-size: 1.2em}
+.content_holder ul.bullets ul.bullets {font-size: 1em}
+/* * TERMS */ div.terms_page {}
+div.terms_page .instructions {text-align: center; font-size: 1.2em; padding: 20px}
+div.terms_page h2, div.terms_page h3 {margin: 20px 0}
+div.terms_page form {}
+div.terms_page form fieldset {margin: 20px 0}
+div.terms_page form fieldset#i_agree {padding: 1em; font-size: 1.2em}
+div.terms_page form label {margin: 0; width: auto; padding-top: 2px}
+div.terms_page form input.checkbox {margin-top: 6px}
+div.terms_page #terms p {margin-left: 2em; max-width: 600px}
+/* * GRAPHS */ #chart_graph {text-align: center; margin-bottom: 20px}
+#chart_graph input {float: none}
+#right_bar form.side_form span.smarty_picker select {width: 81px}
+#right_bar form.side_form span.smarty_picker select.date {margin-right: 4px}
+#chart_graph form.saveform select#user {width: 200px; float: none}
+#chart_graph span#sales_history_special_form {}
+#chart_graph span#sales_history_special_form table {margin-left: auto; margin-right: auto; width: 55em }
+#chart_graph span#sales_history_special_form td.label {text-align: right }
+#chart_graph span#sales_history_special_form select#user {width: 17.3em}
+/* * TAGS */ #tag_everything label {float: left; margin-right: 5px}
+#tag_everything form p {overflow: hidden}
+#tag_everything input.text {float: left; padding: 1px}
+#tag_everything input.submit {float: right}
+div.tag_action_holder {padding: 10px}
+div#import_undo {font-size: 1.2em}
+div#by_tag_filter {border-width: 1px; border-style: solid; padding: 10px 10px 0 10px; margin-bottom: 10px}
+div#by_tag_filter span.restrict_by {margin-bottom: 10px; padding: 2px 0; display: inline-block}
+div#by_tag_filter span.selected {font-weight: bold}
+div#by_tag_filter a.filter, div#by_tag_filter span.selected {display: inline-block; margin-right: 5px; padding: 3px 5px 3px 21px; margin: 0 2px 10px 0; white-space: nowrap}
+ul#tagged_item_columns {width: 100%}
+ul#tagged_item_columns li {float: left}
+ul#tagged_item_columns li .border {position: relative; border-width: 1px; border-style: solid; margin: 0 5px}
+ul#tagged_item_columns li.first .border {margin-left: 0}
+ul#tagged_item_columns li.last .border {margin-right: 0}
+ul#tagged_item_columns li .head {min-height: 50px; padding: 10px 10px 0 10px; text-align: right}
+ul#tagged_item_columns li .head h2 {float: left}
+ul#tagged_item_columns li .paging .paging_link, ul#tagged_item_columns li .paging .paging_button_holder, ul#tagged_item_columns li .paging {line-height: 20px}
+ul#tagged_item_columns li .head .paging {z-index: 89; top: 5px; right: 5px; text-align: center; margin-bottom: 0}
+{ line-height: 20px}
+ul#tagged_item_columns .paging .paging_loading {text-align: right; position: absolute; right: 0; float: right; padding: 0 15px}
+ul#tagged_item_columns .paging .paging_loading span {background-repeat: no-repeat; background-position: 0 0; padding-left: 20px}
+ul#tagged_item_columns li .content {padding: 10px}
+ul#tagged_item_columns li .content tfoot td {min-height: 50px}
+ul#tagged_item_columns li .content tfoot td .bottom_paging {float: right; margin: 0}
+ul#tagged_item_columns li .content tfoot td .paging {position: relative; text-align: center}
+/* * ADMIN */ .admin_holder .content_holder {}
+.admin_holder .content_holder ul.admin_list li {margin-bottom: 0.5em; background-color: #eee; padding: 20px}
+.admin_holder .content_holder ul.admin_list li.selected {background-color: #ff9}
+.admin_holder .content_holder ul.admin_list li h4 {font-size: 1.4em}
+.admin_holder .content_holder ul.admin_list li p {margin-top: 5px; margin-bottom: 0}
+.admin_holder .content_holder ul.admin_list li div.content {margin-top: 20px; margin-left: -15px; margin-right: -15px; margin-bottom: -15px; background-color: #fff; padding: 20px}
+.admin_holder table.custom_values, .admin_holder div.content_holder table.group_values {margin-bottom: 0}
+.admin_holder .content_holder table.group_values thead th, .admin_holder .content_holder table.group_values tbody td {padding-right: 25px}
+.admin_holder table.custom_values td, .admin_holder table.custom_values th {padding-right: 20px}
+.admin_holder table.custom_values th.delete, .admin_holder table.custom_values td.delete {padding-right: 5px}
+.admin_holder table.custom_values td.t-right, .admin_holder .content_holder table.group_values tbody td.t-right {padding-right: 6px}
+.admin_holder table.custom_values input, .admin_holder .content_holder table.group_values input {padding: 2px 1px}
+p.video {margin-top: 10px; cursor: pointer}
+ul.admin_list .colours {position: relative}
+ul.admin_list .colour_swatch {display: inline-block; width: 25px; height: 25px; border: 1px solid #000; margin-right: 10px; position: absolute; top: -22px; right: 0}
+ul.admin_list .colour_swatch.a {right: 35px}
+ul.admin_list .green .colour_swatch.a {background-color: #0F5E15}
+ul.admin_list .green .colour_swatch.b {background-color: #569C30}
+ul.admin_list .blue .colour_swatch.a {background-color: #00195C}
+ul.admin_list .blue .colour_swatch.b {background-color: #4671D5}
+ul.admin_list .red .colour_swatch.a {background-color: #A40404}
+ul.admin_list .red .colour_swatch.b {background-color: #CC7777}
+ul.admin_list .grey .colour_swatch.a {background-color: #343434}
+ul.admin_list .grey .colour_swatch.b {background-color: #999999}
+ul.admin_list .orange .colour_swatch.a {background-color: #FF9C00}
+ul.admin_list .orange .colour_swatch.b {background-color: #DD8800}
+ul.admin_list .purple .colour_swatch.a {background-color: #8100DB}
+ul.admin_list .purple .colour_swatch.b {background-color: #570094}
+ul.admin_list .custom .colour_swatch {background-image: url(/graphics/tactile/picker.png)}
+#farbtastic {float: left; clear: left}
+#qa_farbtastic_swatch {float: right; width: 100px; height: 100px; border: 1px solid #000; margin-top: 48px; margin-right: 40px}
+/* * AJAX */ div.tag_search_results {z-index: 50; width: 150px}
+div.tag_search_results ul {width: 152px}
+form div.tag_search_results ul.autocomplete_results li {display: block; text-align: left}
+.search_results {z-index: 51; width: 184px; position: absolute}
+.search_results p {font-size: 1em; margin-bottom: 0; border-top: 0; padding: 5px; border-style: solid}
+.search_results li {line-height: 22px; padding: 5px}
+.search_results h2 {font-size: 1.2em; line-height: 1.8em; padding: 0 5px}
+.search_results h3 {color: #333; font-size: 1em; line-height: 1.8em; padding: 0 10px}
+.search_results li.selected {cursor: pointer}
+.dedupe_results {position: static; padding-left: 15px; clear: both; float: right}
+#modal_form {z-index: 47; position: fixed; top: 100px; left: 50%; width: 410px; margin-left: -205px}
+#modal_form .cancel {float: right; padding-right: 10px}
+#modal_form h3 {margin-bottom: 10px}
+#modal_form h4 {margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #333}
+#modal_form .form_help {padding: 10px 10px 0 10px; margin-bottom: 10px; font-size: 1.1em}
+#modal_form .save {padding-right: 10px}
+#modal_form .maxHeightWrapper {margin-bottom: 10px; padding-right: 10px; max-height: 450px; overflow: auto}
+form.saveform .save {text-align: right}
+form.saveform .save .row {margin: 0}
+form.saveform .save .row input {float: none; width: auto; padding: 4px 6px; margin: 0}
+form.saveform .save .row span, form.saveform .save .row a {font-size: 1.2em; vertical-align: -2px}
+form.saveform .save .row .or {padding: 0 1px}
+/* * CALENDAR */ div.ui-datepicker {z-index: 98}
+div.cal_container {z-index: 90; position: absolute !important; float: left; border-width: 1px; border-style: solid; width: 160px}
+div.cal_container div {text-align: center; padding: 2px; width: 95%; height: 24px; margin: 2px auto}
+div.cal_container select {height: 20px; margin: 0 2px !important; font-size: 0.9em; padding-top: 3px}
+div.cal_container table {float: left; clear: both; margin: 2px auto; border-collapse: collapse; width: 95%}
+div.cal_container table tr:first-child {font-weight: bold}
+div.cal_container td {padding: 3px; text-align: center; font-size: 1.2em}
+div.cal_container td.selected {text-decoration: none}
+div.cal_container td.data {cursor: pointer}
+div.cal_container select.year_chooser, #container #right_bar div.cal_container select.year_chooser {width: 60px}
+div.cal_container select.month_chooser, #container #right_bar div.cal_container select.month_chooser {width: 80px}
+/* * PURCHASE USERS */ #user_quantity {width: 50px; margin-right: 130px}
+#purchase_users_cart {clear: both; overflow: hidden; border-top: 1px solid black; border-bottom: 1px solid black}
+#purchase_users_total {font-weight: bold}
+/* * MOTD */ #motd, #motd_important {font-size: 1.2em; line-height: 1.5em; margin-bottom: 10px; padding-bottom: 5px}
+#motd_important {margin-top: 10px; background: transparent url(/graphics/tactile/pointer_important.png) no-repeat 5px bottom}
+#motd {background: transparent url(/graphics/tactile/pointer.png) no-repeat 5px bottom}
+#motd .inner, #motd_important .inner {color: #fff; padding: 10px 10px 0 10px; overflow: hidden}
+#motd_important .inner {background-color: #c00}
+#motd .inner {background-color: #333; color: #ddd}
+#motd .inner strong {color: #fff}
+#motd_dismiss {float: right; margin-left: 1em; margin-bottom: 1em}
+#motd_important #motd_dismiss a {background-position: 0 -60px}
+#motd_important #motd_dismiss a:hover {background-position: 0 -90px}
+#motd_important p a, #motd p a {color: #fff; text-decoration: underline}
+/* * IMPORT */ #csv_import_assignment {}
+#csv_import_assignment div.col-2 {clear: both; overflow: hidden}
+#csv_import_assignment div.col-2 div.left {margin-bottom: 20px; width: 50%; min-width: 340px}
+#csv_import_assignment h4 {color: #000; font-size: 1.3em; margin-bottom: 10px}
+#csv_import_assignment label {width: 140px; padding-left: 20px}
+#csv_import_assignment select {width: 150px}
+#csv_import_assignment input.checkbox {margin-right: 138px}
+#csv_imported_headings {}
+#csv_imported_headings .no {background: url(/graphics/tactile/false.png) 0 2px no-repeat}
+#csv_imported_headings .yes {background: url(/graphics/tactile/true.png) 0 2px no-repeat}
+/* * DASHBOARD */ #dashboard_report {text-align: center}
+#dashboard_report .column {width: 35%}
+#dashboard_report .column.wide {width: 65%; float: right}
+#dashboard_report .item {background-color: #dedede; margin: 0 10px 20px 0; height: 105px}
+#dashboard_report .wide .item {margin: 0 0 20px 10px; height: 230px}
+#dashboard_report h3 {font-size: 1em; font-weight: normal; border-bottom: 1px solid #ccc; margin-bottom: 10px; position: relative; padding: 10px}
+#dashboard_report h3 a {color: #000; display: inline-block}
+#dashboard_report .stats li {float: left; width: 33%; position: relative}
+#dashboard_report .stats a.context {color: #333}
+#dashboard_report .stats .num {font-size: 2.2em; display: block; font-weight: bold}
+#activity_stats .later a.context {color: #0a0}
+#activity_stats .today a.context {color: #ff8c00}
+#activity_stats .overdue a.context {color: #a00}
+#dashboard_report #activity_stats li.none a {color: #333}
+#dashboard_report li.none a:hover {text-decoration: none; cursor: default}
+#dashboard_graph {min-width: 200px; height: 170px; background: transparent url(/graphics/omelette/spinner.gif) 50% 50% no-repeat}
+#dashboard_graph a {display: block; background-color: #dedede; height: 100%}
+#dashboard_graph a img {display: block; margin: auto; height: 170px}
+#dashboard_report .detail {display: none; z-index: 49; position: absolute; left: 50%; margin-left: -15px; width: 250px; padding-top: 5px; background: url(/graphics/tactile/system_nav_pointer_up.png) no-repeat scroll 10px 0 transparent; text-align: left}
+#dashboard_report .expanded .detail {display: block}
+#dashboard_report .bubble {background-color: #666; color: #fff; padding: 8px 10px}
+#dashboard_report .bubble ul {max-height: 300px; overflow: auto}
+#dashboard_report .bubble li {float: none; width: auto; overflow: hidden; padding-bottom: 5px}
+#dashboard_report .bubble li.last {padding-bottom: 0}
+#dashboard_report .bubble a {color: #fff}
+#dashboard_report .bubble a.record {display: block; height: auto; padding: 2px 0}
+#dashboard_report .bubble a.sprite {height: 20px; padding-left: 20px}
+#dashboard_report .bubble input {float: left}
+#dashboard_report .bubble div {padding-right: 3px}
+#activity_stats .bubble div {padding-left: 20px}
+#activity_stats .bubble dl {padding: 5px 5px 0 5px; overflow: hidden}
+#activity_stats .bubble dt, #activity_stats .bubble dd {float: left; line-height: 20px}
+#activity_stats .bubble dt {font-weight: bold; clear: left; padding-right: 5px; color: #ccc}
+#activity_stats .bubble dd {float: left}
+#graph_stats h3 a {background: url(/graphics/tactile/tab_arrows.png) no-repeat right -75px transparent; padding-right: 15px}
+/* * ADVANCED SEARCH */ #queryBuilder {border: 1px solid #999; padding: 10px 20px 0}
+#queryBuilder .row {position: relative; max-width: 500px; text-align: right}
+#queryBuilder .row input, #queryBuilder .row select {margin-right: 25px}
+#queryBuilder select.ops {position: absolute; left: 160px; width: 120px}
+#queryBuilder a.delete {position: absolute; right: 0; top: 2px}
+#queryBuilder .row .action {display: inline-block; line-height: 16px; padding: 5px}
+/* * ROUNDED CORNERS */ #pref_content, .edit_holder .content_holder div.hide, .round-bottom {border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; -webkit-border-radius: 0 0 5px 5px}
+#pref_nav, input#header_search.has_results, #header ul#sub_nav > li, #header ul#main_nav > li, .round-top {border-radius: 5px 5px 0 0; -moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0}
+.paging .details .menu, .content_holder h3 {border-radius: 0 5px 5px 0; -moz-border-radius: 0 5px 5px 0; -webkit-border-radius: 0 5px 5px 0}
+.round-left, .paging .details .pages {border-radius: 5px 0 0 5px; -moz-border-radius: 5px 0 0 5px; -webkit-border-radius: 5px 0 0 5px}
+#pref_nav li:first-child, #pref_nav li:first-child a {border-radius: 5px 0 0 0; -moz-border-radius: 5px 0 0 0; -webkit-border-radius: 5px 0 0 0}
+form.saveform .notice div, .view_holder ul.summary_fields, ul#mini_nav li.l1.current a, ul#mini_nav li.l1.on a, input#header_search, #motd_important .inner, #motd .inner, div#by_tag_filter a.filter, div#by_tag_filter span.selected, #right_bar div.side_tag_list div.tag a, #right_bar div.side_tag_list div.tag span, .tag_list ul li.tag a, .modal-shadow, #right_bar div.foldable, #right_bar div.ajax-foldable, div.form_help, div#by_tag_filter, #welcome_text, .round-all, #summary_stats div.stats div.stat, #summary_stats div.stats_small div.stat, #system_navbar div.bubble, #dashboard_report .item, #dashboard_report .bubble, #activity_stats .bubble a {border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px}
+input.submit, .summary_fields .view_data textarea, form.saveform .row textarea, form.saveform .row input[type="submit"], form.saveform .row input[type="password"], form.saveform .row input[type="text"] {border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px}
+form.saveform .row input.has_results, #modal_form input.has_results {border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0}
+/* * Opacity */ #system_navbar div.bubble, #dashboard_report .stats .bubble {opacity: 0.95; filter:alpha(opacity=95); -moz-opacity: 0.95}
+.index_holder {}
+.paging {z-index: 42; float: right; white-space: nowrap; position: relative}
+.paging .tall {float: left; line-height: 50px; margin-left: 8px}
+.paging img {vertical-align: middle}
+.paging .add_disallowed {text-decoration: line-through}
+.paging .details {position: relative}
+.paging .paging_menu_button {position: relative; padding: 5px 0; cursor: pointer}
+.paging .paging_menu_button span {background-color: #fff; height: 20px; padding: 6px 0 6px 5px; display: inline-box; border: 1px solid #ccc}
+.paging .details .pages {border-right: 0}
+.paging .details .menu {border-left: 0; background: #fff url(/graphics/tactile/icons/wrench.png) no-repeat 6px -28px; padding-right: 20px}
+.paging .details div {display: none; position: absolute; top: 40px; right: 0; background: transparent url(/graphics/tactile/pointer_up.png) no-repeat 170px 0; padding-top: 5px}
+.paging .details.expanded .paging_menu_button span, .paging .paging_menu_button:hover span {border-color: #999}
+.paging .details.expanded .paging_menu_button .menu, .paging .paging_menu_button:hover .menu {background-position: 6px 4px}
+.paging .details.expanded div {display: block}
+.paging form ul {color: #fff; background-color: #333; line-height: normal; width: 200px; padding-top: 15px; padding-bottom: 5px}
+.paging .results {color: #aaa}
+.paging form li {padding: 0 10px 10px 10px}
+div.paging select {min-width: 80px; float: right}
+div.bottom_paging {margin-top: 10px}
+div.restriction {font-size: 1.2em; margin-bottom: 20px; font-weight: bold}
+table.index_table {width: 100%; border-collapse: collapse; font-size: 1.1em; clear: left}
+table.index_table .cb {width: 12px; padding-top: 0; padding-right: 0; padding-left: 4px}
+table.index_table .cb input {margin: 0}
+table.index_table thead, table.index_table tfoot {border-width: 1px; border-style: solid}
+table.index_table thead th, table.index_table tfoot th {line-height: 20px; white-space: nowrap}
+table.index_table thead th select {vertical-align: 0}
+table.index_table thead th, table.index_table tfoot th, table.index_table tfoot td {text-align: left; padding: 4px 6px}
+table.index_table tbody {}
+table.index_table tbody tr {min-height: 40px}
+table.index_table tbody th, table.index_table tbody td {border-top-width: 1px; border-top-style: solid; border-bottom-width: 1px; border-bottom-style: solid; padding: 4px 6px}
+table.index_table tbody tr.selected td, table.index_table tbody tr.selected:hover td {background-color: #FFF17E}
+table#report_table tbody tr {height: auto}
+table#report_table tbody th, table#report_table tbody td, table#report_table thead th, table#report_table tfoot th, table#report_table tfoot td {padding: 4px}
+table#report_table tfoot, table#report_table tfoot tr.subtotals {border: none}
+table#report_table tfoot tr {border-width: 1px; border-style: solid; border-color: #999}
+table#report_table tfoot th, table#report_table tfoot td {font-weight: normal}
+table#report_table tfoot tr.subtotals th, table#report_table tfoot tr.subtotals td {font-weight: bold; border: none; background-color: #fff}
+table#report_table td.numeric {white-space: nowrap}
+table.index_table td.primary {font-size: 1.2em}
+table.index_table tfoot.form_controls th, table.index_table tfoot.form_controls td {text-align: right; padding: 4px 6px}
+table.index_table tbody a.action {visibility: hidden}
+table.index_table tbody tr:hover a.action {visibility: visible}
+.content_holder .content table.index_table {margin-bottom: 20px}
+#right_bar #import_export {}
+#right_bar #import_export li.query {font-weight: bold}
+#right_bar fieldset.search_fields {margin-bottom: 5px}
+#right_bar fieldset.search_fields label {line-height: 14px; padding: 2px 0; margin-right: 20px}
+#right_bar fieldset.search_fields input {width: 155px; padding: 2px 1px; margin-left: 5px}
+#right_bar fieldset.search_fields img.spinner {padding-top: 3px}
+#right_bar .search_results {clear: both; float: left; position: static !important; width: 100% !important}
+#right_bar .search_results ul {}
+#right_bar .search_results ul li {display: block; line-height: 1.4em; padding: 3px 0}
+#right_bar .search_results ul li.selected {cursor: pointer}
+#right_bar .search_results ul li.recent_last {border-bottom-width: 2px; border-bottom-style: solid; padding-bottom: 10px; margin-bottom: 10px}
+#right_bar .search_results ul li:last-child.recent_last {border-bottom: 0; margin-bottom: 5px; padding-bottom: 0}
+#right_bar .search_results p {width: 100%}
+#right_bar div.side_tag_list {overflow: hidden; margin-bottom: 5px}
+#right_bar div.side_tag_list div.tag {margin: 0 5px 0 0; float: left}
+#right_bar div.side_tag_list div.tag a, #right_bar div.side_tag_list div.tag.selected span {display: inline-block; padding: 3px 5px 3px 21px; margin: 0 2px 5px 0; white-space: nowrap}
+#right_bar div.side_tag_list div.tag.selected span {font-weight: bold}
+.single_line {white-space: nowrap}
+/* * TAGS */ #tag_cloud {font-size: 1.2em; max-width: 800px}
+#tag_cloud span {line-height: 1.4em; vertical-align: -20%; display: inline-block}
+#tag_cloud span a {display: inline-block; padding: 5px 10px}
+span.tag_band5 {font-size: 4em}
+span.tag_band4 {font-size: 3em}
+span.tag_band3 {font-size: 2.5em}
+span.tag_band2 {font-size: 2em}
+span.tag_band1 {font-size: 1.3em}
+span.tag_band0 {font-size: 1em}
+/* * USAGE */ #usage_table {margin-bottom: 20px; border-left-width: 1px; border-left-style: solid; border-right-width: 1px; border-right-style: solid}
+/* * EMAILS */ #dropbox_info p {overflow: hidden}.view_holder {}
+div.edit_delete {float: right; line-height: 50px; font-size: 1.2em}
+div.edit_delete input {width: auto}
+div.edit_delete form, div.edit_delete fieldset {display: inline}
+.view_holder .description {clear: left; margin: 0 0 10px 0}
+.view_holder div.tag_list {margin-bottom: 10px; font-size: 1.2em; float: left; width: 100%; line-height: 20px}
+.view_holder div.tag_list span.label {font-weight: bold; margin-right: 5px}
+.view_holder div.tag_list ul {float: right; text-align: right}
+.view_holder div.tag_list ul li {display: inline}
+.view_holder div.tag_list ul li.tag a {padding: 3px 5px 3px 21px; white-space: nowrap; background-image: url(/graphics/tactile/icons/tag.png); background-repeat: no-repeat; background-position: 3px center}
+.view_holder div.tag_list ul li.edit {visibility: hidden}
+.view_holder div.tag_list ul:hover li.edit {visibility: visible}
+.view_holder div.tag_list ul:hover li.edit.no_tags {visibility: hidden}
+.view_holder div.tag_list.edit_mode ul {}
+.view_holder div.tag_list.edit_mode ul li a {text-decoration: underline; background-position: top right; background-repeat: no-repeat}
+.view_holder div.tag_list.edit_mode ul li.edit {visibility: visible; margin-right: 10px}
+.view_holder div.tag_list.edit_mode ul li.edit a {background: none}
+.view_holder div.tag_list form {clear: right; text-align: right; padding-top: 10px}
+.view_holder div.tag_list form input.tag_input {width: 150px; margin-right: 5px; padding: 1px}
+.view_nav {margin-bottom: 20px; background: #f5f5f5 url(/graphics/tactile/view_nav_bg.png) repeat-x 0 0; overflow: hidden; width: 100%; clear: left}
+.view_nav h3 {font-size: 1.20em; display: inline-block; cursor: pointer; float: left; line-height: 23px; height: 25px; padding: 0 15px; border-right: 1px solid #aaa}
+.view_nav h3:hover {color: #f5f5f5; background: #f5f5f5 url(/graphics/tactile/view_nav_bg.png) repeat-x 0 -50px}
+.view_nav h3.selected {margin-right: 1px; border-right: 0; color: #fff; background: #f5f5f5 url(/graphics/tactile/view_nav_bg.png) repeat-x 0 -25px}
+#activity_view #show_summary_info, #user_view #show_summary_info, .view_holder #show_summary_stats {border-left: 1px solid #aaa; margin-left: 20px}
+.view_holder #summary_info {overflow: hidden}
+.view_holder ul.summary_fields {overflow: hidden; font-size: 1.2em; max-width: 900px; margin-bottom: 20px}
+.view_holder ul.summary_fields li {float: left; line-height: 1.6em; width: 100%}
+.view_holder ul.summary_fields li.spacer {float: none; clear: left; height: 20px}
+.view_holder ul.summary_fields li.odd {width: 49%; clear: left}
+.view_holder ul.summary_fields li.even {width: 49%}
+.view_holder ul.summary_fields li .view_label, .view_holder ul.summary_fields li .view_data {display: inline-block}
+.view_holder ul.summary_fields li span.view_label {width: 40%; max-width: 150px; text-align: right; color: #666; vertical-align: top; overflow: hidden}
+.view_holder ul.summary_fields li span.view_label span {padding-right: 15px}
+.view_holder ul.summary_fields li span.view_data {width: 58%; vertical-align: top; color: #000}
+.view_holder ul.summary_fields li.single span.view_data .data {float: left; width: 250%}
+.view_holder ul.summary_fields li.description {width: 100%}
+.view_holder ul.summary_fields li.description .view_label, .view_holder ul.summary_fields li.description .view_data {float: left}
+.view_holder ul.summary_fields li.description .view_data {width: 80%}
+.view_holder ul.summary_fields li.description.inline_edit .view_data {border-bottom: 1px solid #fff; cursor: pointer}
+.view_holder ul.summary_fields li.description.inline_edit:hover .view_data {border-bottom: 1px dashed #999}
+.view_holder ul.summary_fields li.description.inline_edit:hover .view_data.edit {border-bottom: 1px solid #fff}
+.summary_fields .view_data textarea {min-height: 80px; max-height: 300px; padding: 4px 1px; width: 560px}
+.summary_fields .view_data .save_or_cancel {margin-top: 1em; padding-bottom: 1em}
+#right_bar #organisation_logo {position: relative; margin-top: 5px; margin-bottom: 10px; padding-left: 14px; padding-right: 14px; min-height: 50px; text-align: center}
+#right_bar div#organisation_logo img {max-width: 270px}
+#right_bar #contact_information {}
+td .email {background: center left url(/graphics/tactile/email_small.png) no-repeat; padding-left: 15px}
+td .phone {background: center left url(/graphics/tactile/phone_small.png) no-repeat; padding-left: 15px}
+td .mobile {background: center left url(/graphics/tactile/mobile_small.png) no-repeat; padding-left: 15px}
+td .fax {background: center left url(/graphics/tactile/fax_small.png) no-repeat; padding-left: 15px}
+td .sprite-website {background: center left url(/graphics/tactile/world_small.png) no-repeat; padding-left: 15px}
+.sidebar_options li.skype img {vertical-align: text-bottom}
+.sidebar_options .gap {height: 2px}
+#qa_contact_method {}
+#qa_contact_method table {}
+#qa_contact_method table th, #qa_contact_method table td {padding: 0 4px 4px 0}
+#qa_contact_method table input {margin: 0 0 0 0}
+#qa_contact_method table input.checkbox {margin-right: 0; margin-left: 0}
+#qa_contact_method table select {margin: 0 0 0 0; width: 75px}
+#qa_contact_method table select optgroup {background-color: #eee}
+#qa_contact_method table select optgroup option {background-color: #fff}
+#qa_contact_method table tfoot {font-size: 1.2em}
+#qa_contact_method table tfoot td {padding-top: 10px}
+#qa_contact_method table tfoot td a {background: url(/graphics/tactile/icons/add.png) no-repeat 6px 0; padding-left: 25px}
+#qa_contact_method .radio {float: none; vertical-align: -2px}
+#qa_contact_method select {width: 75px; margin-left: 0; margin-right: 10px}
+#qa_contact_method .qa_cm_label {width: 50px}
+#qa_contact_method .qa_cm_contact {width: 171px}
+#qa_contact_method .delete {font-size: 1.2em; font-weight: bold; text-decoration: none; text-align: center; padding-right: 0}
+ul#qa_tweets {}
+ul#qa_tweets li {margin-bottom: 10px; font-size: 1.2em; clear: left; overflow: hidden}
+ul#qa_tweets li img {float: left; margin-right: 10px}
+ul#qa_tweets li p {float: left; max-width: 310px}
+ul#qa_tweets li span.when {font-style: italic; color: #999; font-size: 0.8em}
+#right_bar #opportunity_contact_details, #right_bar #activity_contact_details {}
+#right_bar #opportunity_contact_details td, #right_bar #activity_contact_details td {vertical-align: bottom}
+#right_bar #opportunity_contact_details table.opportunity_contact, #right_bar #activity_contact_details table.activity_contact {margin-bottom: 10px}
+#right_bar #opportunity_contact_details table.opportunity_contact caption, #right_bar #activity_contact_details table.activity_contact caption {font-weight: bold}
+#right_bar table.opportunity_contact td {padding-top: 5px}
+#right_bar #organisation_addresses, #right_bar #person_addresses {}
+#right_bar #organisation_addresses .sidebar_options li, #right_bar #person_addresses .sidebar_options li {margin-bottom: 5px}
+#right_bar #organisation_addresses address, #right_bar #person_addresses address {padding-left: 20px}
+#right_bar #organisation_addresses ul li li a.action, #right_bar #person_addresses ul li li a.action {visibility: hidden}
+#right_bar #organisation_addresses ul li li:hover a.action, #right_bar #person_addresses ul li li:hover a.action {visibility: visible}
+#right_bar a.add_related {position: absolute; right: 10px; text-decoration: underline; font-weight: normal}
+#right_bar ul.related_list {overflow: hidden; width: 100%}
+#right_bar ul.related_list li {overflow: hidden; position: relative; clear: left; padding-bottom: 10px; border-bottom-width: 1px; border-bottom-style: solid; margin-bottom: 10px}
+#right_bar div.activities ul.related_list li {margin-bottom: 0}
+#right_bar #activities div.activities ul li dl {margin-bottom: 10px}
+#right_bar ul.related_list li li {padding-bottom: 0px; padding-top: 0px; border-bottom: 0; margin-top: 0px; margin-bottom: 3px}
+#right_bar ul.related_list li.none_yet {border-bottom: 0; padding-bottom: 0; margin-bottom: 0}
+#right_bar ul.related_list li.last {border-bottom: 0; padding-bottom: 0}
+#right_bar ul.related_list li:last-child {border-bottom: 0; padding-bottom: 0}
+#right_bar ul.related_list > li:last-child {margin-bottom: 5px}
+#right_bar ul.related_list li a.action {position: absolute; right: 0; visibility: hidden}
+#right_bar ul.related_list li:hover a.action {visibility: visible}
+#right_bar ul.related_list li a.view_link {font-weight: bold}
+#right_bar ul.related_list li dl {overflow: hidden}
+#right_bar ul.related_list li dl dt {float: left; clear: left; width: 80px; font-weight: bold}
+#right_bar ul.related_list li dl dd {float: left}
+#right_bar ul.related_list ul.sidebar_options li.last {margin-bottom: 0}
+#right_bar ul.related_list ul.sidebar_options li:last-child {margin-bottom: 0}
+#right_bar li.activity_complete, #right_bar li.activity_uncomplete, #right_bar li.download {padding-left: 16px; background-position: left center; background-repeat: no-repeat}
+#right_bar ul.related_list.files {}
+#right_bar ul.related_list.files li form {display: none; position: absolute; top: 9px; right: -2px; text-align: right}
+#right_bar ul.related_list.files li:hover form {display: block}
+#right_bar div.show_all {margin-bottom: 5px}
+#right_bar div.file_name_size {margin-bottom: 10px}
+#right_bar div.file_comment {font-style: italic; margin-bottom: 10px}
+#right_bar form#opp_archiving_form {}
+#right_bar form#opp_archiving_form input#opp_status_update {float: right; width: auto; padding: 1px 6px}
+#summary_stats {margin: 0 0 20px 10px; overflow: hidden}
+#summary_stats div.stats {width: 33%; float: left; text-align: center}
+#summary_stats div.stats div.stat {background-color: #efefef; margin: 0 10px; padding: 10px}
+#summary_stats h4 {font-size: 1.1em; margin: 0; color: #666}
+#summary_stats p {font-size: 1.1em}
+#summary_stats p.value {font-size: 1.6em; font-weight: bold; line-height: 1.2em; padding: 0; margin: 0}
+#summary_stats p.subtitle {color: #666; margin: 0}
+#summary_stats #pipeline.can_edit {cursor: pointer}
+#summary_stats #pipeline.can_edit select {font-size: 1.2em; width: 120px}
+#summary_stats #pipeline.can_edit:hover a {text-decoration: underline}
+/* * FRESHBOOKS */ #right_bar #invoices {}
+#right_bar #invoices span {font-weight: bold}
+/* * Custom Fields */ #right_bar #organisation_custom_fields table, #right_bar #activity_custom_fields table, #right_bar #person_custom_fields table, #right_bar #opportunity_custom_fields table {margin-bottom: 5px}
+#qa_custom_fields td.name label {width: auto; display: inline-block; float: none; margin: 0; width: 150px; overflow: hidden}
+#qa_custom_fields td.name, #qa_custom_fields td.empty {width: 160px}
+#qa_custom_fields td.value {height: 35px}
+#qa_custom_fields td.value, #qa_custom_fields td.select {width: 190px; padding-right: 5px}
+#qa_custom_fields td.value input, #qa_custom_fields td select {margin: 0}
+#qa_custom_fields .delete {font-size: 1.2em; font-weight: bold; text-decoration: none; text-align: center}
+#qa_custom_fields tfoot td {padding: 5px 0}
+#qa_custom_fields tfoot span select {float: none; margin: 0; padding: 1px}
+/* * ACTIVITY TRACKS */ #right_bar #noActivityTracks {margin-bottom: 10px}
+#right_bar #showActivityTrackForm {color: #c00; font-weight: normal; position: absolute; text-decoration: underline; right: 50px}
+#right_bar #activityTrackForm {border-bottom: 1px solid #ccc; margin-bottom: 10px}
+.edit_holder {}
+form.saveform {}
+form.saveform .row {overflow: hidden; margin-bottom: 10px; max-width: 400px}
+form.saveform .row label, form.saveform .row .false_label {float: left; font-size: 1.2em; line-height: 2em}
+#modal_form form.saveform .row .false_input {line-height: 2em; padding: 0}
+form.saveform .row .false_input, form.saveform .row input, form.saveform .row select {float: right; font-size: 1.2em; padding: 4px 1px; margin: 0 0 0 5px; width: 180px; line-height: 1em}
+form.saveform .row select {width: 182px; padding: 1px; margin-top: 2px}
+form.saveform .row .new_clear {float: right; line-height: 1em; margin: 3px 0 0 0; display: none}
+form.saveform .row .new_clear * {display: none}
+form.saveform .row .new_clear.new {display: inline; cursor: pointer}
+form.saveform .row .new_clear.new strong {display: inline; padding: 0 20px 0 0; background-position: 100% 50%}
+form.saveform .row .new_clear.clear {display: inline; clear: none}
+form.saveform .row .new_clear.clear a {display: inline}
+form.saveform .notice {position: absolute; left: 420px; padding-left: 5px; background: transparent url(/graphics/tactile/left.png) 0px 8px no-repeat; min-width: 250px; max-width: 300px}
+form.saveform .notice div {background-color: #666; color: #fff; padding: 5px 10px}
+form.saveform .row input.checkbox {width: auto; margin-top: 4px; margin-right: 170px}
+form.saveform .row input.file {float: none; margin-left: 50px}
+input.submit {background: #ccc url(/graphics/tactile/button-bg.png) top left repeat-x; cursor: pointer; line-height: 1.4em; padding: 1px 8px}
+form input.submit:hover, form.saveform .row input.submit:hover {border-color: #333}
+form.saveform .row textarea {float: right; min-height: 80px; max-height: 300px; width: 345px; font-size: 1.2em; padding: 4px 1px}
+textarea.descriptionEdit {min-height: 80px; max-height: 300px; padding: 4px 1px}
+form.saveform input.short {width: 50px}
+form.saveform #save_container {text-align: right}
+form.saveform #save_container input {float: none; padding: 4px 6px; margin: 0; width: auto; background: #ccc url(/graphics/tactile/button-bg.png) top left repeat-x; cursor: pointer; width: 180px}
+form.saveform #save_container input:hover {border-color: #333}
+form.saveform fieldset#save_container {border-top-width: 1px; border-top-style: dashed; padding-top: 20px}
+form.saveform input.has_error {border-width: 1px; border-style: solid}
+form.saveform fieldset.cancel_or_save {font-size: 1.2em}
+form.saveform fieldset#save_container.cancel_or_save input {float: none; font-size: 1em; padding: 1px 6px; width: auto; margin-left: 100px}
+form.saveform .inline_error {float: left; margin: 6px 0; padding: 4px 0; font-style: italic; font-weight: bold; font-size: 1.2em}
+form.saveform label.inline_checkbox {float: none; width: auto; font-size: 1.2em}
+form.saveform label.inline_checkbox input {float: none; margin: 0}
+#right_bar form.saveform .row label {font-size: 1em}
+#right_bar form.saveform .row input, #right_bar form.saveform .row select {font-size: 1em; width: 140px}
+#right_bar form.saveform .inline_checkbox input {width: auto; margin: 0; vertical-align: text-bottom}
+form.delete_form {}
+form.delete_form fieldset#save_container {font-size: 1.2em; border-top-width: 2px; border-top-style: dashed; padding-top: 20px}
+form.delete_form fieldset#save_container input {margin-left: 196px}
+div.form_help {position: relative; padding: 10px 20px 0 20px; margin: 0 0px 20px 0; border-width: 1px; border-style: solid}
+div.form_help .more {float: right; font-size: 1.2em; margin: 0 0 1em 1em}
+div.form_help a:hover {text-decoration: underline}
+div.form_help .warning {font-weight: bold}
+.edit_holder fieldset div.duplicates {clear: both; float: right; width: 182px; border-width: 1px; border-style: dashed; border-top: 0}
+.edit_holder fieldset div.duplicates p {background-color: #ddd; margin: 0; padding: 0 5px; font-size: 1em; border-top: 1px solid #999}
+.edit_holder fieldset div.duplicates p.top {padding: 5px; font-size: 1.2em; border: 0}
+.edit_holder fieldset div.duplicates ul {background-color: #eee; border-top: 1px solid #999}
+.edit_holder fieldset div.duplicates li {color: #00c; padding: 5px}
+.edit_holder fieldset div.duplicates li:hover {background-color: #fff; cursor: pointer}
+.edit_holder #read_access, .edit_holder #write_access {}
+.edit_holder #read_access h4, .edit_holder #write_access h4 {font-size: 1.2em; display: inline}
+.edit_holder #read_access .radio_options, .edit_holder #write_access .radio_options {padding: 0}
+.edit_holder #read_access .radio_options li, .edit_holder #write_access .radio_options li {margin-bottom: 10px}
+.edit_holder #read_access .radio_options label, .edit_holder #write_access .radio_options label {float: none; font-size: 1em}
+.edit_holder #read_access .radio_options input, .edit_holder #write_access .radio_options input {float: none; margin: 0 5px 0 0}
+.edit_holder #read_access .radio_options select, .edit_holder #write_access .radio_options select {margin: 10px 0 0 0}
+.edit_holder fieldset a.quick_add_trigger {float: left; line-height: 1.6em; margin: 10px 0}
+/* * PREFERENCES */ #pref_nav {overflow: hidden; border: 1px solid #999}
+#pref_nav ul {padding-right: 15px; display: table}
+#pref_nav ul li {float: left; font-size: 1.2em; line-height: 25px; padding: 0 0 0 15px}
+#pref_nav ul li.arrow {background: url(/graphics/tactile/chevron25.png) no-repeat right top; width: 15px}
+#pref_nav ul li.on_left {background: url(/graphics/tactile/chevron25selected.png) no-repeat right top}
+#pref_nav ul li.on_right {background: url(/graphics/tactile/chevron25backwards.png) no-repeat right top}
+#pref_nav ul li.on {background-color: #ff9}
+#pref_nav ul li h3 a {display: inline-block; font-weight: normal}
+#pref_nav ul li.on a {color: #333; font-weight: bold}
+#pref_nav ul li:last-child h3 {padding-left: 5px}
+#pref_content {padding-top: 20px; border: 1px solid #999; border-top: 0}
+#pref_content .content_holder {margin: 0; overflow: hidden; padding: 0 20px}
+#pref_content .content_holder .content {margin-left: 0}
+.edit_holder .dropboxkey, .edit_holder .webkey {}
+.edit_holder fieldset.prefs_save {margin-bottom: 20px}
+.edit_holder fieldset.prefs_save input {margin-left: 176px}
+#timeline_options input {float: none}
+#right_bar #toggle_welcome_message .mini_preference_label {float: left; padding-top: 3px; margin-bottom: 10px}
+#right_bar #toggle_welcome_message input {width: auto; float: right}
+#key_prefs input.savebutton {margin-bottom: 20px}
+#timeline_options {margin-top: 2px}
+/* * TAGS */ input#tags.tag_list {width: 300px}
+div#import_options {}
+div#import_options input.checkbox {margin-top: 3px}
+/* * ACTIVITIES */ #activity_new_inline {margin-left: 20px}
+#activity_new_inline .row label {margin: 5px 0 0 0}
+#when_container {float: right; width: 187px; position: relative}
+#when_container a.skipToDate {display: block; position: absolute; left: -25px; top: 0; height: 25px; width: 25px; background: transparent url(/graphics/tactile/icons/calendar.png) no-repeat center center}
+#when_container a.skipToDate:hover {text-decoration: none}
+#when_container input, #when_container select {float: right}
+#when_container #datetime_container {float: right}
+#activity_select_date {width: 112px !important}
+#activity_location_container {display: none}
+.activity_fs.todo_later, .activity_fs.event_later {}
+.activity_fs.todo_later #activity_datetime, .activity_fs.todo_later #time_range_mark, .activity_fs.todo_later #activity_end_datetime, .activity_fs.event_later #activity_datetime, .activity_fs.event_later #time_range_mark, .activity_fs.event_later #activity_end_datetime {display: none}
+.activity_fs.todo_later #activity_select_date, .activity_fs.event_later #activity_select_date {width: 180px !important}
+.activity_fs.event_later #activity_location_container {display: block}
+.activity_fs.todo_t {}
+.activity_fs.todo_t input.date, .activity_fs.todo_t #time_range_mark, .activity_fs.todo_t #activity_end_datetime {display: none}
+.activity_fs.todo_date {}
+.activity_fs.todo_date #time_range_mark, .activity_fs.todo_date #activity_end_datetime {display: none}
+.activity_fs.todo_date #activity_select_date {width: 180px !important}
+.activity_fs.todo_date #datetime_container {margin-top: 10px}
+.activity_fs.event_t {}
+.activity_fs.event_t #activity_location_container {display: block}
+.activity_fs.event_t #activity_datetime, .activity_fs.event_t #time_range_mark, .activity_fs.event_t #activity_end_datetime {float: left !important}
+.activity_fs.event_t input.date {display: none}
+.activity_fs.event_t #activity_select_date {width: 180px !important}
+.activity_fs.event_t #time_range_mark {margin: 5px 0; padding: 0 15px 0 20px}
+.activity_fs.event_t #datetime_container {margin-top: 10px}
+.activity_fs.event_date {}
+.activity_fs.event_date #activity_location_container {display: block}
+.activity_fs.event_date #time_range_mark {margin: 5px 0; padding-left: 50px !important}
+.activity_fs.event_date #datetime_container {margin-top: 10px}
+.activity_fs.event_date #activity_end_datetime {clear: left !important}
+.activity_fs.event_date #activity_select_date {width: 181px !important}
+#datetime_container {}
+#datetime_container .date {width: 109px !important}
+#datetime_container .time {width: 25px !important}
+#time_range_mark {margin-top: 10px; padding: 0 10px; float: left; font-size: 1.2em}
+/* * CHANGE YOUR PLAN */ table#plan_comparison {font-size: 1.2em; margin-bottom: 20px}
+table#plan_comparison td, table#plan_comparison th {padding: 5px 0; text-align: center}
+table#plan_comparison tbody th, table#plan_comparison tbody td {border-top-width: 1px; border-top-style: solid; border-bottom-width: 1px; border-bottom-style: solid}
+table#plan_comparison input {float: none}
+/* * CHANGE PAYMENT */ #card_expiration_month {width: 115px}
+#card_expiration_year {width: 60px}
+/* * GROUPS/ROLES */ #read_roles_ids, #write_roles_ids, #Role_users {height: 150px}
+/* * TACTILEMAIL */ #tactilemail_shared_addresses {font-size: 1.2em; margin-bottom: 1em}
+#tactilemail_shared_addresses td {padding-bottom: 3px}
+#tactilemail_shared_addresses td.email_address {color: #666}
+#tactilemail_shared_addresses td.email_address span {color: #000}
+span.verified {color: #3a3}
+span.unverified {color: #c90}
+#pref_shared_addresses .content p, #pref_email_templates .content p {margin-bottom: 20px}
+/** * Custom Fields */ table#custom_fields_table tbody td {vertical-align: top; padding-top: 10px; font-weight: bold}
+table#custom_fields_table tr.none_yet td, table#custom_fields_table tbody a.action {font-weight: normal}
+table#custom_fields_table span.sprite {display: table-cell; padding-right: 4px}
+table#custom_fields_table span.addRow {display: block}
+table#custom_fields_table span.addRow img {vertical-align: text-top}
+table#custom_fields_table span.addRow input {margin-top: 5px; width: 120px}
+table#custom_fields_table input.name {width: 120px}
+table#custom_fields_table th#field_name, table#custom_fields_table th#enabled_for {width: 150px}
+table#custom_fields_table th#delete {width: 20px}
+/* * WEBFORM */ #edit_tactile_webform div.radio_options {}
+#edit_tactile_webform div.radio_options label {display: inline; float: none; margin: 0}
+#edit_tactile_webform div.radio_options input {margin: 0; float: none}
+#edit_tactile_webform .form_help pre {font-size: 1.2em; margin-bottom: 1em}
+#edit_tactile_webform .radio_options label {font-size: 1em; line-height: 1.2em}
+/* * LOGOS */ #right_bar #login_logo img {border: 1px solid #333}
+/* * RESET */ .sprite-organisation, .sprite-person, .sprite-opportunity, .sprite-activity {background-image: url(/graphics/tactile/items/sprite_small.png)}
+.sprite-organisation {background-position: 0 2px}
+.sprite-person {background-position: 0 -98px}
+.sprite-opportunity {background-position: 0 -198px}
+.sprite-activity {background-position: 0 -298px}
+.sprite-organisation_med, .sprite-person_med, .sprite-opportunity_med, .sprite-opportunity_archived_med, .sprite-activity_med, .sprite-user_med, .sprite-user_disabled_med {background-image: url(/graphics/tactile/items/sprite_med.png)}
+.sprite-organisation_med {background-position: 0 0px}
+.sprite-person_med {background-position: 0 -60px}
+.sprite-opportunity_med {background-position: 0 -120px}
+.sprite-opportunity_archived_med {background-position: 0 -420px}
+.sprite-activity_med {background-position: 0 -180px}
+.sprite-user_med {background-position: 0 -240px}
+.sprite-user_disabled_med {background-position: 0 -540px}
+#add_nav .sprite-organisation_med {background-position: 5px 5px}
+#add_nav .sprite-person_med {background-position: 5px -55px}
+#add_nav .sprite-opportunity_med {background-position: 5px -115px}
+#add_nav .sprite-activity_med {background-position: 5px -175px}
+.attached_things .sprite-organisation {background-position: 8px 2px}
+.attached_things .sprite-person {background-position: 8px -98px}
+.attached_things .sprite-opportunity {background-position: 8px -198px}
+.attached_things .sprite-activity {background-position: 8px -298px}
+.sprite-phone {background-image: url(/graphics/tactile/icons/phone.png)}
+.sprite-fax {background-image: url(/graphics/tactile/icons/fax.png)}
+.sprite-email {background-image: url(/graphics/tactile/icons/email.png)}
+.sprite-mobile {background-image: url(/graphics/tactile/icons/mobile.png)}
+.sprite-website {background-image: url(/graphics/tactile/icons/website.png)}
+.sprite-skype {background-image: url(/graphics/tactile/icons/skype.png)}
+.sprite-linkedin {background-image: url(/graphics/tactile/icons/linkedin.png)}
+.sprite-twitter {background-image: url(/graphics/tactile/icons/twitter.png)}
+.sprite-facebook {background-image: url(/graphics/tactile/icons/facebook.png)}
+.sprite-address {background-image: url(/graphics/tactile/icons/address.png)}
+.sprite-address_main {background-image: url(/graphics/tactile/icons/address_main.png)}
+.sprite-note {background-image: url(/graphics/tactile/icons/note.png)}
+.sprite-file {background-image: url(/graphics/tactile/icons/disk.png)}
+.sprite-tag {background-image: url(/graphics/tactile/icons/tag.png)}
+.sprite-add {background-image: url(/graphics/tactile/icons/add.png)}
+.sprite-search {background-image: url(/graphics/tactile/icons/search.png)}
+.sprite-edit {background-image: url(/graphics/tactile/icons/wrench.png)}
+.sprite-complete {background-image: url(/graphics/tactile/icons/tick.png)}
+.sprite-remove, .sprite-uncomplete {background-image: url(/graphics/tactile/icons/cross.png)}
+.sprite-alert {background-image: url(/graphics/tactile/icons/alert.png)}
+.sprite-download {background-image: url(/graphics/tactile/icons/download.png)}
+.sprite-timeline {background-image: url(/graphics/tactile/icons/timeline.png)}
+.sprite-list {background-image: url(/graphics/tactile/icons/list.png)}
+.sprite-rss {background-image: url(/graphics/tactile/icons/feed.png)}
+.sprite-graph {background-image: url(/graphics/tactile/icons/graph.png)}
+.sprite-export {background-image: url(/graphics/tactile/icons/export.png)}
+.sprite-import {background-image: url(/graphics/tactile/icons/import.png)}
+.sprite-dropbox {background-image: url(/graphics/tactile/icons/email.png)}
+.sprite-upwards {background-image: url(/graphics/tactile/icons/upwards.png)}
+.sprite-dismiss {background-image: url(/graphics/tactile/dismiss.png); background-position: 0 0}
+.sprite-dismiss:hover {background-position: 0 -30px}
+.sprite-loading, div.loading {background-image: url(/graphics/omelette/spinner.gif)}
+.bubble .sprite-loading {background-image: url(/graphics/omelette/spinner_invert.gif)}
+.side_tag_list .tag a {background: url(/graphics/tactile/icons/tag.png) no-repeat 2px 2px}
+input#activity_date, input#activity_end_date, input.datefield {background-image: url(/graphics/tactile/icons/calendar.png); background-repeat: no-repeat; background-position: 99% 50%}
+/* * SCREEN */ .shadow184 {background-image: url(/graphics/tactile/shadow184.png)}
+.shadow200 {background-image: url(/graphics/tactile/shadow200.png)}
+.shadow222 {background-image: url(/graphics/tactile/shadow222.png)}
+.shadow270 {background-image: url(/graphics/tactile/shadow270.png)}
+.shadow430 {background-image: url(/graphics/tactile/shadow430.png)}
+.modal-shadow {background-image: url(/graphics/tactile/black50.png)}
+#add_nav li.level1 span {background-image: url(/graphics/tactile/icons/add.png)}
+#add_nav li.org a {background-image: url(/graphics/tactile/items/organisation_medium_on.png)}
+#add_nav li.person a {background-image: url(/graphics/tactile/items/person_medium_on.png)}
+#add_nav li.opp a {background-image: url(/graphics/tactile/items/opportunity_medium_on.png)}
+#add_nav li.act a {background-image: url(/graphics/tactile/items/activity_medium_on.png)}
+#add_nav #check_calls li.level1 span {background-image: url(/graphics/tactile/dialable.png)}
+#right_bar div.foldable h3, #right_bar div.ajax-foldable h3 {background-image: url(/graphics/tactile/opened.png)}
+#right_bar div.foldable.unfoldable h3 {background-image: none}
+#right_bar div.foldable h3.closed, #right_bar div.ajax-foldable h3.closed {background-image: url(/graphics/tactile/closed.png)}
+#right_bar div.help {background-image: url(/graphics/tactile/icons/help.png)}
+#right_bar li.add_new {background-image: url(/graphics/tactile/icons/add.png)}
+ul#tagged_item_columns .paging .paging_loading span {background-image: url(/graphics/omelette/spinner.gif)}
+ul.call_list li.person {background-image: url(/graphics/tactile/items/person_medium_on.png)}
+ul.call_list li.company {background-image: url(/graphics/tactile/items/organisation_medium_on.png)}
+table tr.on td.user_name {background-image: url(/graphics/tactile/items/user_medium_on.png)}
+table tr.off td.user_name {background-image: url(/graphics/tactile/items/user_medium_off.png)}
+.view_holder div.tag_list.edit_mode ul li.tag a {background-image: url(/graphics/tactile/icons/tag_delete.png)}
+#by_tag_filter a.filter, #by_tag_filter span.selected, #right_bar div.side_tag_list div.tag a, #right_bar div.side_tag_list div.tag.selected span, .view_holder div.tag_list ul li.tag a {background-image: url(/graphics/tactile/icons/tag.png); background-repeat: no-repeat; background-position: 3px center}
+/* * RESET */ a {color: #00c}
+a:visited {color: #00c}
+textarea {border-color: #999}
+input, select {border-color: #999}
+textarea.subtle, input.subtle {background-color: #f5f5f5; color: #999}
+button.button_link {background: transparent; color: #c00}
+table.index_table a.out {color: #000}
+a.action, #actions ul a {color: #c00}
+a.show_fields {color: #080}
+.sprite-organisation, .sprite-person, .sprite-activity, .sprite-opportunity {background-color: transparent}
+/* * SCREEN */ body {background-color: #ccc}
+#container {background-color: #fff}
+#free_plan_upsell {background-color: #ffee62}
+#free_plan_upsell a {color: #000}
+#browser_warning {background-color: #fff}
+#browser_warning .warning {color: #c00}
+div.loading {border-color: #c00; color: #000; background-color: #fff}
+#flash #messages {border-color: #999; background-color: #ffa}
+#flash #errors, ul#main_nav li.highlight_errors, ul#sub_nav li.highlight_errors, #summary_stats div.stats div.alert {border-color: #c00; background-color: #fdd}
+#summary_stats div.stats div.warning {background-color: #FFDEBE}
+#summary_stats div.stats div.won {background-color: #B5E3AC}
+ul#main_nav li.no_highlight, ul#sub_nav li.no_highlight {background-color: #fff}
+.modal-shadow .shadow-inner {background-color: #fff}
+#add_nav li.level1 {background-color: #fff}
+#add_nav li.level1:hover {background-color: #fff}
+#add_nav li.level1 span {background-color: #fff}
+#add_nav ul li a:hover {background-color: #ff9}
+#add_nav li a {background-color: #fff}
+#add_nav #check_calls li.level1 span {background-color: #fff}
+#logo_holder {background-color: #fff}
+#right_bar {color: #333}
+#right_bar h3 a, #right_bar h4 {color: #000}
+#right_bar div.foldable, #right_bar div.ajax-foldable {border-color: #999; background-color: #f5f5f5}
+#right_bar div.foldable.no-background {background-color: #fff}
+#right_bar div.usage_warning {background-color: #ffffcc}
+#right_bar div.help {background-color: #ff9}
+#right_bar div.help div a {color: #00c}
+#welcome_text {border-color: #999; background-color: #ffc}
+#right_bar #activities div.overdue a.view_link, #right_bar #activities div.today a.view_link {color: #fff}
+#right_bar #activities div.overdue a.view_link {background-color: #c00}
+#right_bar #activities div.today a.view_link {background-color: #FF8C00}
+#right_bar #activities div.upcoming a.view_link, #right_bar #activities div.later a.view_link {background-color: #ddd}
+.content_holder h3 {border-left-color: #999; background-color: #ccc}
+div.terms_page .instructions {background-color: #ff9}
+div.terms_page form fieldset#i_agree {background-color: #ffc}
+div#by_tag_filter {border-color: #333; background-color: #f5f5f5}
+div#by_tag_filter a.filter, div#by_tag_filter span.selected {background-color: #e5e5e5}
+div#by_tag_filter a.filter:hover {background-color: #ff9}
+ul#tagged_item_columns li .border {border-color: #999}
+ul#tagged_item_columns .paging .paging_loading {background-color: #fff}
+ul#tagged_item_columns li .content tfoot td .paging .paging_loading {background-color: #fff; color: black}
+.search_results p, .search_results ul {background-color: #fff}
+.search_results p {color: #999}
+.search_results ul li.selected {background-color: #ff9}
+div.cal_container {border-color: #aaa; background-color: #eee}
+div.cal_container select:focus {background-color: #fff}
+div.cal_container table tr.even td {background-color: #ffffff}
+div.cal_container td {color: #000}
+div.cal_container td.today {background-color: #ff9 !important; color: #333 !important}
+div.cal_container td.selected {background-color: #333 !important; color: #fff !important}
+div.cal_container td.no_data {background-color: #e3e3e3 !important}
+div.cal_container td.data:hover {background-color: #000; color: #fff}
+/* * INDEX */ div.paging span.add_disallowed {color: #999}
+table.index_table thead, table.index_table tfoot {border-color: #999}
+table.index_table thead th, table.index_table tfoot th, table.index_table tfoot td {background: #e6e6e6 url(/graphics/tactile/table-bg.png) repeat-x bottom; color: #333}
+table.index_table tbody th, table.index_table tbody td {border-top-color: #999; border-bottom-color: #999}
+table.index_table tbody tr:hover td, table.index_table tbody tr:hover th {background-color: #ff9}
+table#report_table tfoot tr.subtotals th {background-color: #fff !important; background-image: none}
+#right_bar div.side_tag_list div.tag a, #right_bar div.side_tag_list div.tag.selected span {background-color: #e5e5e5}
+#right_bar div.side_tag_list div.tag a:hover {background-color: #ff9}
+#tag_cloud span:hover {background-color: #ff9}
+#usage_table {border-left-color: #999; border-right-color: #999}
+tr.good td, span.good {background-color: #9f9}
+tr.warn td, span.warn {background-color: #ffc95e}
+tr.bad td, span.bad {background-color: #f99}
+/* * EDIT */ form.saveform textarea {border-color: #999}
+form.saveform fieldset#save_container {border-top-color: #333}
+form.saveform input.has_error {border-color: #c00; background-color: #fdd}
+form.saveform .inline_error {color: #c00}
+form.delete_form fieldset#save_container {border-top-color: #333}
+div.form_help {background-color: #ffc; border-color: #999}
+div.form_help .warning {color: #c00}
+.edit_holder .content_holder div.hide {color: #333; background-color: #eee}
+.edit_holder .content_holder div.show {background-color: #fff}
+.edit_holder .content_holder div.show_hide a {color: #00c}
+table#plan_comparison col:hover {background-color: #ff9}
+table#plan_comparison tbody th, table#plan_comparison tbody td {border-top-color: #080; border-bottom-color: #080}
+table#plan_comparison col.current {background-color: #ff9}
+table#plan_comparison col.unavailable {background-color: #ccc}
+/* * VIEW */ .view_holder div.tag_list ul li.tag a {background-color: #eee}
+.view_holder div.tag_list ul li.tag a:hover {background-color: #ff5}
+.view_holder div.tag_list.edit_mode ul li.tag a {color: #c00}
+.view_holder .content_holder .view_list .view_label {color: #666}
+.view_holder .content_holder .view_list a.out {color: #00c}
+#right_bar a.add_related {color: #c00}
+#right_bar ul.related_list li {border-bottom-color: #ccc}
+#right_bar form.side_form input.has_error, #right_bar form.side_form select.has_error {border-color: #c00; background-color: #fdd}
+#right_bar form.side_form .inline_error {color: #c00}
+#right_bar #invoices .unpaid {color: #c00}
+#right_bar #invoices .part-paid {color: #f93}
+#right_bar #invoices .paid {color: #293}
+/** * Farbtastic Color Picker 1.2 * © 2008 Steven Wittens * * This program is free software; you can redistribute it and/or modify * it under the terms of the GNU General Public License as published by * the Free Software Foundation; either version 2 of the License, or * (at your option) any later version. * * This program is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the * GNU General Public License for more details. * * You should have received a copy of the GNU General Public License * along with this program; if not, write to the Free Software * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA */ .farbtastic {position: relative}
+.farbtastic * {position: absolute; cursor: crosshair}
+.farbtastic, .farbtastic .wheel {width: 195px; height: 195px}
+.farbtastic .color, .farbtastic .overlay {top: 47px; left: 47px; width: 101px; height: 101px}
+.farbtastic .wheel {background: url(/graphics/tactile/farbtastic/wheel.png) no-repeat; width: 195px; height: 195px}
+.farbtastic .overlay {background: url(/graphics/tactile/farbtastic/mask.png) no-repeat}
+.farbtastic .marker {width: 17px; height: 17px; margin: -8px 0 0 -8px; overflow: hidden; background: url(/graphics/tactile/farbtastic/marker.png) no-repeat}

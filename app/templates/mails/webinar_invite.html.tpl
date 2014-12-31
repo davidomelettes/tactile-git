@@ -1,0 +1,9 @@
+{assign var='email_title' value='Webinar Invite'}
+{include file="mails/shared/header.tpl"}
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 25px 0 10px 0; padding: 0;">Hi {$firstname},</p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">I trust you are getting on well with Tactile CRM and it's proving useful.</p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">I just wanted to let you know that we have several of our free '<a href="http://www.tactilecrm.com/webinars/?firstname={$firstname}&surname={$surname}&site_address={$site_address}&email={$email_address}&utm_source=TactileCRM&utm_medium=email&utm_campaignWebinar%2BInvite">webinars</a>' coming up and to offer you the chance to come along and ask us any questions you have about Tactile CRM. They run on a regular basis and we've got some coming up on:</p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">&gt; <strong>{$webinar1}</strong><br/>&gt; <strong>{$webinar2}</strong><br />&gt; <strong>{$webinar3}</strong></p>
+																<p style="font-family: Arial; font-size: 12px; color: #333; margin: 0 0 10px 0; padding: 0;">If those aren't convenient, keep an eye on the <a href="http://www.tactilecrm.com/webinars/?firstname={$firstname}&surname={$surname}&site_address={$site_address}&email={$email_address}&utm_source=TactileCRM&utm_medium=email&utm_campaignWebinar%2BInvite">webinars page</a>, <a href="mailto:george@tactilecrm.com?Subject=Webinar">drop me an email</a> or give us a call on +44(0)207 183 6677 (remember we're in the UK so between 9am and 5pm is best).</p>
+{include file="mails/shared/jake-sig.html.tpl"}
+{include file="mails/shared/footer.tpl"}

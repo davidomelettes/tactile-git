@@ -1,0 +1,432 @@
+.view_holder {}
+
+div.edit_delete {
+	float: right;
+	line-height: 50px;
+	font-size: 1.2em;
+}
+	div.edit_delete input { width: auto; }
+	div.edit_delete form,
+	div.edit_delete fieldset {
+		display: inline;
+	}
+
+.view_holder .description {
+	clear: left;
+	margin: 0 0 10px 0;
+}
+
+.view_holder div.tag_list {
+	margin-bottom: 10px;
+	font-size: 1.2em;
+	float: left;
+	width: 100%;
+	line-height: 20px;
+}
+	.view_holder div.tag_list span.label {
+		font-weight: bold;
+		margin-right: 5px;
+	}
+	.view_holder div.tag_list ul {
+		float: right;
+		text-align: right;
+	}
+		.view_holder div.tag_list ul li { display: inline; }
+			.view_holder div.tag_list ul li.tag a {
+				padding: 3px 5px 3px 21px;
+				white-space: nowrap;
+				background-image: url(/graphics/tactile/icons/tag.png);
+				background-repeat: no-repeat;
+				background-position: 3px center;
+			}
+			.view_holder div.tag_list ul li.edit { visibility: hidden; }
+				.view_holder div.tag_list ul:hover li.edit { visibility: visible; }
+				.view_holder div.tag_list ul:hover li.edit.no_tags { visibility: hidden; }
+		
+		.view_holder div.tag_list.edit_mode ul {}
+			.view_holder div.tag_list.edit_mode ul li a {
+				text-decoration: underline;
+				background-position: top right;
+				background-repeat: no-repeat;
+			}
+			.view_holder div.tag_list.edit_mode ul li.edit {
+				visibility: visible;
+				margin-right: 10px;
+			}
+				.view_holder div.tag_list.edit_mode ul li.edit a { background: none; }
+	
+	.view_holder div.tag_list form {
+		clear: right;
+		text-align: right;
+		padding-top: 10px;
+	}
+		.view_holder div.tag_list form input.tag_input {
+			width: 150px;
+			margin-right: 5px;
+			padding: 1px;
+		}
+
+.view_nav {
+	margin-bottom: 20px;
+	background: #f5f5f5 url(/graphics/tactile/view_nav_bg.png) repeat-x 0 0;
+	overflow: hidden;
+	width: 100%;
+	clear: left;
+}
+	.view_nav h3 {
+		font-size: 1.20em;
+		display: inline-block;
+		cursor: pointer;
+		float: left;
+		line-height: 23px;
+		height: 25px;
+		padding: 0 15px;
+		border-right: 1px solid #aaa;
+	}
+	.view_nav h3:hover {
+		color: #f5f5f5;
+		background: #f5f5f5 url(/graphics/tactile/view_nav_bg.png) repeat-x 0 -50px;
+	}
+	.view_nav h3.selected {
+		margin-right: 1px;
+		border-right: 0;
+		color: #fff;
+		background: #f5f5f5 url(/graphics/tactile/view_nav_bg.png) repeat-x 0 -25px;
+	}
+
+#activity_view #show_summary_info,
+#user_view #show_summary_info,
+.view_holder #show_summary_stats { border-left: 1px solid #aaa; margin-left: 20px; }
+.view_holder #summary_info { overflow: hidden; }
+
+.view_holder ul.summary_fields {
+	overflow: hidden;
+	font-size: 1.2em;
+	max-width: 900px;
+	margin-bottom: 20px;
+}
+	.view_holder ul.summary_fields li {
+		float: left;
+		line-height: 1.6em;
+		width: 100%;
+	}
+	.view_holder ul.summary_fields li.spacer { float: none; clear: left; height: 20px; }
+	.view_holder ul.summary_fields li.odd { width: 49%; clear: left; }
+	.view_holder ul.summary_fields li.even { width: 49%; }
+	.view_holder ul.summary_fields li .view_label,
+	.view_holder ul.summary_fields li .view_data { display: inline-block; }
+	.view_holder ul.summary_fields li span.view_label {
+		width: 40%;
+		max-width: 150px;
+		text-align: right;
+		color: #666;
+		vertical-align: top;
+		overflow: hidden;
+	}
+		.view_holder ul.summary_fields li span.view_label span { padding-right: 15px; }
+	.view_holder ul.summary_fields li span.view_data {
+		width: 58%;
+		vertical-align: top;
+		color: #000;
+	}
+	.view_holder ul.summary_fields li.single span.view_data .data {
+		float: left;
+		width: 250%;
+	}
+	.view_holder ul.summary_fields li.description { width: 100%; }
+	.view_holder ul.summary_fields li.description .view_label,
+	.view_holder ul.summary_fields li.description .view_data { float: left; }
+	.view_holder ul.summary_fields li.description .view_data { width: 80%; }
+	.view_holder ul.summary_fields li.description.inline_edit .view_data { border-bottom: 1px solid #fff; cursor: pointer; }
+	.view_holder ul.summary_fields li.description.inline_edit:hover .view_data { border-bottom: 1px dashed #999; }
+	.view_holder ul.summary_fields li.description.inline_edit:hover .view_data.edit { border-bottom: 1px solid #fff; }
+	
+.summary_fields .view_data textarea {
+	min-height: 80px;
+	max-height: 300px;
+	padding: 4px 1px;
+	width: 560px;
+}
+.summary_fields .view_data .save_or_cancel { margin-top: 1em; padding-bottom: 1em; }
+
+#right_bar #organisation_logo {
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 14px;
+	padding-right: 14px;
+	min-height: 50px;
+	text-align: center;
+}
+	#right_bar div#organisation_logo img { max-width: 270px; }
+	
+
+#right_bar #contact_information {}
+
+	td .email {
+		background: center left url(/graphics/tactile/email_small.png) no-repeat;
+		padding-left: 15px;
+	}
+	td .phone {
+		background: center left url(/graphics/tactile/phone_small.png) no-repeat;
+		padding-left: 15px;
+	}
+	td .mobile {
+		background: center left url(/graphics/tactile/mobile_small.png) no-repeat;
+		padding-left: 15px;
+	}
+	td .fax {
+		background: center left url(/graphics/tactile/fax_small.png) no-repeat;
+		padding-left: 15px;
+	}
+	td .sprite-website {
+		background: center left url(/graphics/tactile/world_small.png) no-repeat;
+		padding-left: 15px;
+	}
+	.sidebar_options li.skype img { vertical-align: text-bottom; }
+
+.sidebar_options .gap { height: 2px; }
+
+#qa_contact_method {}
+	#qa_contact_method table {}
+		#qa_contact_method table th,
+		#qa_contact_method table td { padding: 0 4px 4px 0; }
+		#qa_contact_method table input { margin: 0 0 0 0; }
+		#qa_contact_method table input.checkbox { margin-right: 0; margin-left: 0; }
+		#qa_contact_method table select { margin: 0 0 0 0; width: 75px; }
+		#qa_contact_method table select optgroup { background-color: #eee; }
+			#qa_contact_method table select optgroup option { background-color: #fff; }
+		#qa_contact_method table tfoot { font-size: 1.2em; }
+			#qa_contact_method table tfoot td { padding-top: 10px; }
+				#qa_contact_method table tfoot td a {
+					background: url(/graphics/tactile/icons/add.png) no-repeat 6px 0;
+					padding-left: 25px;
+				}
+	#qa_contact_method .radio {
+		float: none;
+		vertical-align: -2px;
+	}
+	#qa_contact_method select {
+		width: 75px;
+		margin-left: 0;
+		margin-right: 10px;
+	}
+	#qa_contact_method .qa_cm_label { width: 50px; }
+	#qa_contact_method .qa_cm_contact { width: 171px; }
+	#qa_contact_method .delete {
+		font-size: 1.2em;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+		padding-right: 0;
+	}
+		
+ul#qa_tweets {}
+	ul#qa_tweets li { margin-bottom: 10px; font-size: 1.2em; clear: left; overflow: hidden; }
+	ul#qa_tweets li img { float: left; margin-right: 10px; }
+	ul#qa_tweets li p { float: left; max-width: 310px; }
+	ul#qa_tweets li span.when { font-style: italic; color: #999; font-size: 0.8em; }
+		
+#right_bar #opportunity_contact_details,
+#right_bar #activity_contact_details {}
+	#right_bar #opportunity_contact_details td,
+	#right_bar #activity_contact_details td { vertical-align: bottom; }
+	#right_bar #opportunity_contact_details table.opportunity_contact,
+	#right_bar #activity_contact_details table.activity_contact { margin-bottom: 10px; }
+		#right_bar #opportunity_contact_details table.opportunity_contact caption,
+		#right_bar #activity_contact_details table.activity_contact caption { font-weight: bold; }
+		#right_bar table.opportunity_contact td { padding-top: 5px; }
+
+#right_bar #organisation_addresses,
+#right_bar #person_addresses {}
+	#right_bar #organisation_addresses .sidebar_options li,
+	#right_bar #person_addresses .sidebar_options li { margin-bottom: 5px; }
+	#right_bar #organisation_addresses address,
+	#right_bar #person_addresses address { padding-left: 20px; }
+	#right_bar #organisation_addresses ul li li a.action,
+	#right_bar #person_addresses ul li li a.action { visibility: hidden; }
+	#right_bar #organisation_addresses ul li li:hover a.action,
+	#right_bar #person_addresses ul li li:hover a.action { visibility: visible; }
+		
+#right_bar a.add_related {
+	position: absolute;
+	right: 10px;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+#right_bar ul.related_list {
+	overflow: hidden;
+	width: 100%;
+}
+	#right_bar ul.related_list li {
+		overflow: hidden;
+		position: relative;
+		clear: left;
+		padding-bottom: 10px;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		margin-bottom: 10px;
+	}
+		#right_bar div.activities ul.related_list li {
+			margin-bottom: 0;
+		}
+		#right_bar #activities div.activities ul li dl {
+			margin-bottom: 10px;
+		}
+		#right_bar ul.related_list li li {
+			padding-bottom: 0px;
+			padding-top: 0px;
+			border-bottom: 0;
+			margin-top: 0px;
+			margin-bottom: 3px;
+		}
+	#right_bar ul.related_list li.none_yet {
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	#right_bar ul.related_list li.last {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+	#right_bar ul.related_list li:last-child {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+		#right_bar ul.related_list > li:last-child { margin-bottom: 5px; }
+		#right_bar ul.related_list li a.action {
+			position: absolute;
+			right: 0;
+			visibility: hidden;
+		}
+			#right_bar ul.related_list li:hover a.action { visibility: visible; }
+		#right_bar ul.related_list li a.view_link { font-weight: bold; }
+		#right_bar ul.related_list li dl { overflow: hidden; }
+			#right_bar ul.related_list li dl dt {
+				float: left;
+				clear: left;
+				width: 80px;
+				font-weight: bold;
+			}
+			#right_bar ul.related_list li dl dd { float: left; }
+	
+	#right_bar ul.related_list ul.sidebar_options li.last { margin-bottom: 0; }
+	#right_bar ul.related_list ul.sidebar_options li:last-child { margin-bottom: 0; }
+
+#right_bar li.activity_complete,
+#right_bar li.activity_uncomplete,
+#right_bar li.download {
+	padding-left: 16px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+#right_bar ul.related_list.files {}
+	#right_bar ul.related_list.files li form {
+		display: none;
+		position: absolute;
+		top: 9px;
+		right: -2px;
+		text-align: right;
+	}
+		#right_bar ul.related_list.files li:hover form { display: block; }
+
+#right_bar div.show_all { margin-bottom: 5px; }
+#right_bar div.file_name_size { margin-bottom: 10px; }
+#right_bar div.file_comment { font-style: italic; margin-bottom: 10px; }
+
+#right_bar form#opp_archiving_form {}
+	#right_bar form#opp_archiving_form input#opp_status_update {
+		float: right;
+		width: auto;
+		padding: 1px 6px;
+	}
+
+#summary_stats {
+	margin: 0 0 20px 10px;
+	overflow: hidden;
+}
+	#summary_stats div.stats {
+		width: 33%;
+		float: left;
+		text-align: center;
+	}
+		#summary_stats div.stats div.stat {
+			background-color: #efefef;
+			margin: 0 10px;
+			padding: 10px;
+		}
+	#summary_stats h4 {
+		font-size: 1.1em;
+		margin: 0;
+		color: #666;
+	}
+	#summary_stats p { font-size: 1.1em; }
+	#summary_stats p.value {
+		font-size: 1.6em;
+		font-weight: bold;
+		line-height: 1.2em;
+		padding: 0;
+		margin: 0;
+	}
+	#summary_stats p.subtitle {
+		color: #666;
+		margin: 0;
+	}
+#summary_stats #pipeline.can_edit { cursor: pointer; }
+#summary_stats #pipeline.can_edit select {
+	font-size: 1.2em;
+	width: 120px;
+}
+#summary_stats #pipeline.can_edit:hover a { text-decoration: underline; }
+
+/*
+ * FRESHBOOKS
+ */
+
+#right_bar #invoices {}
+	#right_bar #invoices span { font-weight: bold; }
+
+
+/*
+ * Custom Fields
+ */
+
+#right_bar #organisation_custom_fields table,
+#right_bar #activity_custom_fields table,
+#right_bar #person_custom_fields table,
+#right_bar #opportunity_custom_fields table { margin-bottom: 5px; }
+
+#qa_custom_fields td.name label {
+	width: auto;
+	display: inline-block;
+	float: none;
+	margin: 0;
+	width: 150px;
+	overflow: hidden;
+}
+#qa_custom_fields td.name,
+#qa_custom_fields td.empty { width: 160px; }
+#qa_custom_fields td.value { height: 35px; }
+#qa_custom_fields td.value,
+#qa_custom_fields td.select { width: 190px; padding-right: 5px; }
+#qa_custom_fields td.value input,
+#qa_custom_fields td select { margin: 0; }
+#qa_custom_fields .delete {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+#qa_custom_fields tfoot td { padding: 5px 0; }
+	#qa_custom_fields tfoot span select { float: none; margin: 0; padding: 1px; }
+
+
+/*
+ * ACTIVITY TRACKS
+ */
+
+#right_bar #noActivityTracks { margin-bottom: 10px; }
+#right_bar #showActivityTrackForm { color: #c00; font-weight: normal; position: absolute; text-decoration: underline; right: 50px; }
+#right_bar #activityTrackForm { border-bottom: 1px solid #ccc; margin-bottom: 10px; }

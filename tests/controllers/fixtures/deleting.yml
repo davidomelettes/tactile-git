@@ -1,0 +1,76 @@
+---
+
+non_admin_person:
+  id: 1000
+  firstname: Fred
+  surname: Smith
+  owner: greg//tactile
+  alteredby: greg//tactile
+  usercompanyid: 1
+  language_code: EN
+ 
+non_admin_user:
+  -
+    person_id: 1000
+    username: nonadmin//tactile
+    password: password
+    terms_agreed: 2009-01-01 12:30:12
+    
+non_admin_access:
+  -
+    username: nonadmin//tactile
+    organisation_id: 1
+  
+owned_activity:
+  id: 100
+  name: Default Activity
+  owner: nonadmin//tactile
+  alteredby: nonadmin//tactile
+  later: true
+  assigned_to: nonadmin//tactile
+  assigned_by: nonadmin//tactile
+  usercompanyid: 1
+  
+not_owned_activity:
+  id: 200
+  name: Not-Owned Activity
+  owner: greg//tactile
+  alteredby: greg//tactile
+  later: true
+  assigned_to: greg//tactile
+  assigned_by: greg//tactile
+  usercompanyid: 1
+  
+not_admin_owned_activity:
+  id: 300
+  name: Default Activity2
+  owner: nonadmin//tactile
+  alteredby: nonadmin//tactile
+  later: true
+  assigned_to: nonadmin//tactile
+  assigned_by: nonadmin//tactile
+  usercompanyid: 1
+
+owned_opportunity:
+  id: 100
+  name: Default Opp
+  enddate: 12/12/2006
+  owner: nonadmin//tactile
+  alteredby: nonadmin//tactile
+  usercompanyid: 1
+  
+not_owned_opportunity:
+  id: 200
+  name: Default Opp2
+  enddate: 12/12/2007
+  owner: greg//tactile
+  alteredby: greg//tactile
+  usercompanyid: 1
+
+not_admin_owned_opportunity:
+  id: 300
+  name: Default Opp3
+  enddate: 12/12/2006
+  owner: nonadmin//tactile
+  alteredby: nonadmin//tactile
+  usercompanyid: 1

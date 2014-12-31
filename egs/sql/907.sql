@@ -1,0 +1,3 @@
+BEGIN;
+ALTER TABLE store_sections ADD COLUMN website_id bigint REFERENCES websites (id) ON UPDATE CASCADE ON DELETE CASCADE;
+COMMIT;

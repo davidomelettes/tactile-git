@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response status="ok">
+  <clients page="2" per_page="1" pages="2" total="2">
+    <client>
+      <client_id>15</client_id>
+      <organization>XYZ Corp</organization>
+      <username>johnsmith</username>
+      <first_name>John</first_name>
+      <last_name>Smith</last_name>
+      <email>johnsmith@freshbooks.com</email>
+    </client>
+  </clients>
+</response>

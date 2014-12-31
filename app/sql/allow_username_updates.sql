@@ -1,0 +1,10 @@
+BEGIN;
+
+ALTER TABLE notes DROP CONSTRAINT notes_owner_fkey;
+ALTER TABLE notes ADD FOREIGN KEY (owner) REFERENCES users(username) ON UPDATE CASCADE;
+ALTER TABLE notes DROP CONSTRAINT notes_alteredby_fkey;
+ALTER TABLE notes ADD FOREIGN KEY (alteredby) REFERENCES users(username) ON UPDATE CASCADE;
+ALTER TABLE s3_files DROP CONSTRAINT s3_files_owner_fkey;
+ALTER TABLE s3_files ADD FOREIGN KEY (owner) REFERENCES users(username) ON UPDATE CASCADE;
+
+COMMIT;

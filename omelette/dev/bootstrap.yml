@@ -1,0 +1,118 @@
+---
+-
+  name: allow ownerless company
+  type: sql
+  query: alter table company alter owner drop not null
+-
+  name: create initial company
+  type: insert
+  table: company
+  insert:
+    id: 1
+    name: Default Company
+    usercompanyid: 1
+    accountnumber: ABC01
+
+-
+  name: make the company a system company
+  type: insert
+  table: system_companies
+  insert:
+    id: 1
+    company_id: 1
+-
+  name: allow ownerless people
+  type: sql
+  query: alter table person alter owner drop not null
+-
+  name: create initial person
+  type: insert
+  table: person
+  insert:
+    id: 1
+    firstname: Default
+    surname: User
+    company_id: 1
+    lang: EN
+    usercompanyid: 1
+-
+  name: create initial user
+  type: insert
+  table: users
+  insert:
+    username: root
+    password: 5f4dcc3b5aa765d61d8327deb882cf99
+    person_id: 1
+
+-
+  name: give the user access to the system company
+  type: insert
+  table: user_company_access
+  insert:
+    username: root
+    company_id: 1
+
+-
+  name: make the owner own themselves
+  type: update
+  table: person
+  update:
+    owner: root
+  where: id=1
+-
+  name: make the user the owner of the default company
+  type: update
+  table: company
+  update:
+    owner: root
+  where: id=1
+
+-
+  name: stop allowing ownerless companies
+  type: sql
+  query: alter table company alter owner set not null      
+
+-
+  name: stop allowing ownerless people
+  type: sql
+  query: alter table person alter owner set not null    
+
+
+
+-
+  name: make a default role
+  type: insert
+  table: roles
+  insert:
+    id: 1
+    name: Admin
+    usercompanyid: 1
+    
+-
+  name: put the user in the role
+  type: insert
+  table: hasrole
+  insert:
+    roleid: 1
+    username: root
+    
+-
+  name: give the role access to everything
+  type: sql
+  query: INSERT INTO haspermission (roleid, permissionsid) (SELECT 1, id FROM permissions)
+  
+-
+  name: make them an admin for everything
+  type: sql
+  query: INSERT INTO module_admins (role_id, module_name) (SELECT 1, permission FROM permissions where type='m')
+-
+  name: give the system-company access to the base modules
+  type: sql
+  query: INSERT INTO companypermissions(usercompanyid, permissionid) (SELECT 1, p.id FROM permissions p WHERE type='m' AND p.permission IN ('dashboard','contacts','crm','projects','admin','system_admin'))
+
+
+
+
+
+
+

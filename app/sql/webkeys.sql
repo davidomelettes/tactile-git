@@ -1,0 +1,3 @@
+BEGIN;
+	ALTER TABLE users ADD webkey VARCHAR(32);
+COMMIT;

@@ -1,0 +1,4 @@
+BEGIN;
+	ALTER TABLE person ADD private BOOLEAN NOT NULL DEFAULT FALSE;
+	UPDATE person SET private = TRUE WHERE company_id IS NULL;
+COMMIT;

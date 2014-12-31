@@ -1,0 +1,6 @@
+{"status":"success", "people": [<#strip#>
+<#foreach name=persons item=person from=$persons#>
+<#$person->asJson()#>
+<#if !$smarty.foreach.persons.last#>,<#/if#>
+<#/foreach#>
+<#/strip#>], "cur_page":<#$cur_page#>, "num_pages":<#$num_pages#>, "per_page":<#$persons->per_page#>, "total":<#$persons->num_records#>}

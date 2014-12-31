@@ -1,0 +1,19 @@
+body { background-color: #eee; }
+
+#header {
+	background-color: #ff9c00;
+	background-image: url(/graphics/tactile/headers/orange.png);
+}
+#header #topbit h1 { color: #333; }
+	#header #topbit h1 a { color: #333; }
+
+.topNav li.level1 { background-color: #d80; }
+	.topNav li a { color: #fff; }
+	.topNav li.hover a { color: #333; }
+	.topNav li.current a { color: #333; }
+		
+ul#mini_nav li { color: #333; }
+	ul#mini_nav li a {
+		color: #333;
+		border-left-color: #333;
+	}

@@ -1,0 +1,1 @@
+{include file="elements/zendesk_ticket_list.tpl" tickets=$tickets}

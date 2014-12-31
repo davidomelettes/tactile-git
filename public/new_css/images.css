@@ -1,0 +1,147 @@
+/*
+ * RESET
+ */
+
+.sprite-organisation, 
+.sprite-person,
+.sprite-opportunity,
+.sprite-activity { background-image: url(/graphics/tactile/items/sprite_small.png); }
+.sprite-organisation { background-position: 0 2px; }
+.sprite-person { background-position: 0 -98px; }
+.sprite-opportunity { background-position: 0 -198px; }
+.sprite-activity { background-position: 0 -298px; }
+
+.sprite-organisation_med, 
+.sprite-person_med,
+.sprite-opportunity_med,
+.sprite-opportunity_archived_med,
+.sprite-activity_med,
+.sprite-user_med,
+.sprite-user_disabled_med { background-image: url(/graphics/tactile/items/sprite_med.png); }
+.sprite-organisation_med { background-position: 0 0px; }
+.sprite-person_med { background-position: 0 -60px; }
+.sprite-opportunity_med { background-position: 0 -120px; }
+.sprite-opportunity_archived_med { background-position: 0 -420px; }
+.sprite-activity_med { background-position: 0 -180px; }
+.sprite-user_med { background-position: 0 -240px; }
+.sprite-user_disabled_med { background-position: 0 -540px; }
+
+#add_nav .sprite-organisation_med { background-position: 5px 5px; }
+#add_nav .sprite-person_med { background-position: 5px -55px; }
+#add_nav .sprite-opportunity_med { background-position: 5px -115px; }
+#add_nav .sprite-activity_med { background-position: 5px -175px; }
+
+.attached_things .sprite-organisation { background-position: 8px 2px; }
+.attached_things .sprite-person { background-position: 8px -98px; }
+.attached_things .sprite-opportunity { background-position: 8px -198px; }
+.attached_things .sprite-activity { background-position: 8px -298px; }
+
+.sprite-phone { background-image: url(/graphics/tactile/icons/phone.png); }
+.sprite-fax { background-image: url(/graphics/tactile/icons/fax.png); }
+.sprite-email { background-image: url(/graphics/tactile/icons/email.png); }
+.sprite-mobile { background-image: url(/graphics/tactile/icons/mobile.png); }
+.sprite-website { background-image: url(/graphics/tactile/icons/website.png); }
+.sprite-skype { background-image: url(/graphics/tactile/icons/skype.png); }
+.sprite-linkedin { background-image: url(/graphics/tactile/icons/linkedin.png); }
+.sprite-twitter { background-image: url(/graphics/tactile/icons/twitter.png); }
+.sprite-facebook { background-image: url(/graphics/tactile/icons/facebook.png); }
+
+.sprite-address { background-image: url(/graphics/tactile/icons/address.png); }
+.sprite-address_main { background-image: url(/graphics/tactile/icons/address_main.png); }
+
+.sprite-note { background-image: url(/graphics/tactile/icons/note.png); }
+.sprite-file { background-image: url(/graphics/tactile/icons/disk.png); }
+.sprite-tag { background-image: url(/graphics/tactile/icons/tag.png); }
+
+.sprite-add { background-image: url(/graphics/tactile/icons/add.png); }
+.sprite-search { background-image: url(/graphics/tactile/icons/search.png); }
+.sprite-edit { background-image: url(/graphics/tactile/icons/wrench.png); }
+.sprite-complete { background-image: url(/graphics/tactile/icons/tick.png); }
+.sprite-remove,
+.sprite-uncomplete { background-image: url(/graphics/tactile/icons/cross.png); }
+.sprite-alert { background-image: url(/graphics/tactile/icons/alert.png); }
+.sprite-download { background-image: url(/graphics/tactile/icons/download.png); }
+
+.sprite-timeline { background-image: url(/graphics/tactile/icons/timeline.png); }
+.sprite-list { background-image: url(/graphics/tactile/icons/list.png); }
+.sprite-rss { background-image: url(/graphics/tactile/icons/feed.png); }
+
+.sprite-graph { background-image: url(/graphics/tactile/icons/graph.png); }
+.sprite-export { background-image: url(/graphics/tactile/icons/export.png); }
+.sprite-import { background-image: url(/graphics/tactile/icons/import.png); }
+.sprite-dropbox { background-image: url(/graphics/tactile/icons/email.png); }
+
+.sprite-upwards { background-image: url(/graphics/tactile/icons/upwards.png); }
+
+.sprite-dismiss {
+	background-image: url(/graphics/tactile/dismiss.png);
+	background-position: 0 0;
+}
+.sprite-dismiss:hover { background-position: 0 -30px; }
+
+.sprite-loading,
+div.loading { background-image: url(/graphics/omelette/spinner.gif); }
+.bubble .sprite-loading { background-image: url(/graphics/omelette/spinner_invert.gif); }
+
+.side_tag_list .tag a {
+	background: url(/graphics/tactile/icons/tag.png) no-repeat 2px 2px;
+}
+
+input#activity_date,
+input#activity_end_date,
+input.datefield {
+	background-image: url(/graphics/tactile/icons/calendar.png);
+	background-repeat: no-repeat;
+	background-position: 99% 50%;
+}
+
+
+/*
+ * SCREEN
+ */
+
+.shadow184 { background-image: url(/graphics/tactile/shadow184.png); }
+.shadow200 { background-image: url(/graphics/tactile/shadow200.png); }
+.shadow222 { background-image: url(/graphics/tactile/shadow222.png); }
+.shadow270 { background-image: url(/graphics/tactile/shadow270.png); }
+.shadow430 { background-image: url(/graphics/tactile/shadow430.png); }
+.modal-shadow { background-image: url(/graphics/tactile/black50.png); }
+
+#add_nav li.level1 span { background-image: url(/graphics/tactile/icons/add.png); }
+
+#add_nav li.org a { background-image: url(/graphics/tactile/items/organisation_medium_on.png); }
+#add_nav li.person a { background-image: url(/graphics/tactile/items/person_medium_on.png); }
+#add_nav li.opp a { background-image: url(/graphics/tactile/items/opportunity_medium_on.png); }
+#add_nav li.act a { background-image: url(/graphics/tactile/items/activity_medium_on.png); }
+
+#add_nav #check_calls li.level1 span { background-image: url(/graphics/tactile/dialable.png); }
+
+#right_bar div.foldable h3,
+#right_bar div.ajax-foldable h3 { background-image: url(/graphics/tactile/opened.png); }
+#right_bar div.foldable.unfoldable h3 { background-image: none; }
+#right_bar div.foldable h3.closed,
+#right_bar div.ajax-foldable h3.closed { background-image: url(/graphics/tactile/closed.png); }
+
+#right_bar div.help { background-image: url(/graphics/tactile/icons/help.png); }
+
+#right_bar li.add_new { background-image: url(/graphics/tactile/icons/add.png); }
+
+ul#tagged_item_columns .paging .paging_loading span { background-image: url(/graphics/omelette/spinner.gif); }
+
+ul.call_list li.person { background-image: url(/graphics/tactile/items/person_medium_on.png); }
+ul.call_list li.company { background-image: url(/graphics/tactile/items/organisation_medium_on.png); }
+
+table tr.on td.user_name { background-image: url(/graphics/tactile/items/user_medium_on.png); }
+table tr.off td.user_name { background-image: url(/graphics/tactile/items/user_medium_off.png); } 
+
+.view_holder div.tag_list.edit_mode ul li.tag a { background-image: url(/graphics/tactile/icons/tag_delete.png); }
+
+#by_tag_filter a.filter,
+#by_tag_filter span.selected,
+#right_bar div.side_tag_list div.tag a,
+#right_bar div.side_tag_list div.tag.selected span,
+.view_holder div.tag_list ul li.tag a {
+	background-image: url(/graphics/tactile/icons/tag.png);
+	background-repeat: no-repeat;
+	background-position: 3px center;
+}

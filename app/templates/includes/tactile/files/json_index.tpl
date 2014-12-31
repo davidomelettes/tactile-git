@@ -1,0 +1,1 @@
+{literal}{{/literal}"status":"success","files":{$files_json}{literal}}{/literal}

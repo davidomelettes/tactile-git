@@ -1,0 +1,16 @@
+<?php
+class MFDeptCollection extends DataObjectCollection {
+	
+		public $field;
+		
+		function __construct() {
+			parent::__construct('MFDept');
+			$this->_tablename="mf_deptsoverview";
+			
+		$this->view='';
+		}
+	
+		
+		
+}
+?>

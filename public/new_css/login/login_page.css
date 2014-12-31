@@ -1,0 +1,114 @@
+body {
+	background-color: #eee;
+	font: 1em Verdana, Arial, sans-serif;
+	font-size: x-small;
+}
+
+#horizon { text-align: center; }
+
+#wrapper {
+	background-color: #fff;
+	border: 5px solid #ccc;
+	width: 450px;
+	text-align: left;
+	margin: 50px auto 10px auto;
+	overflow: hidden;
+}
+	#wrapper.wide { width: 750px; }
+
+h1 {
+	margin: 20px;
+	padding: 0;
+	font: 2em 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+	background: url(/graphics/tactile/tactile_medium.png) no-repeat top left;
+	color: #60BE19;
+	font-weight: normal;
+	padding-left: 65px;
+	line-height: 50px;
+}
+img#account_logo { margin-top: 20px; margin-bottom: 20px; margin-left: 85px; }
+
+h3 {
+	font-weight: bold;
+	font-size: 1em;
+	padding: 0;
+	margin: 0 0 12px 0;
+}
+
+#normal_login_form {
+	float: left;
+	margin-left: 85px;
+	padding-right: 60px;
+}
+	.wide #normal_login_form { border-right: 1px solid #ccc; }
+#openid_login_form {
+	float: right;
+	margin-right: 85px;
+}
+#reset_password {
+	float: left;
+	margin-left: 85px;
+	border-right: 1px solid #ccc;
+	padding-right: 60px;
+}
+#remind_username {
+	float: right;
+	margin-right: 85px;
+}
+
+form {
+	margin-bottom: 20px;
+	font-size: 1.2em;
+}
+	form fieldset {
+		border: none;
+		padding: 0;
+	}
+	form label {
+		display: block;
+		margin-bottom: 3px;
+	}
+	form #remember_area { margin-bottom: 10px; }
+		form #remember_area label {
+			display: inline;
+			margin: 0;
+		}
+		form #remember_area input { margin-bottom: 0; }
+	form input {
+		width: 220px;
+		margin-bottom: 10px;
+	}
+		form input.checkbox { width: auto; }
+		form input.submit {
+			width: auto;
+			padding: 0 10px;
+		}
+
+ul { padding: 0; margin: 0; }
+#flash {
+	margin-left: 85px;
+	font-size: 1.2em;
+}
+#errors { color: #c00; }
+#messages { color: #5c832f; }
+#errors li,
+#messages li {
+	padding: 0; margin: 0;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+li { list-style: none; }
+span.steps { font-weight: bold; }
+ol { padding: 0; margin: 0 0 20px 0; }
+ol li { list-style: decimal; font-size: 1.3em; margin-left: 85px; }
+#wrapper p {
+	font-size: 1.2em;
+	margin-left: 85px;
+}
+#wrapper form p {
+	font-size: 1em;
+	margin-left: 0;
+}
+#trouble_link { clear: both; margin-bottom: 20px; text-align: center; padding-right: 85px; }
+#wrapper.wide #trouble_link { clear: both; margin-bottom: 20px; text-align: center; padding-right: 85px; }
+

@@ -1,0 +1,1 @@
+{include file="elements/resolve_ticket_list.tpl" tickets=$tickets}

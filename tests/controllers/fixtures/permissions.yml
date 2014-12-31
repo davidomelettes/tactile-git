@@ -1,0 +1,294 @@
+user_person_set:
+  -
+    id: 2
+    organisation_id: 1
+    firstname: Jake
+    surname: Stride
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  -
+    id: 3
+    organisation_id: 1
+    firstname: David
+    surname: Edwards
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  -
+    id: 4
+    organisation_id: 1
+    firstname: Archie
+    surname: Stride
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  -
+    id: 5
+    organisation_id: 1
+    firstname: Denver
+    surname: Dragon
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+
+user_set:
+  -
+    person_id: 2
+    username: jake//tactile
+    password: password
+    terms_agreed: 2007-01-01 00:00
+    is_admin: true
+  -
+    person_id: 3
+    username: david//tactile
+    password: password
+    terms_agreed: 2007-01-01 00:00
+  -
+    person_id: 4
+    username: archie//tactile
+    password: password
+    terms_agreed: 2007-01-01 00:00
+  -
+    person_id: 5
+    username: denver//tactile
+    password: password
+    terms_agreed: 2007-01-01 00:00
+
+user_company_access_set:
+  -
+    username: jake//tactile
+    organisation_id: 1
+  -
+    username: david//tactile
+    organisation_id: 1
+  -
+    username: archie//tactile
+    organisation_id: 1
+  -
+    username: denver//tactile
+    organisation_id: 1
+
+role_set:
+  -
+    id: 3
+    name: jake//tactile
+    usercompanyid: 1
+  -
+    id: 4
+    name: david//tactile
+    usercompanyid: 1
+  -
+    id: 5
+    name: archie//tactile
+    usercompanyid: 1
+  -
+    id: 6
+    name: denver//tactile
+    usercompanyid: 1
+  -
+    id: 100
+    name: Dragons
+    usercompanyid: 1
+  -
+    id: 200
+    name: Dogs
+    usercompanyid: 1
+  -
+    id: 300
+    name: Security
+    usercompanyid: 1
+
+hasrole_set:
+  -
+    username: jake//tactile
+    roleid: 2
+  -
+    username: jake//tactile
+    roleid: 3
+  -
+    username: david//tactile
+    roleid: 2
+  -
+    username: david//tactile
+    roleid: 4
+  -
+    username: archie//tactile
+    roleid: 2
+  -
+    username: archie//tactile
+    roleid: 5
+  -
+    username: denver//tactile
+    roleid: 2
+  -
+    username: denver//tactile
+    roleid: 6
+  -
+    username: denver//tactile
+    roleid: 100
+  -
+    username: archie//tactile
+    roleid: 200
+  -
+    username: archie//tactile
+    roleid: 300
+
+organisation_set:
+  -
+    id: 10
+    name: Public Corp
+    owner: greg//tactile
+    usercompanyid: 1
+  -
+    id: 20
+    name: David and Denver Only Inc
+    owner: david//tactile
+    usercompanyid: 1
+  -
+    id: 30
+    name: Custom Permissions Co
+    owner: greg//tactile
+    usercompanyid: 1
+
+organisation_role_set:
+  -
+    organisation_id: 10
+    roleid: 2
+    read: t
+    write: t
+  -
+    organisation_id: 20
+    roleid: 2
+    read: f
+    write: f
+  -
+    organisation_id: 20
+    roleid: 4
+    read: t
+    write: t
+  -
+    organisation_id: 20
+    roleid: 100
+    read: t
+    write: t
+  -
+    organisation_id: 30
+    roleid: 100
+    read: t
+    write: t
+  -
+    organisation_id: 30
+    roleid: 200
+    read: t
+    write: t
+
+person_set:
+  -
+    id: 10
+    firstname: Alfred
+    surname: Anderson
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  -
+    id: 20
+    firstname: Bob
+    surname: Bachelor
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  -
+    id: 30
+    firstname: Charlie
+    surname: Chaplain
+    language_code: EN
+    owner: david//tactile
+    private: true
+    usercompanyid: 1
+  -
+    id: 40
+    organisation_id: 10
+    firstname: Daniel
+    surname: Dangerous
+    language_code: EN
+    owner: david//tactile
+    private: true
+    usercompanyid: 1
+  -
+    id: 50
+    organisation_id: 20
+    firstname: Edgar
+    surname: Edwards
+    language_code: EN
+    owner: david//tactile
+    usercompanyid: 1
+  -
+    id: 60
+    firstname: Createdbyme
+    surname: Cannotvieworg
+    organisation_id: 30
+    language_code: EN
+    owner: archie//tactile
+    usercompanyid: 1
+    
+
+tag_set:
+  -
+    id: 1
+    name: private
+    usercompanyid: 1
+  -
+    id: 2
+    name: public
+    usercompanyid: 1
+  -
+    id: 3
+    name: mixed
+    usercompanyid: 1
+  -
+    id: 4
+    name: orgmixed
+    usercompanyid: 1
+
+tag_map_set:
+  -
+    tag_id: 1
+    person_id: 30
+  -
+    tag_id: 2
+    person_id: 10
+  -
+    tag_id: 3
+    person_id: 20
+  -
+    tag_id: 3
+    person_id: 30
+  -
+    tag_id: 4
+    person_id: 10
+  -
+    tag_id: 4
+    person_id: 20
+  -
+    tag_id: 4
+    person_id: 40
+    
+notes_set:
+  -
+    id: 100
+    title: A Private Note
+    note: This is private!
+    organisation_id: 10
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    private: true
+  -
+    id: 200
+    title: Should not be duplicated
+    note: Hello
+    organisation_id: 30
+    owner: archie//tactile
+    alteredby: archie//tactile
+    usercompanyid: 1

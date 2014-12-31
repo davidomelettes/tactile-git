@@ -1,0 +1,1 @@
+{literal}{{/literal}"graph_name":{$graph_name|json_encode},"graph_src":{$graph_src|json_encode}{literal}}{/literal}

@@ -1,0 +1,90 @@
+---
+
+setup:
+  people:
+    id: 2
+    firstname: Other
+    surname: Person
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  users:
+    username: other_user//othersite
+    password: monkey
+    person_id: 2
+  organisations:
+    id: 2
+    name: Other Company
+    accountnumber: OC01
+    usercompanyid: 2
+    owner: other_user//othersite
+  user_company_access:
+    username: other_user//othersite
+    organisation_id: 2
+
+
+default_opportunity:
+  -
+    id: 2
+    name: Test Opportunity
+    usercompanyid: 2
+    owner: other_user//othersite
+    enddate: 2007-12-01
+    alteredby: other_user//othersite
+    
+    
+opp_to_different_account:
+  Opportunity:
+    name: Test Opportunity
+    enddate: 12/04/2009
+    assigned_to: other_user//othersite
+
+act_to_different_account:
+  Activity:
+    name: Test Activity
+    assigned_to: other_user//othersite
+    
+company_to_different_account:
+  Organisation:
+    name: Test Company 123
+    accountnumber: TC123
+    assigned_to: other_user//othersite
+    
+person_to_different_account:
+  Person:
+    firstname: Test
+    surname: Person
+    assigned_to: other_user//othersite
+
+opp_to_different_company:
+  Opportunity:
+    name: Test Opp 1234
+    enddate: 12/12/2007
+    organisation_id: 2
+    
+act_to_different_company:
+  Activity:
+    name: Test Activity
+    organisation_id: 2
+
+person_to_different_company:
+  Person:
+    firstname: Samantha
+    surname: Samson
+    organisation_id: 2
+    
+opp_to_different_person:
+  Opportunity:
+    name: Test Of Bad Person ID
+    enddate: 12/12/2008
+    person_id: 2
+    
+act_to_different_person:
+  Activity:
+    name: Test Of Bad Person ID
+    person_id: 2
+    
+act_to_different_opportunity:
+  Activity:
+    name: Test Of Bad Opp ID
+    opportunity_id: 2

@@ -1,0 +1,47 @@
+#!/bin/bash
+if [ "$1" != "-q" ]; then
+	echo "Use -q to supress messages"
+	echo "Clearing templates..."
+fi
+cd ../data/templates_c
+rm -f *
+cd ../../build
+
+if [ "$1" != "-q" ]; then
+	echo "Clearing cache..."
+fi
+cd ../data/tmp
+rm -f *
+cd ../../build
+
+if [ "$1" != "-q" ]; then
+	echo "Compiling CSS..."
+fi
+cd ../public/new_css
+touch combined-four.compressed.css
+touch combined-four.css
+rm combined-four.compressed.css
+rm combined-four.css
+#cat *.css > combined-four.css
+cat reset.css screen.css nonstandard.css index_page.css view_page.css edit_page.css images.css colours.css farbtastic.css > combined-four.css
+cd ../../build
+perl css_compress.pl ../public/new_css/combined-four.css > ../public/new_css/combined-four.compressed.css
+
+if [ "$1" != "-q" ]; then
+	echo "Compiling Javascript..."
+fi
+cd ../public/js
+touch combined-four.js
+touch combined-four.compressed.js
+rm combined-four.js
+rm combined-four.compressed.js
+cat omelette.classes.js lib/plugins/jquery.hotkeys.js lib/plugins/jquery.activities.js lib/plugins/jquery.expandingtextarea.js lib/plugins/jquery.foldables.js lib/plugins/jquery.quickadders.js lib/plugins/jquery.timelines.js lib/plugins/jquery.tags.js lib/plugins/jquery.config.js lib/plugins/jquery.freshbooks.js lib/plugins/jquery.email.js lib/plugins/jquery.customvalue.js lib/plugins/jquery.indextables.js lib/plugins/jquery.querybuilder.js omelette.rules.js tactile.rules.js lib/farbtastic.js > combined-four.js
+cd ../../build
+php5 js_compress.php ../public/js/combined-four.js > ../public/js/combined-four.compressed.js
+
+REVISION=`svn info | grep Revision | sed s/[^0-9]//g`
+echo "<?php define('TACTILE_SVN_REVISION', '$REVISION');" > ../app/svn.php
+if [ "$1" != "-q" ]; then
+	echo "Revision stamp: $REVISION"
+	echo "REMINDERS: Rebuild other Omelette apps. Does db schema cache need clearing?"
+fi

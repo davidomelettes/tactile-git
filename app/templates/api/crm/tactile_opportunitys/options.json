@@ -1,0 +1,22 @@
+{"status":"success","opportunity_options":{<#strip#>
+"assigned_to":{
+<#foreach name=options from=$assigned_to item=option key=id#>"<#$option#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"status":{
+<#foreach name=options from=$status item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"type":{
+<#foreach name=options from=$type item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"source":{
+<#foreach name=options from=$source item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+}
+<#/strip#>}}

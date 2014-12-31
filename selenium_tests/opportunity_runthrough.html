@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>opportunity_runthrough</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">opportunity_runthrough</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Opportunities</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>add_opportunity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>opportunity_name</td>
+	<td>Selenium Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>opportunity_enddate</td>
+	<td>12/09/2007</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Opportunity_description</td>
+	<td>This is just a test!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>edit_opportunity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>opportunity_name</td>
+	<td>Selenium Test (edited)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Saved Successfully</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>delete_opportunity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to do this?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>30000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Tactile</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

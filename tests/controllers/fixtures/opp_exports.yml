@@ -1,0 +1,69 @@
+---
+
+basic_with_lookups:
+  -
+    name: Test Opportunity
+    enddate: 2009-04-01
+    status_id: 1
+    source_id: 1
+    type_id: 1
+    organisation_id: 10
+    person_id: 100
+    owner: greg//tactile
+    description: An opportunity with a description
+    cost: 2000.50
+    probability: 75
+    assigned_to: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+  
+lookup_defaults:
+  opportunitystatus:
+    id: 1
+    name: Test Status
+    open: true
+  opportunitysource:
+    id: 1
+    name: Test Source
+  opportunitytype:
+    id: 1
+    name: Test Type
+     
+lookup_defaults_2:
+  opportunitystatus:
+    id: 2
+    name: 2nd Status
+    open: false
+  opportunitysource:
+    id: 2
+    name: Another Source
+  opportunitytype:
+    id: 2
+    name: Different Type
+     
+alternative_person:
+  -
+    id: 100
+    organisation_id: 10
+    firstname: Fred
+    surname: Smith
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    language_code: EN
+ 
+alternative_company:
+  -
+    id: 10
+    name: Test Other UC
+    accountnumber: TOU01
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    
+user2:
+  - 
+    person_id: 100
+    username: user2//tactile
+    password: sdfsdfsdfsdfsdfds
+    

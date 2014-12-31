@@ -1,0 +1,33 @@
+{"status":"success",<#strip#>
+"timeline":[
+<#foreach name=timeline item=item from=$activity_timeline#>
+{<#$item->getTimelineType()|strtolower|json_encode#>:{
+
+"id":<#$item->id|json_encode#>,
+"organisation_id":<#$item->organisation_id|json_encode#>,
+"organisation":<#$item->organisation|json_encode#>,
+"person_id":<#$item->person_id|json_encode#>,
+"person":<#$item->person|json_encode#>,
+"opportunity_id":<#$item->opportunity_id|json_encode#>,
+"opportunity":<#$item->opportunity|json_encode#>,
+"activity_id":<#$item->activity_id|json_encode#>,
+"activity":<#$item->activity|json_encode#>,
+
+"private":<#if $item->private eq 't'#>true<#else#>false<#/if#>,
+
+"owner":<#$item->owner|json_encode#>,
+"created":<#$item->created|json_encode#>,
+"lastupdated":<#$item->lastupdated|json_encode#>,
+"received":<#$item->received|json_encode#>,
+"title":<#$item->getTimelineSubject()|json_encode#>,
+"subject":<#$item->getTimelineSubject()|json_encode#>,
+"body":<#$item->getTimelineBody()|json_encode#>,
+"note":<#$item->getTimelineBody()|json_encode#>,
+
+"when":<#$item->getTimelineWhenString(false)|json_encode#>,
+"url":<#$item->getTimelineUrl()|json_encode#>
+
+}}
+<#if !$smarty.foreach.timeline.last#>,<#/if#>
+<#/foreach#>
+<#/strip#>],"cur_page":<#$cur_page#>,"num_pages":<#$num_pages#>,"per_page":<#$per_page#>,"total":<#$num_records#>}

@@ -1,0 +1,254 @@
+/*
+ * RESET
+ */
+
+a { color: #00c; }
+	a:visited { color: #00c; }
+textarea { border-color: #999; }
+input, select { border-color: #999; }
+	textarea.subtle,
+	input.subtle {
+		background-color: #f5f5f5;
+		color: #999;
+	}
+button.button_link {
+	background: transparent;
+	color: #c00;
+}
+
+table.index_table a.out { color: #000; }
+a.action, #actions ul a { color: #c00; }
+a.show_fields { color: #080; }
+
+.sprite-organisation,
+.sprite-person,
+.sprite-activity,
+.sprite-opportunity { background-color: transparent; }
+
+
+/*
+ * SCREEN
+ */
+
+body { background-color: #ccc; }
+#container { background-color: #fff; }
+#free_plan_upsell { background-color: #ffee62; }
+	#free_plan_upsell a { color: #000; }
+#browser_warning { background-color: #fff; }
+	#browser_warning .warning { color: #c00; }
+	
+div.loading {
+	border-color: #c00;
+	color: #000;
+	background-color: #fff;
+}
+
+#flash #messages {
+	border-color: #999;
+	background-color: #ffa;
+}
+#flash #errors, ul#main_nav li.highlight_errors, ul#sub_nav li.highlight_errors, #summary_stats div.stats div.alert {
+	border-color: #c00;
+	background-color: #fdd;
+}
+
+#summary_stats div.stats div.warning { background-color: #FFDEBE; }
+#summary_stats div.stats div.won { background-color: #B5E3AC; }
+
+ul#main_nav li.no_highlight, ul#sub_nav li.no_highlight {
+	background-color: #fff;
+}
+
+.modal-shadow .shadow-inner { background-color: #fff; }
+
+#add_nav li.level1 { background-color: #fff; }
+	#add_nav li.level1:hover  { background-color: #fff; }
+	#add_nav li.level1 span { background-color: #fff; }
+	#add_nav ul li a:hover { background-color: #ff9; }
+	
+#add_nav li a { background-color: #fff; }
+
+#add_nav #check_calls li.level1 span { background-color: #fff; }
+
+#logo_holder { background-color: #fff; }
+
+#right_bar { color: #333; }
+	#right_bar h3 a,
+	#right_bar h4 { color: #000; }
+	
+#right_bar div.foldable, #right_bar div.ajax-foldable {
+	border-color: #999;
+	background-color: #f5f5f5;
+}
+	#right_bar div.foldable.no-background { background-color: #fff; }
+	
+#right_bar div.usage_warning { background-color: #ffffcc; }
+
+#right_bar div.help { background-color: #ff9; }
+	#right_bar div.help div a { color: #00c; }
+	
+#welcome_text {
+	border-color: #999;
+	background-color: #ffc;
+}
+
+#right_bar #activities div.overdue a.view_link,
+#right_bar #activities div.today a.view_link { color: #fff; }
+#right_bar #activities div.overdue a.view_link { background-color: #c00; } 
+#right_bar #activities div.today a.view_link { background-color: #FF8C00; }
+#right_bar #activities div.upcoming a.view_link,
+#right_bar #activities div.later a.view_link { background-color: #ddd; }
+
+.content_holder h3 {
+	border-left-color: #999;
+	background-color: #ccc;
+}
+
+div.terms_page .instructions { background-color: #ff9; }
+div.terms_page form fieldset#i_agree { background-color: #ffc; }
+
+div#by_tag_filter {
+	border-color: #333;
+	background-color: #f5f5f5;
+}
+div#by_tag_filter a.filter,
+div#by_tag_filter span.selected { background-color: #e5e5e5; }
+	div#by_tag_filter a.filter:hover { background-color: #ff9; }
+ul#tagged_item_columns li .border { border-color: #999; }
+ul#tagged_item_columns .paging .paging_loading { background-color: #fff; }
+ul#tagged_item_columns li .content tfoot td .paging .paging_loading { background-color: #fff; color: black; }
+
+.search_results p,
+.search_results ul { background-color: #fff; }
+.search_results p { color: #999; }
+.search_results ul li.selected { background-color: #ff9; }
+
+div.cal_container {
+	border-color: #aaa;
+	background-color: #eee;
+}
+div.cal_container select:focus { background-color: #fff; }
+div.cal_container table tr.even td { background-color: #ffffff; }
+div.cal_container td { color: #000; }
+div.cal_container td.today {
+	background-color: #ff9 !important;
+	color: #333 !important;
+}
+div.cal_container td.selected {
+	background-color: #333 !important;
+	color: #fff !important;
+}
+div.cal_container td.no_data { background-color: #e3e3e3 !important; }
+div.cal_container td.data:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+
+/*
+ * INDEX
+ */
+
+div.paging span.add_disallowed { color: #999; }
+
+table.index_table thead,
+table.index_table tfoot { border-color: #999; }
+table.index_table thead th,
+table.index_table tfoot th,
+table.index_table tfoot td {
+	background: #e6e6e6 url(/graphics/tactile/table-bg.png) repeat-x bottom;
+	color: #333;
+}
+table.index_table tbody th,
+table.index_table tbody td {
+	border-top-color: #999;
+	border-bottom-color: #999;
+}
+table.index_table tbody tr:hover td,
+table.index_table tbody tr:hover th { background-color: #ff9; }
+
+table#report_table tfoot tr.subtotals th {
+	background-color: #fff !important;
+	background-image: none;
+}
+
+#right_bar div.side_tag_list div.tag a,
+#right_bar div.side_tag_list div.tag.selected span { background-color: #e5e5e5; }
+#right_bar div.side_tag_list div.tag a:hover { background-color: #ff9; }
+
+#tag_cloud span:hover { background-color: #ff9; }
+
+#usage_table {
+	border-left-color: #999;
+	border-right-color: #999;
+}
+tr.good td,
+span.good { background-color: #9f9; }
+tr.warn td,
+span.warn { background-color: #ffc95e; }
+tr.bad td,
+span.bad { background-color: #f99; }
+
+
+/*
+ * EDIT
+ */
+
+form.saveform textarea { border-color: #999; }
+form.saveform fieldset#save_container { border-top-color: #333; }
+form.saveform input.has_error {
+	border-color: #c00;
+	background-color: #fdd;
+}
+form.saveform .inline_error { color: #c00; }
+
+form.delete_form fieldset#save_container { border-top-color: #333; }
+
+div.form_help {
+	background-color: #ffc;
+	border-color: #999;
+}
+div.form_help .warning { color: #c00; }
+
+.edit_holder .content_holder div.hide {
+	color: #333;
+	background-color: #eee;
+}
+.edit_holder .content_holder div.show { background-color: #fff; }
+.edit_holder .content_holder div.show_hide a { color: #00c; }
+
+table#plan_comparison col:hover { background-color: #ff9; }
+table#plan_comparison tbody th,
+table#plan_comparison tbody td {
+	border-top-color: #080;
+	border-bottom-color: #080;
+}
+table#plan_comparison col.current { background-color: #ff9; }
+table#plan_comparison col.unavailable { background-color: #ccc; }
+
+
+/*
+ * VIEW
+ */
+
+.view_holder div.tag_list ul li.tag a { background-color: #eee; }
+.view_holder div.tag_list ul li.tag a:hover { background-color: #ff5; }
+.view_holder div.tag_list.edit_mode ul li.tag a { color: #c00; }
+
+.view_holder .content_holder .view_list .view_label { color: #666; }
+.view_holder .content_holder .view_list a.out { color: #00c; }
+
+#right_bar a.add_related { color: #c00; }
+
+#right_bar ul.related_list li { border-bottom-color: #ccc; }
+
+#right_bar form.side_form input.has_error,
+#right_bar form.side_form select.has_error {
+	border-color: #c00;
+	background-color: #fdd;
+}
+#right_bar form.side_form .inline_error { color: #c00; }
+
+#right_bar #invoices .unpaid { color: #c00; }
+#right_bar #invoices .part-paid { color: #f93; }
+#right_bar #invoices .paid { color: #293; }

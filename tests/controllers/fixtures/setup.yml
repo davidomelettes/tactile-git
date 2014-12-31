@@ -1,0 +1,63 @@
+---
+
+opp_statuses:
+  -
+    id: 100
+    name: Discussionation
+    usercompanyid: 1
+  -
+    id: 200
+    name: Blabbing
+    usercompanyid: 1
+    position: 1
+  -
+    id: 300
+    name: We Won
+    usercompanyid: 1
+    position: 2
+    won: 'true'
+  -
+    id: 400
+    name: We Lost
+    usercompanyid: 1
+    position: 3
+    open: 'false'
+  -
+    id: 500
+    name: Hold the mayo
+    usercompanyid: 1
+    position: 4
+
+opps_with_statuses:
+  -
+    id: 100
+    name: Don't change me!
+    status_id: 100
+    enddate: 2010-07-10
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+  -
+    id: 200
+    name: Change Me!
+    status_id: 200
+    enddate: 2010-07-10
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+  -
+    id: 300
+    name: Yo
+    status_id: 300
+    enddate: 2010-07-10
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+  -
+    id: 400
+    name: Yo
+    status_id: 400
+    enddate: 2010-07-10
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile

@@ -1,0 +1,639 @@
+---
+#saves successfully
+basic:
+  name: Test Client
+  accountnumber: TC01
+
+basic_private_company:
+  -
+    id: 109
+    name: Private Client
+    accountnumber: PC01
+    usercompanyid: 1
+    owner: user2//tactile
+  
+basic_private_companyroles:
+  -
+    companyid: 109
+    roleid: 1
+    read: 't'
+    write: 't'
+ 
+no_accountnumber:
+  name: Test Client
+
+with_created_set:
+  name: Test Client
+  accountnumber: TC01
+  created: 01/01/2006 12:30:21
+  
+all_main_fields:
+  name: Test Client
+  accountnumber: TC01
+  parent_id: 1
+  
+basic_with_phone:
+  name: Test Client
+  accountnumber: TC01
+  phone:
+    contact: 01234 567 890
+    
+basic_with_phone_fax_email:
+  name: Test Client
+  accountnumber: TC01
+  phone:
+    contact: 01234 567 890
+  fax:
+    contact: 0123 345 4339
+  email:
+    contact: foo@bar.com
+    
+basic_with_address:
+  name: Test Client
+  accountnumber: TC01
+  address:
+    street1: 12 Some Road
+    street2: Somebit
+    town: Sometown
+    county: Someshire
+    postcode: SO12 3FG
+    country_code: GB
+    
+access_for_everyone:
+  read: everyone
+  write: everyone
+
+private_access:
+  read: private
+  write: private
+  
+everyone_read_private_write:
+  read: everyone
+  write: private
+  
+with_crm_fields:
+  name: Test Client
+  accountnumber: TC01
+  status_id: 1
+  source_id: 1
+  classification_id: 1
+  rating_id: 1
+  industry_id: 1
+  type_id: 1
+    
+basic_note:
+  title: Test Note
+  note: This is a test note
+  organisation_id: 1
+  owner: greg//tactile
+  alteredby: greg//tactile
+  
+adding_phone_number:
+  name: Main
+  contact: 0121 234 5434
+  
+adding_email:
+  name: Main Email
+  contact: info@foo.com
+  
+adding_address:
+  organisation_id: 1
+  street1: 12 Some Road
+  town: Sometown
+  county: Someshire
+  postcode: SO12 4GJ
+  country_code: GB
+
+#doesn't save successfully
+no_name:
+  accountnumber: TC01
+
+non_numeric_employees:
+  name: Test Client
+  accountnumber: TC01
+  
+non_numeric_creditlimit:
+  name: Test Client
+  accountnumber: TC01
+  
+basic_with_incomplete_address:
+  name: Test Client
+  accountnumber: TC01
+  street1: 12 Some Road
+  street2: Somebit
+  county: Someshire
+  postcode: SO12 3FG
+  country_code: GB
+ 
+#some defaults
+crm_defaults:
+   company_statuses:
+     id: 1
+     name: Test Status
+   company_sources:
+     id: 1
+     name: Test Source
+   company_classifications:
+     id: 1
+     name: Test Classification
+   company_ratings:
+     id: 1
+     name: Test Rating
+   company_industries:
+     id: 1
+     name: Test Industry
+   company_types:
+     id: 1
+     name: Test Type
+     
+client_defaults: 
+  - 
+    id: 100
+    name: Client 100
+    accountnumber: CXXX
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    
+contact_methods:
+  -
+    organisation_id: 100
+    type: E
+    main: true
+    contact: sales@tactilecrm.com
+    name: Main
+  -
+    organisation_id: 100
+    type: T
+    main: true
+    contact: 0121 234 5543
+    name: Main
+    
+addresses:
+  -
+    organisation_id: 100
+    main: true
+    street1: 12 Leafy Lane
+    street2: Earlsdon
+    town: Coventry
+    county: West Midlands
+    postcode: CV5 4FG
+    country_code: GB
+    
+notes:
+  -
+    organisation_id: 100
+    title: Test Note
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    note: This is some text in the note
+    
+private_notes:
+  -
+    organisation_id: 100
+    title: Test Private Note
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    note: This is some text in the private note
+    
+hidden_private_notes:
+  -
+    organisation_id: 100
+    title: Test Hidden Private Note
+    owner: user2//tactile
+    alteredby: user2//tactile
+    usercompanyid: 1
+    note: This is a hidden private note
+    private: true
+   
+alternative_person:
+  -
+    id: 100
+    firstname: Fred
+    surname: Smith
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    language_code: EN
+ 
+alternative_user:
+  - 
+    person_id: 100
+    username: user2//tactile
+    password: sdfsdfsdfsdfsdfds
+    terms_agreed: 2007-01-01 00:00
+    
+index_test_clients:
+  -
+    id: 200
+    name: Alpha Company
+    accountnumber: AC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+    created: 2008-12-01 12:13:24
+  - 
+    id: 210
+    name: Echo Company
+    accountnumber: EC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: user2//tactile
+    created: 2008-12-02 12:13:24
+  -
+    id: 220
+    name: Charlie Company
+    accountnumber: CC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+    created: 2008-12-03 12:13:24
+  -
+    id: 230
+    name: Bravo Company
+    accountnumber: BC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: user2//tactile
+    created: 2008-12-04 12:13:24
+
+test_client_addresses:
+  -
+    street1: 12 Test Road
+    town: Testtown
+    county: Testshire
+    postcode: ab1 2cd
+    country_code: GB
+    organisation_id: 200
+    main: true
+  -
+    street1: 13 Test Road
+    town: Testtown
+    county: Testshire
+    postcode: ab1 2cd
+    country_code: GB
+    organisation_id: 210
+    main: true
+  -
+    street1: 14 Test Road
+    town: Othertown
+    county: Testshire
+    postcode: ab1 2cd
+    country_code: GB
+    organisation_id: 220
+    main: true
+  -
+    street1: 15 Test Road
+    town: Nowhere
+    county: Noshire
+    postcode: ab1 2cd
+    country_code: GB
+    organisation_id: 230
+    main: true
+
+client_index_access:
+  -
+    organisation_id: 200
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 210
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 220
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 230
+    roleid: 1
+    read: true
+    write: true
+    
+
+client_views:
+  -
+    type: organisations
+    owner: greg//tactile
+    label: Alpha Company
+    link_id: 200
+    created: 2008-02-15 12:30:15
+  -
+    type: organisations
+    owner: greg//tactile
+    label: Charlie Company
+    link_id: 220
+    created: 2008-02-15 16:30:15
+  -
+    type: organisations
+    owner: greg//tactile
+    label: Bravo Company
+    link_id: 230
+    created: 2008-02-17 12:30:15
+  -
+    type: organisations
+    owner: greg//tactile
+    label: Default Company
+    link_id: 1
+    created: 2008-02-18 02:30:15
+    
+client_tags:
+  -
+    id: 100
+    name: Foo
+    usercompanyid: 1
+  -
+    id: 101
+    name: Bar
+    usercompanyid: 1
+  -
+    id: 102
+    name: Baz
+    usercompanyid: 1
+    
+client_tag_map:
+  -
+    tag_id: 100
+    organisation_id: 200
+  -
+    tag_id: 100
+    organisation_id: 210
+  -
+    tag_id: 101
+    organisation_id: 210
+  -
+    tag_id: 100
+    organisation_id: 220
+  -
+    tag_id: 100
+    organisation_id: 230
+  -
+    tag_id: 101
+    organisation_id: 220
+  -
+    tag_id: 102
+    organisation_id: 220
+
+more_clients:
+  -
+    id: 500
+    name: Foxtrot Company
+    accountnumber: FC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 501
+    name: Golf Company
+    accountnumber: GC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 502
+    name: Hotel Company
+    accountnumber: HC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 503
+    name: Indigo Company
+    accountnumber: IC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 504
+    name: Juliet Company
+    accountnumber: JC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 505
+    name: Kilo Company
+    accountnumber: KC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 506
+    name: Lima Company
+    accountnumber: LC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 507
+    name: Mike Company
+    accountnumber: MC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 508
+    name: November Company
+    accountnumber: NC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+  -
+    id: 509
+    name: Oscar Company
+    accountnumber: OC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+
+more_client_access:
+  -
+    organisation_id: 500
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 501
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 502
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 503
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 504
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 505
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 506
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 507
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 508
+    roleid: 1
+    read: true
+    write: true
+  -
+    organisation_id: 509
+    roleid: 1
+    read: true
+    write: true
+
+more_client_tag_maps:
+  -
+    tag_id: 101
+    organisation_id: 500
+  -
+    tag_id: 101
+    organisation_id: 501
+  -
+    tag_id: 101
+    organisation_id: 502
+  -
+    tag_id: 101
+    organisation_id: 503
+  -
+    tag_id: 101
+    organisation_id: 504
+  -
+    tag_id: 101
+    organisation_id: 505
+  -
+    tag_id: 101
+    organisation_id: 506
+  -
+    tag_id: 101
+    organisation_id: 507
+  -
+    tag_id: 101
+    organisation_id: 508
+  -
+    tag_id: 101
+    organisation_id: 509
+
+cross_company:
+  -
+    id: 2
+    name: XX Company
+    accountnumber: XX01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 2
+    assigned_to: greg//tactile
+    
+cross_company_clients:
+  -
+    id: 900
+    name: Zulu Company
+    accountnumber: ZC01
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 2
+    assigned_to: greg//tactile
+    
+cross_company_client_addresses:
+  -
+    street1: 12 Test Road
+    town: Testtown
+    county: Testshire
+    postcode: ab1 2cd
+    country_code: GB
+    organisation_id: 900
+    main: true
+
+alternative_user_company_access:
+  -
+    username: user2//tactile
+    organisation_id: 1
+    
+alternative_user_role:
+  -
+    id: 3
+    name: user2//tactile
+    usercompanyid: 1
+    
+alternative_user_hasrole:
+  -
+    roleid: 3
+    username: user2//tactile
+    
+alternative_user_organisation_access:
+  -
+    roleid: 3
+    organisation_id: 200
+    read: true
+  -
+    roleid: 3
+    organisation_id: 210
+    read: true
+  -
+    roleid: 3
+    organisation_id: 230
+    read: true
+
+orgs_only_visible_by_greg:
+  -
+    id: 777
+    name: Lucky Seven
+    accountnumber: 777
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+    assigned_to: greg//tactile
+
+org_roles_only_visible_by_greg:
+  -
+    organisation_id: 777
+    roleid: 1
+    read: true
+    write: true
+    
+tags_only_visible_by_greg:
+  -
+    id: 777
+    name: Super Secret
+    usercompanyid: 1
+    
+tag_map_only_visible_by_greg:
+  -
+    tag_id: 777
+    organisation_id: 777
+    hash: org777

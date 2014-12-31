@@ -1,0 +1,210 @@
+---
+
+organisation:
+  -
+    id: 100
+    name: Basic Company
+    accountnumber: BC01
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+
+person:
+  -
+    id: 100
+    organisation_id: 100
+    firstname: Basic
+    surname: Person
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    language_code: EN
+
+opportunity_status:
+  -
+    id: 100
+    name: Default Status
+    usercompanyid: 1
+
+opportunity:
+  -
+    id: 100
+    name: Basic Opportunity
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    enddate: 2012-12-13
+    status_id: 100
+  -
+    id: 101
+    name: Archived Opportunity
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    enddate: 2012-12-13
+    status_id: 100
+    archived: true
+
+activity:
+  -
+    id: 100
+    name: Basic Activity
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    assigned_by: greg//tactile
+    assigned_to: greg//tactile
+    later: true
+    created: 2009-01-01 11:20:12
+
+org_note:
+  -
+    id: 100
+    organisation_id: 100
+    title: Basic Note
+    note: This is the body of the note
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    created: 2009-01-03 12:20:12
+
+greg_contact_method_email:
+  -
+    id: 1
+    contact: greg.jones@senokian.com
+    type: E
+    person_id: 1
+    name: Main
+    main: true
+
+person_contact_method_email:
+  -
+    id: 2
+    contact: basic.person@senokian.com
+    type: E
+    person_id: 100
+    name: Main
+    main: true
+
+email:
+  -
+    id: 100
+    person_id: 100
+    organisation_id: 100
+    email_from: basic.person@senokian.com
+    email_to: greg.jones@senokian.com
+    subject: Basic Email
+    body: This is the body of the email
+    usercompanyid: 1
+    owner: greg//tactile
+    created: 2009-01-02 12:20:12
+
+file:
+  -
+    id: 100
+    bucket: tactile
+    object: 1/2/foo.doc
+    filename: foo.doc
+    content_type: application/msword
+    size: 1024
+    usercompanyid: 1
+    owner: greg//tactile
+
+other_user_person:
+  -
+    id: 2
+    firstname: Other
+    surname: Person
+    organisation_id: 1
+    usercompanyid: 1
+    owner: greg//tactile
+    alteredby: greg//tactile
+    language_code: EN
+
+other_user:
+  -
+    person_id: 2
+    username: other//tactile
+    password: x
+
+other_user_note:
+  -
+    id: 101
+    organisation_id: 100
+    title: Other Note
+    note: This is the body of the note
+    usercompanyid: 1
+    owner: other//tactile
+    alteredby: other//tactile
+    created: 2009-01-01 12:20:12
+
+custom_timeline_prefs:
+  -
+    key: timeline_emails_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_notes_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_files_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_opportunities_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_activities_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_activities_completed
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_activities_overdue
+    value: all
+    username: greg//tactile
+
+custom_timeline_prefs_no_emails_my_notes:
+  -
+    key: timeline_emails_new
+    value: none
+    username: greg//tactile
+  -
+    key: timeline_notes_new
+    value: mine
+    username: greg//tactile
+  -
+    key: timeline_files_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_opportunities_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_activities_new
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_activities_completed
+    value: all
+    username: greg//tactile
+  -
+    key: timeline_activities_overdue
+    value: all
+    username: greg//tactile
+    
+overdue_tz_activities:
+  -
+    id: 111
+    name: Today and Overdue
+    class: todo
+    owner: greg//tactile
+    alteredby: greg//tactile
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    usercompanyid: 1

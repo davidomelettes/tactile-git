@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Login Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="Subscribe/styles/fb-styles.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript">
+	function verify() {
+		if(document.form.email.value == "") {
+			alert("Please enter your email address");
+			return false;
+		}
+		return true
+	}
+</script>
+
+</head>
+<body onload="document.form.email.focus();">
+
+
+<div id="header">
+	<div class="container">
+		<ul class="menu">
+			<li><a href="http://www.freshbooks.com">Home</a></li>
+			<li><a href="http://www.freshbooks.com/tour.php">Tour</a></li>
+			<li><a href="http://www.freshbooks.com/pricing.php">Pricing</a></li>
+			<li><a href="http://www.freshbooks.com/manifesto.php">About</a></li>
+			<li><a href="http://forum.freshbooks.com">Forums</a></li>
+			<li><a href="http://www.freshbooks.com/blog/">Blog</a></li>
+			<li><a href="http://www.freshbooks.com/contact.php">Contact</a></li>
+		</ul>
+		
+		<div class="logoarea">
+			<div class="logo">
+				<a href="http://www.freshbooks.com"><img src="/Subscribe/images/fresh/freshbooks2.gif" alt="FreshBooks" width="151" height="80" border="0" class="fLeft" /></a>
+			</div>
+			<div class="phone">
+				<a href="http://www.freshbooks.com/contact.php"><img src="/Subscribe/images/fresh/call.gif" alt="Call Toll Free 1.866.303.6061" width="288" height="22" border="0" /></a><br />
+									<a href="/subscribe.php" class="b">Sign Up</a> |
+									Already Signed Up? <a href="/loginSearch.php" class="b">Login</a><br />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bar">
+	<img src="Subscribe/images/fresh/h-bookmark.gif" alt="Welcome Back... Your Account Awaits" width="704" height="85" /><br />
+</div>
+
+<div align="center">
+<div class="container">
+
+	<div class="leftCol">
+					<h2 class="img">Find Your FreshBooks Account</h2>
+			<p>Enter your email address below and we will find your FreshBooks login page. From there you can log in to your account.</p>
+			<p><span class="hl">Please bookmark your login page so you can quickly access it in the future.</span></p>
+			<div>&nbsp;</div>			<fieldset id="logSearchForm">
+				<legend>Login Page Search</legend>
+				<br />
+				<form name="form" action="/loginSearch.php" method="post" onsubmit="return verify();">
+					<label for="email">Email address:</label>
+					<input name="email" id="email" type="text" size="25" value="" style="vertical-align: middle;" />						
+					<input type="submit" value="Find Login Page" style="vertical-align: middle;" /><br />
+					<input type="hidden" name="submit" value="true" />
+				</form>
+				<br />
+			</fieldset>
+			<p>&nbsp;</p>
+				</div>
+
+	<div class="rightCol">
+
+		<a href="http://www.freshbooks.com/blog/2008/10/08/fox-news/"><img src="Subscribe/images/fresh/fox-news.gif" alt="" width="209" height="150" border="0" /></a><br />
+		
+		<div class="dashed"><img src="Subscribe/images/fresh/spacer.gif" alt="" width="1" height="1" /></div>
+		
+			</div>
+
+
+</div>
+</div>
+
+
+<!-- IndexTools SSL Code v4.00 - All rights reserved -->
+<script language="javascript1.1" src="/indextools_ssl.js"></script><noscript>
+<img src="https://secure.indextools.com/p.pl?a=10001576749918&js=no" width="1" height="1"></noscript><!--//-->
+<!-- End of IndexTools Code -->
+
+</body>
+</html>

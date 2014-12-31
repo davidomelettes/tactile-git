@@ -1,0 +1,153 @@
+person_with_calendar:
+  -
+    id: 910
+    firstname: Calendar
+    surname: Smith
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+
+user_with_calendar:
+  -
+    person_id: 910
+    username: calendar//tactile
+    password: password
+    webkey: c0343a3b18daf310b8156552e9850cac
+    terms_agreed: 2009-01-01 12:30:12
+    
+user_with_calendar_company_access:
+  -
+    username: calendar//tactile
+    organisation_id: 1
+
+calendar_activities:
+  -
+    name: Activity 1
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Activity 2
+    description: With description
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Activity 3
+    description: Not Owner
+    assigned_to: calendar//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+  -
+    name: Activity 4
+    description: Completed
+    completed: 2007-01-01 00:00:00
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Activity 5
+    description: Not Owner or Assignee
+    assigned_to: greg//tactile
+    assigned_by: greg//tactile
+    owner: greg//tactile
+    alteredby: greg//tactile
+    usercompanyid: 1
+  -
+    name: Activity 6
+    description: With date and time
+    date: 2011-01-01
+    time: 10:00:00
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+
+calendar_activities_events:
+  -
+    name: Todo 1
+    description: One hour
+    class: todo
+    date: 2011-01-01
+    time: 10:00:00
+    end_date: 2011-01-01
+    end_time: 11:00:00
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Event 1
+    description: One hour
+    class: event
+    date: 2011-01-01
+    time: 10:00:00
+    end_date: 2011-01-01
+    end_time: 11:00:00
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Event 2
+    description: One day
+    class: event
+    date: 2011-01-01
+    time: 10:00:00
+    end_date: 2011-01-02
+    end_time: 10:00:00
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Event 3
+    description: one day, one hour, one minute and one second
+    class: event
+    date: 2011-01-01
+    time: 10:00:00
+    end_date: 2011-01-02
+    end_time: 11:01:01
+    location: place
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+  -
+    name: Event 4
+    description: just days, no time
+    class: event
+    date: 2011-02-01
+    end_date: 2011-02-02
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    usercompanyid: 1
+
+http_modified_activities:
+  -
+    id: 700
+    name: Old Activity Event
+    class: event
+    owner: calendar//tactile
+    alteredby: calendar//tactile
+    later: true
+    assigned_to: calendar//tactile
+    assigned_by: calendar//tactile
+    created: 2000-01-01 12:00:00
+    lastupdated: 2000-01-01 12:00:00
+    usercompanyid: 1

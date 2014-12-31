@@ -1,0 +1,18 @@
+{"status":"success","person_options":{<#strip#>
+"assigned_to":{
+<#foreach name=options from=$assigned_to item=option key=id#>"<#$option#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"language_code":{
+<#foreach name=options from=$language_code item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"country_code":{
+<#foreach name=options from=$country_code item=option key=id#>"<#$id#>":"<#$option#>"
+<#if !$smarty.foreach.options.last#>,<#/if#>
+<#/foreach#>
+},
+"default_country_code":"<#$default_country_code#>"
+<#/strip#>}}

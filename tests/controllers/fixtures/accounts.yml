@@ -1,0 +1,95 @@
+---
+
+free_to_paid:
+  plan: 2
+  Card:
+    cardholder_name: Greg Jones
+    addr_1: 12 Someroad
+    addr_2:
+    city: Someville
+    state: Someshire
+    post_code: SO12 2FG
+    country: England
+    card_type: Visa
+    card_number: '4444333322221111'
+    cv2: 123
+    card_expiration_month: '01'
+    card_expiration_year: '14'
+
+empty_form:
+  plan: 2
+  
+same_plan:
+  plan: 1
+  
+invalid_card:
+  plan: 2
+  Card:
+    cardholder_name: Greg Jones
+    addr_1: 12 Someroad
+    addr_2:
+    city: Someville
+    state: Someshire
+    post_code: SO12 2FG
+    country: England
+    card_type: Visa
+    card_number: '4444333322222222'
+    cv2: 123
+    card_expiration_month: '01'
+    card_expiration_year: '14'
+
+paid_to_free:
+  plan: 1
+
+
+existing_payment_record:
+  -
+    account_id: 1
+    amount: 6
+    pre_authed: 'f'
+    auth_code: '9999'
+    test_status: true
+    card_no: '21111'
+    card_expiry: '0109'
+    cardholder_name: Mr G Jones
+    created: 2008-02-01
+    authorised: 't'
+    trans_id: Tactile20080205094242
+    type: FULL
+    
+    
+alternate_user:
+  people:
+    id: 2
+    firstname: Other
+    surname: Person
+    language_code: EN
+    owner: greg//tactile
+    usercompanyid: 1
+  users:
+    username: other_user//tactile
+    password: monkey
+    person_id: 2
+    terms_agreed: 2007-01-01 12:30:23
+    is_admin: true
+  user_company_access:
+    username: other_user//tactile
+    organisation_id: 1
+
+free_peruser_to_paid_peruser:
+  plan: 4
+  quantity: 1
+  Card:
+    cardholder_name: Greg Jones
+    addr_1: 12 Someroad
+    addr_2:
+    city: Someville
+    state: Someshire
+    post_code: SO12 2FG
+    country: England
+    card_type: Visa
+    card_number: '4444333322221111'
+    cv2: 123
+    card_expiration_month: '01'
+    card_expiration_year: '14'
+    

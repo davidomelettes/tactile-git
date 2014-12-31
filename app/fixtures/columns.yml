@@ -1,0 +1,29 @@
+---
+
+company_statuses: &idname
+  - name
+  - usercompanyid
+
+company_sources: *idname
+
+company_ratings: *idname
+
+company_industries: *idname
+
+company_types: *idname
+
+opportunitystatus:
+  - name
+  - usercompanyid
+  - open
+  - position
+  - won
+  
+opportunitysource: &idnameposition
+  - name
+  - usercompanyid
+  - position
+
+opportunitytype: *idnameposition
+
+activitytype: *idnameposition

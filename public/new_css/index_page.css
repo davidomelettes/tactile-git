@@ -1,0 +1,221 @@
+.index_holder {}
+
+.paging {
+	z-index: 42;
+	float: right;
+	white-space: nowrap;
+	position: relative;
+}
+	.paging .tall { float: left; line-height: 50px; margin-left: 8px; }
+	.paging img { vertical-align: middle; }
+	.paging .add_disallowed { text-decoration: line-through;	}
+	.paging .details { position: relative; }
+	.paging .paging_menu_button { position: relative; padding: 5px 0; cursor: pointer; }
+	.paging .paging_menu_button span { background-color: #fff; height: 20px; padding: 6px 0 6px 5px; display: inline-box; border: 1px solid #ccc; }
+	.paging .details .pages { border-right: 0; }
+	.paging .details .menu { border-left: 0; background: #fff url(/graphics/tactile/icons/wrench.png) no-repeat 6px -28px; padding-right: 20px; }
+	.paging .details div { display: none; position: absolute; top: 40px; right: 0; background: transparent url(/graphics/tactile/pointer_up.png) no-repeat 170px 0; padding-top: 5px; }
+	.paging .details.expanded .paging_menu_button span,
+	.paging .paging_menu_button:hover span { border-color: #999; }
+	.paging .details.expanded .paging_menu_button .menu,
+	.paging .paging_menu_button:hover .menu { background-position: 6px 4px; }
+	.paging .details.expanded div { display: block; }
+	.paging form ul {
+		color: #fff;
+		background-color: #333;
+		line-height: normal;
+		width: 200px;
+		padding-top: 15px;
+		padding-bottom: 5px;
+	}
+	.paging .results { color: #aaa; }
+	.paging form li { padding: 0 10px 10px 10px; }
+	div.paging select { min-width: 80px; float: right; }
+
+div.bottom_paging {	margin-top: 10px; }
+
+div.restriction {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+table.index_table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1.1em;
+	clear: left;
+}
+	table.index_table .cb { width: 12px; padding-top: 0; padding-right: 0; padding-left: 4px; }
+	table.index_table .cb input {
+		margin: 0;
+	}
+	table.index_table thead,
+	table.index_table tfoot {
+		border-width: 1px;
+		border-style: solid;
+	}
+		table.index_table thead th,
+		table.index_table tfoot th { line-height: 20px; white-space: nowrap; }
+		table.index_table thead th select { vertical-align: 0; }
+		table.index_table thead th,
+		table.index_table tfoot th,
+		table.index_table tfoot td {
+			text-align: left;
+			padding: 4px 6px;
+		}
+	table.index_table tbody {}
+		table.index_table tbody tr { min-height: 40px; }
+		table.index_table tbody th,
+		table.index_table tbody td {
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			padding: 4px 6px;
+		}
+		table.index_table tbody tr.selected td,
+		table.index_table tbody tr.selected:hover td { background-color: #FFF17E; }
+		
+		table#report_table tbody tr { height: auto; }
+		table#report_table tbody th,
+		table#report_table tbody td,
+		table#report_table thead th,
+		table#report_table tfoot th,
+		table#report_table tfoot td { padding: 4px; }
+		table#report_table tfoot,
+		table#report_table tfoot tr.subtotals { border: none; }
+		table#report_table tfoot tr {
+			border-width: 1px;
+			border-style: solid;
+			border-color: #999;
+		}
+		table#report_table tfoot th,
+		table#report_table tfoot td { font-weight: normal; }
+		table#report_table tfoot tr.subtotals th,
+		table#report_table tfoot tr.subtotals td {
+			font-weight: bold;
+			border: none;
+			background-color: #fff;
+		}
+		table#report_table td.numeric { white-space: nowrap; }
+
+table.index_table td.primary { font-size: 1.2em; }
+
+table.index_table tfoot.form_controls th,
+table.index_table tfoot.form_controls td {
+	text-align: right;
+	padding: 4px 6px;
+}
+
+table.index_table tbody a.action { visibility: hidden; }
+table.index_table tbody tr:hover a.action { visibility: visible; }
+
+.content_holder .content table.index_table { margin-bottom: 20px; }
+
+#right_bar #import_export {}
+	#right_bar #import_export li.query { font-weight: bold; }
+	
+#right_bar fieldset.search_fields { margin-bottom: 5px; }
+	#right_bar fieldset.search_fields label {
+		line-height: 14px;
+		padding: 2px 0;
+		margin-right: 20px;
+	}
+	#right_bar fieldset.search_fields input {
+		width: 155px;
+		padding: 2px 1px;
+		margin-left: 5px;
+	}
+	#right_bar fieldset.search_fields img.spinner { padding-top: 3px; }
+	
+#right_bar .search_results {
+	clear: both;
+	float: left;
+	position: static !important;
+	width: 100% !important;
+}
+	#right_bar .search_results ul {}
+		#right_bar .search_results ul li {
+			display: block;
+			line-height: 1.4em;
+			padding: 3px 0;
+		}
+			#right_bar .search_results ul li.selected { cursor: pointer; }
+			#right_bar .search_results ul li.recent_last {
+				border-bottom-width: 2px;
+				border-bottom-style: solid;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+			}
+			#right_bar .search_results ul li:last-child.recent_last {
+				border-bottom: 0;
+				margin-bottom: 5px;
+				padding-bottom: 0;
+			}
+	#right_bar .search_results p { width: 100%; }
+
+#right_bar div.side_tag_list {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+	#right_bar div.side_tag_list div.tag {
+		margin: 0 5px 0 0;
+		float: left;
+	}
+		#right_bar div.side_tag_list div.tag a,
+		#right_bar div.side_tag_list div.tag.selected span {
+			display: inline-block;
+			padding: 3px 5px 3px 21px;
+			margin: 0 2px 5px 0;
+			white-space: nowrap;
+		}
+		#right_bar div.side_tag_list div.tag.selected span { font-weight: bold; }
+
+.single_line { white-space: nowrap; }
+
+
+/*
+ * TAGS
+ */
+
+#tag_cloud {
+	font-size: 1.2em;
+	max-width: 800px;
+}
+	#tag_cloud span {
+		line-height: 1.4em;
+		vertical-align: -20%;
+		display: inline-block;
+	}
+		#tag_cloud span a {
+			display: inline-block;
+			padding: 5px 10px;
+		}
+
+span.tag_band5 { font-size: 4em; }
+span.tag_band4 { font-size: 3em; }
+span.tag_band3 { font-size: 2.5em; }
+span.tag_band2 { font-size: 2em; }
+span.tag_band1 { font-size: 1.3em; }
+span.tag_band0 { font-size: 1em; }
+
+
+/*
+ * USAGE
+ */
+
+#usage_table {
+	margin-bottom: 20px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+
+
+/*
+ * EMAILS
+ */
+ 
+#dropbox_info p { overflow: hidden; }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response status="ok">
+  <clients page="1" per_page="15" pages="1" total="0" />
+</response>
