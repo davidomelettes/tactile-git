@@ -1,7 +1,1 @@
-cache/*
-exports/*
-jobfiles/*
-jobs/*
-mail_templates_c/*
-templates_c/*
-tmp/*
+application.log
