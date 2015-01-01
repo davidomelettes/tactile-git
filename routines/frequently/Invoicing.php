@@ -502,7 +502,7 @@ class Invoicing extends EGSCLIApplication {
 				->set('Total', $payment['amount']);
 
 			try {
-				$xero_invoice->put();
+				//$xero_invoice->put();
 			} catch (Service_Xero_Exception $e) {
 				$logger = new Zend_Log(new Log_Writer_Mail(DEBUG_EMAIL_ADDRESS, 'Error saving invoice to Xero'));
 				$logger->crit($e->getMessage());
@@ -753,7 +753,7 @@ class Invoicing extends EGSCLIApplication {
 		$xero_contact->addAddress($xero_address);
 		
 		try {
-			$xero_contact->put();
+			//$xero_contact->put();
 		} catch (Service_Xero_Exception $e) {
 			$logger = new Zend_Log(new Log_Writer_Mail(DEBUG_EMAIL_ADDRESS, 'Error saving contact to Xero'));
 			$logger->crit('Account\'s Site Address: '.$contact['site_address']);
