@@ -54,7 +54,7 @@ class Invoicing extends EGSCLIApplication {
 	            return 0.27;
 	        case 'GB':
 	        case 'UK':
-	            if ($when > strtotime('2015-01-01 00:00:00')) {
+	            if ($when >= strtotime('2015-01-01 00:00:00')) {
 	                // Deregistered for VAT
 	                return 0;
 	            } else {
@@ -190,7 +190,22 @@ class Invoicing extends EGSCLIApplication {
 		}
 		
 		// Get all the uninvoiced transactions (we lower case the description due to descrepencies in the invoicing code)
-		$query = "SELECT r.id, r.account_id, r.auth_code, p.name AS plan, p.cost_per_month, a.site_address, a.company, CASE WHEN a.country_code IS NULL THEN 'US' ELSE a.country_code END AS country_code, a.email, a.firstname, a.surname, a.vat_number, r.amount, lower(r.description) AS description, r.trans_id, date_trunc('day', r.created) AS created, a.notes, a.telephone
+		$query = "SELECT r.id,
+		        r.account_id,
+		        r.auth_code,
+		        p.name AS plan,
+		        p.cost_per_month,
+		        a.site_address, a.company,
+		        CASE WHEN a.country_code IS NULL THEN 'US' ELSE a.country_code END AS country_code,
+		        a.email,
+		        a.firstname,
+		        a.surname,
+		        a.vat_number,
+		        r.amount,
+		        lower(r.description) AS description,
+		        r.trans_id,
+		        date_trunc('day', r.created) AS created,
+		        a.notes, a.telephone
 		FROM account_plans p, tactile_accounts a, payment_records r WHERE r.invoiced = false AND p.id=a.current_plan_id AND a.id=r.account_id AND r.type IN ('FULL', 'RELEASE', 'REPEAT') AND r.created>'" . $this->_start_date . "'";
 		
 		$query .= " AND r.account_id<> 4687 ORDER BY created ASC";
@@ -287,7 +302,7 @@ class Invoicing extends EGSCLIApplication {
 						->set('TaxType', $tax_type) // There are several different types
 						->set('TaxAmount', round($tax_amount * intval($payment['amount']/self::PREMIUM_PER_USER), 2));
 					
-					$total_vat = round($tax_amount * intval($payment['amount']/6), 2);
+					$total_vat = round($tax_amount * intval($payment['amount']/self::PREMIUM_PER_USER), 2);
 				} 
 				else if($payment['plan'] == 'Enterprise') {
 					// This is an enterprise Plan (30 Day/Full), i.e. a per user payment
@@ -538,7 +553,7 @@ class Invoicing extends EGSCLIApplication {
 			$mail->getView()->set('line_total', '&pound;'.number_format($xero_invoice->LineItems->LineItem[0]->LineAmount, 2));
 			$mail->getView()->set('sub_total', '&pound;'.number_format($payment['amount'] - $total_vat, 2));
 			$mail->getView()->set('vat', '&pound;'.number_format($total_vat, 2));
-			$mail->getView()->set('vat_rate', $this->getVATForCountry($payment['country_code'])*100);
+			$mail->getView()->set('vat_rate', $this->getVATForCountry($payment['country_code'], $payment['created'])*100);
 			$mail->getView()->set('total', '&pound;'.number_format($payment['amount'], 2));
 			$mail->getView()->set('total', '&pound;'.number_format($payment['amount'], 2));
 			$mail->getView()->set('country', $this->_countries[$payment['country_code']]);
